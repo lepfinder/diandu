@@ -1,0 +1,170 @@
+{
+  "niexiaoqian": {
+    "portrait": "/images/characters/niexiaoqian-portrait.webp",
+    "avatar": "/images/characters/niexiaoqian-avatar.webp"
+  },
+  "yingning": {
+    "portrait": "/images/characters/yingning-portrait.webp",
+    "avatar": "/images/characters/yingning-avatar.webp"
+  },
+  "jiaona": {
+    "portrait": "/images/characters/jiaona-portrait.webp",
+    "avatar": "/images/characters/jiaona-avatar.webp"
+  },
+  "qingfeng": {
+    "portrait": "/images/characters/qingfeng-portrait.webp",
+    "avatar": "/images/characters/qingfeng-avatar.webp"
+  },
+  "hongyu": {
+    "portrait": "/images/characters/hongyu-portrait.webp",
+    "avatar": "/images/characters/hongyu-avatar.webp"
+  },
+  "lianxiang": {
+    "portrait": "/images/characters/lianxiang-portrait.webp",
+    "avatar": "/images/characters/lianxiang-avatar.webp"
+  },
+  "xiaocui": {
+    "portrait": "/images/characters/xiaocui-portrait.webp",
+    "avatar": "/images/characters/xiaocui-avatar.webp"
+  },
+  "huapi": {
+    "portrait": "/images/characters/huapi-portrait.webp",
+    "avatar": "/images/characters/huapi-avatar.webp"
+  },
+  "liansuo": {
+    "portrait": "/images/characters/liansuo-portrait.webp",
+    "avatar": "/images/characters/liansuo-avatar.webp"
+  },
+  "jiuniang": {
+    "portrait": "/images/characters/jiuniang-portrait.webp",
+    "avatar": "/images/characters/jiuniang-avatar.webp"
+  },
+  "xiangyu": {
+    "portrait": "/images/characters/xiangyu-portrait.webp",
+    "avatar": "/images/characters/xiangyu-avatar.webp"
+  },
+  "huangying": {
+    "portrait": "/images/characters/huangying-portrait.webp",
+    "avatar": "/images/characters/huangying-avatar.webp"
+  },
+  "gejin": {
+    "portrait": "/images/characters/gejin-portrait.webp",
+    "avatar": "/images/characters/gejin-avatar.webp"
+  },
+  "baiqiulian": {
+    "portrait": "/images/characters/baiqiulian-portrait.webp",
+    "avatar": "/images/characters/baiqiulian-avatar.webp"
+  },
+  "xifangping": {
+    "portrait": "/images/characters/xifangping-portrait.webp",
+    "avatar": "/images/characters/xifangping-avatar.webp"
+  },
+  "chengming": {
+    "portrait": "/images/characters/chengming-portrait.webp",
+    "avatar": "/images/characters/chengming-avatar.webp"
+  },
+  "yanzhi": {
+    "portrait": "/images/characters/yanzhi-portrait.webp",
+    "avatar": "/images/characters/yanzhi-avatar.webp"
+  },
+  "lupan": {
+    "portrait": "/images/characters/lupan-portrait.webp",
+    "avatar": "/images/characters/lupan-avatar.webp"
+  },
+  "laoshan": {
+    "portrait": "/images/characters/laoshan-portrait.webp",
+    "avatar": "/images/characters/laoshan-avatar.webp"
+  },
+  "ruiyun": {
+    "portrait": "/images/characters/ruiyun-portrait.webp",
+    "avatar": "/images/characters/ruiyun-avatar.webp"
+  },
+  "xinshisiniang": {
+    "portrait": "/images/characters/xinshisiniang-portrait.webp",
+    "avatar": "/images/characters/xinshisiniang-avatar.webp"
+  },
+  "yatou": {
+    "portrait": "/images/characters/yatou-portrait.webp",
+    "avatar": "/images/characters/yatou-avatar.webp"
+  },
+  "qingmei": {
+    "portrait": "/images/characters/qingmei-portrait.webp",
+    "avatar": "/images/characters/qingmei-avatar.webp"
+  },
+  "fengsanniang": {
+    "portrait": "/images/characters/fengsanniang-portrait.webp",
+    "avatar": "/images/characters/fengsanniang-avatar.webp"
+  },
+  "axiu": {
+    "portrait": "/images/characters/axiu-portrait.webp",
+    "avatar": "/images/characters/axiu-avatar.webp"
+  },
+  "xiaoxie": {
+    "portrait": "/images/characters/xiaoxie-portrait.webp",
+    "avatar": "/images/characters/xiaoxie-avatar.webp"
+  },
+  "wuqiuyue": {
+    "portrait": "/images/characters/wuqiuyue-portrait.webp",
+    "avatar": "/images/characters/wuqiuyue-avatar.webp"
+  },
+  "meinv": {
+    "portrait": "/images/characters/meinv-portrait.webp",
+    "avatar": "/images/characters/meinv-avatar.webp"
+  },
+  "huanniang": {
+    "portrait": "/images/characters/huanniang-portrait.webp",
+    "avatar": "/images/characters/huanniang-avatar.webp"
+  },
+  "abao": {
+    "portrait": "/images/characters/abao-portrait.webp",
+    "avatar": "/images/characters/abao-avatar.webp"
+  },
+  "qiaonv": {
+    "portrait": "/images/characters/qiaonv-portrait.webp",
+    "avatar": "/images/characters/qiaonv-avatar.webp"
+  },
+  "xianv": {
+    "portrait": "/images/characters/xianv-portrait.webp",
+    "avatar": "/images/characters/xianv-avatar.webp"
+  },
+  "shangsanguan": {
+    "portrait": "/images/characters/shangsanguan-portrait.webp",
+    "avatar": "/images/characters/shangsanguan-avatar.webp"
+  },
+  "xiliu": {
+    "portrait": "/images/characters/xiliu-portrait.webp",
+    "avatar": "/images/characters/xiliu-avatar.webp"
+  },
+  "lvyinv": {
+    "portrait": "/images/characters/lvyinv-portrait.webp",
+    "avatar": "/images/characters/lvyinv-avatar.webp"
+  },
+  "zhuqing": {
+    "portrait": "/images/characters/zhuqing-portrait.webp",
+    "avatar": "/images/characters/zhuqing-avatar.webp"
+  },
+  "axian": {
+    "portrait": "/images/characters/axian-portrait.webp",
+    "avatar": "/images/characters/axian-avatar.webp"
+  },
+  "huaguzi": {
+    "portrait": "/images/characters/huaguzi-portrait.webp",
+    "avatar": "/images/characters/huaguzi-avatar.webp"
+  },
+  "hehuasan": {
+    "portrait": "/images/characters/hehuasan-portrait.webp",
+    "avatar": "/images/characters/hehuasan-avatar.webp"
+  },
+  "xihuzhu": {
+    "portrait": "/images/characters/xihuzhu-portrait.webp",
+    "avatar": "/images/characters/xihuzhu-avatar.webp"
+  },
+  "pianpian": {
+    "portrait": "/images/characters/pianpian-portrait.webp",
+    "avatar": "/images/characters/pianpian-avatar.webp"
+  },
+  "change": {
+    "portrait": "/images/characters/change-portrait.webp",
+    "avatar": "/images/characters/change-avatar.webp"
+  }
+}

@@ -1,0 +1,606 @@
+{
+  "groups": [
+    { "id": "house", "name": "西门一家", "color": "#8f2d2d" },
+    { "id": "wives", "name": "妻妾", "color": "#a6843c" },
+    { "id": "servants", "name": "仆婢", "color": "#6b4c7a" },
+    { "id": "friends", "name": "帮闲", "color": "#2f4d73" },
+    { "id": "wu", "name": "武家", "color": "#6a5344" },
+    { "id": "outside", "name": "外宅官场", "color": "#2c6b4f" }
+  ],
+  "list": [
+    {
+      "id": "ximen",
+      "name": "西门庆",
+      "group": "house",
+      "role": "清河商人",
+      "firstCh": 1,
+      "lastCh": 79,
+      "bio": "清河县生药铺西门达之子。热结十兄弟，勾搭潘金莲，毒死武大，陆续娶孟玉楼、潘金莲、李瓶儿，又攀上蔡京门路，做到山东提刑所理刑。第七十九回纵欲而亡。"
+    },
+    {
+      "id": "yueniang",
+      "name": "吴月娘",
+      "group": "wives",
+      "role": "正室",
+      "firstCh": 1,
+      "lastCh": 100,
+      "bio": "西门庆正室，左卫吴千户之女。府中诸妾争宠，她多半持重。西门庆死后生下遗腹子孝哥，守着破败的家，第一百回在永福寺听普静点化。"
+    },
+    {
+      "id": "jiaoer",
+      "name": "李娇儿",
+      "group": "wives",
+      "role": "二房",
+      "firstCh": 1,
+      "lastCh": 80,
+      "bio": "丽春院出身，西门庆的二房，桂姐的姑姑。西门庆一死，她卷了财物回到院子里。"
+    },
+    {
+      "id": "yulou",
+      "name": "孟玉楼",
+      "group": "wives",
+      "role": "三房",
+      "firstCh": 7,
+      "lastCh": 91,
+      "bio": "贩布杨宗锡的寡妇，有一份自己的嫁妆。第七回经薛嫂说合嫁进西门府，排行三房。西门庆死后，第九十一回改嫁李衙内。"
+    },
+    {
+      "id": "xuee",
+      "name": "孙雪娥",
+      "group": "wives",
+      "role": "四房",
+      "firstCh": 9,
+      "lastCh": 94,
+      "bio": "原是西门庆屋里的使女收房，管厨房，排行四房。与潘金莲争斗最烈。西门庆死后被来旺拐走，后来沦落到酒楼，第九十四回在守备府受辱。"
+    },
+    {
+      "id": "jinlian",
+      "name": "潘金莲",
+      "group": "wives",
+      "role": "五房",
+      "firstCh": 1,
+      "lastCh": 87,
+      "bio": "本是张大户家使女，嫁卖炊饼的武大。与西门庆私通，毒死亲夫，第九回进门为第五房。争宠、驯春梅、害官哥，都出在她手里。西门庆死后与陈敬济私通，第八十七回被遇赦归来的武松杀死。"
+    },
+    {
+      "id": "pinger",
+      "name": "李瓶儿",
+      "group": "wives",
+      "role": "六房",
+      "firstCh": 13,
+      "lastCh": 62,
+      "bio": "先是花子虚的妻子，隔壁梁中书妾出逃后的财主。花子虚死后短暂招赘蒋竹山，第十九回带着家私进西门府，为第六房。生官哥，官哥死后一病不起，第六十二回死在西门庆怀里。"
+    },
+    {
+      "id": "chunmei",
+      "name": "庞春梅",
+      "group": "servants",
+      "role": "丫鬟",
+      "firstCh": 7,
+      "lastCh": 100,
+      "bio": "原侍候吴月娘，后拨给潘金莲，又被西门庆收用。金莲得罪出门后，春梅做了周守备的夫人。第一百回纵欲病死，书名三字她占了一个梅字。"
+    },
+    {
+      "id": "jingji",
+      "name": "陈敬济",
+      "group": "house",
+      "role": "女婿",
+      "firstCh": 1,
+      "lastCh": 99,
+      "bio": "陈洪之子，西门大姐的丈夫。杨戬倒台后躲进西门府，与潘金莲调情。西门庆死后家破，流落临清，第九十九回死于张胜刀下。"
+    },
+    {
+      "id": "dajie",
+      "name": "西门大姐",
+      "group": "house",
+      "role": "女儿",
+      "firstCh": 1,
+      "lastCh": 92,
+      "bio": "西门庆与亡妻所生的女儿，嫁陈敬济。西门庆死后受陈敬济折磨，第九十二回自缢。"
+    },
+    {
+      "id": "guange",
+      "name": "官哥",
+      "group": "house",
+      "role": "儿子",
+      "firstCh": 30,
+      "lastCh": 59,
+      "bio": "李瓶儿所生，西门庆为他捐了蔡京门下的干儿子名分。潘金莲用雪狮子猫惊吓，第五十九回惊风而死。"
+    },
+    {
+      "id": "xiaoge",
+      "name": "孝哥",
+      "group": "house",
+      "role": "遗腹子",
+      "firstCh": 79,
+      "lastCh": 100,
+      "bio": "吴月娘在西门庆断气之夜生下的儿子。第一百回普静禅师说他是西门庆托生，幻度出家，法名明悟。"
+    },
+    {
+      "id": "daian",
+      "name": "玳安",
+      "group": "servants",
+      "role": "小厮",
+      "firstCh": 1,
+      "lastCh": 100,
+      "bio": "西门庆贴身小厮，府里的门路和外宅多半经他的腿。后来吴月娘收为养子，改名西门安。"
+    },
+    {
+      "id": "laiwang",
+      "name": "来旺",
+      "group": "servants",
+      "role": "家奴",
+      "firstCh": 9,
+      "lastCh": 90,
+      "bio": "西门庆家奴，宋蕙莲的丈夫。被西门庆设计递解徐州。蕙莲死后，第九十回他拐走孙雪娥。"
+    },
+    {
+      "id": "huilian",
+      "name": "宋蕙莲",
+      "group": "servants",
+      "role": "仆妇",
+      "firstCh": 22,
+      "lastCh": 26,
+      "bio": "来旺的妻子，生得俏，被西门庆勾上。来旺遭陷后她发觉自己被骗，第二十六回上吊。"
+    },
+    {
+      "id": "qiuju",
+      "name": "秋菊",
+      "group": "servants",
+      "role": "丫鬟",
+      "firstCh": 9,
+      "lastCh": 87,
+      "bio": "潘金莲房里受气的丫鬟，屡次被打。后来把金莲和陈敬济的事泄露出去。"
+    },
+    {
+      "id": "yingchun",
+      "name": "迎春",
+      "group": "servants",
+      "role": "丫鬟",
+      "firstCh": 13,
+      "lastCh": 75,
+      "bio": "李瓶儿的丫鬟，墙头密约时在缝里窥见。瓶儿死后仍留在府中。"
+    },
+    {
+      "id": "boyue",
+      "name": "应伯爵",
+      "group": "friends",
+      "role": "十兄弟",
+      "firstCh": 1,
+      "lastCh": 80,
+      "bio": "十兄弟里的老二，帮闲的头脑。西门庆在时凑趣说媒，西门庆一死就改口趋附张二官，把西门府的路径卖出去。"
+    },
+    {
+      "id": "wusong",
+      "name": "武松",
+      "group": "wu",
+      "role": "都头",
+      "firstCh": 1,
+      "lastCh": 87,
+      "bio": "景阳冈打虎，做了阳谷都头。哥哥被毒死时他误打死李外传，刺配孟州。遇赦回来，西门庆已死，第八十七回杀潘金莲祭兄，投二龙山。"
+    },
+    {
+      "id": "wuda",
+      "name": "武大郎",
+      "group": "wu",
+      "role": "卖炊饼",
+      "firstCh": 1,
+      "lastCh": 6,
+      "bio": "武松的哥哥，身量矮，卖炊饼。捉奸被西门庆踢伤，第五回被潘金莲下砒霜毒死。第六回何九被买通，遮过验尸。"
+    },
+    {
+      "id": "wangpo",
+      "name": "王婆",
+      "group": "outside",
+      "role": "媒婆",
+      "firstCh": 2,
+      "lastCh": 87,
+      "bio": "紫石街开茶坊，定下十件挨光计，撮合西门庆和潘金莲，又参与毒死武大。第八十七回贪财把金莲交给武松，自己也送了命。"
+    },
+    {
+      "id": "huazixu",
+      "name": "花子虚",
+      "group": "friends",
+      "role": "十兄弟",
+      "firstCh": 1,
+      "lastCh": 14,
+      "bio": "十兄弟之一，李瓶儿的丈夫。西门庆与瓶儿私通，他气病而死，家私随后进了西门府。"
+    },
+    {
+      "id": "zhushan",
+      "name": "蒋竹山",
+      "group": "outside",
+      "role": "医生",
+      "firstCh": 17,
+      "lastCh": 19,
+      "bio": "瓶儿在西门庆避祸期间招赘的医士。西门庆脱身后来打竹山，瓶儿把他休了。"
+    },
+    {
+      "id": "guijie",
+      "name": "李桂姐",
+      "group": "outside",
+      "role": "丽春院",
+      "firstCh": 11,
+      "lastCh": 80,
+      "bio": "李娇儿侄女，丽春院粉头。西门庆梳笼她，她又认月娘做干娘。西门庆死后跟着娇儿回院。"
+    },
+    {
+      "id": "wangliuer",
+      "name": "王六儿",
+      "group": "outside",
+      "role": "外宅",
+      "firstCh": 37,
+      "lastCh": 100,
+      "bio": "韩道国的妻子。西门庆包占她，临清一带的货和人情多从这家过。西门庆死后，韩道国拐财远走，她仍在书里缠到结局。"
+    },
+    {
+      "id": "handao",
+      "name": "韩道国",
+      "group": "outside",
+      "role": "伙计",
+      "firstCh": 33,
+      "lastCh": 81,
+      "bio": "绒线铺伙计，明知西门庆占了妻子，仍靠这门路揽买卖。第八十一回拐了西门庆的货款远遁。"
+    },
+    {
+      "id": "lintaitai",
+      "name": "林太太",
+      "group": "outside",
+      "role": "招宣府",
+      "firstCh": 68,
+      "lastCh": 78,
+      "bio": "王招宣府的寡妇。第六十九回西门庆由文嫂引进，此后屡次往来，也把她的儿子王三官收在门下。"
+    },
+    {
+      "id": "caijing",
+      "name": "蔡京",
+      "group": "outside",
+      "role": "太师",
+      "firstCh": 17,
+      "lastCh": 71,
+      "bio": "当朝太师。西门庆靠生日礼和翟管家的门路认到他名下，得了金吾卫副千户、山东提刑。书里他本人很少出场，权势却压着清河。"
+    },
+    {
+      "id": "xuesao",
+      "name": "薛嫂",
+      "group": "outside",
+      "role": "媒婆",
+      "firstCh": 7,
+      "lastCh": 91,
+      "bio": "说合孟玉楼的媒人，后来府里买卖人口、传话，仍常进出。玉楼改嫁，又是她牵的线。"
+    },
+    {
+      "id": "xiexida",
+      "name": "谢希大",
+      "group": "friends",
+      "role": "十兄弟",
+      "firstCh": 1,
+      "lastCh": 80,
+      "bio": "表字子纯，十兄弟里和应伯爵最贴的一个。帮闲凑趣，西门庆一死，这班兄弟也就散了。"
+    },
+    {
+      "id": "zhushinian",
+      "name": "祝实念",
+      "group": "friends",
+      "role": "十兄弟",
+      "firstCh": 1,
+      "lastCh": 80,
+      "bio": "表字贡诚。第一回点名时就在破落户一列里，跟着西门庆吃酒，没有自己的一条线。"
+    },
+    {
+      "id": "suntianhua",
+      "name": "孙天化",
+      "group": "friends",
+      "role": "孙寡嘴",
+      "firstCh": 1,
+      "lastCh": 80,
+      "bio": "表字伯修，绰号孙寡嘴。十兄弟里专会说嘴的一个，西门庆在时随席，人死了也就没了踪影。"
+    },
+    {
+      "id": "wudianen",
+      "name": "吴典恩",
+      "group": "friends",
+      "role": "十兄弟",
+      "firstCh": 1,
+      "lastCh": 97,
+      "bio": "本县阴阳生，革退后靠着给官吏保债，与西门庆往来。后来靠这门路补了官，西门庆死后反而倒打一耙。"
+    },
+    {
+      "id": "yunlishou",
+      "name": "云理守",
+      "group": "friends",
+      "role": "十兄弟",
+      "firstCh": 1,
+      "lastCh": 100,
+      "bio": "云参将的兄弟，字非去。十兄弟之一，后来还为西门庆经手过马匹。结拜的名字，书里一直写到结局。"
+    },
+    {
+      "id": "changzhijie",
+      "name": "常峙节",
+      "group": "friends",
+      "role": "十兄弟",
+      "firstCh": 1,
+      "lastCh": 80,
+      "bio": "表字坚初。家里穷，张口向西门庆借银子。第五十六回西门庆拿出一笔钱，他回去才在妻子面前硬气起来。"
+    },
+    {
+      "id": "buzhidao",
+      "name": "卜志道",
+      "group": "friends",
+      "role": "十兄弟",
+      "firstCh": 1,
+      "lastCh": 8,
+      "bio": "十兄弟里早死的一个。结拜那天已经不在，空出的位子补了花子虚。西门庆还念着他送过的一把扇。"
+    },
+    {
+      "id": "bailaiguang",
+      "name": "白赉光",
+      "group": "friends",
+      "role": "十兄弟",
+      "firstCh": 1,
+      "lastCh": 80,
+      "bio": "表字光汤。旁人嫌这名字难听，他自己拿「周有大赉，于汤有光」圆回来。也是席上的帮闲。"
+    },
+    {
+      "id": "ruyi",
+      "name": "如意儿",
+      "group": "servants",
+      "role": "奶子",
+      "firstCh": 30,
+      "lastCh": 97,
+      "bio": "官哥的奶妈。瓶儿死后仍留在府里，西门庆收用了她。孩子死了，她的位子却还在。"
+    },
+    {
+      "id": "yuxiao",
+      "name": "玉箫",
+      "group": "servants",
+      "role": "丫鬟",
+      "firstCh": 1,
+      "lastCh": 81,
+      "bio": "吴月娘房里的丫鬟，和书童有私情。府里许多话从她嘴里进出，西门庆死后不久也就散出了这条线。"
+    },
+    {
+      "id": "xiuchun",
+      "name": "绣春",
+      "group": "servants",
+      "role": "丫鬟",
+      "firstCh": 10,
+      "lastCh": 95,
+      "bio": "李瓶儿房里的丫鬟，和迎春一起从花家跟过来。瓶儿死后仍在西门府走动。"
+    },
+    {
+      "id": "xiaoyu",
+      "name": "小玉",
+      "group": "servants",
+      "role": "丫鬟",
+      "firstCh": 9,
+      "lastCh": 100,
+      "bio": "吴月娘身边的丫鬟，从金莲进门侍候到最后。月娘守寡之后，她还在永福寺那场收场里。"
+    },
+    {
+      "id": "pingan",
+      "name": "平安",
+      "group": "servants",
+      "role": "小厮",
+      "firstCh": 7,
+      "lastCh": 100,
+      "bio": "门上小厮，传话、看门、跟马。西门府里外的人，多半先撞见他。"
+    },
+    {
+      "id": "qintong",
+      "name": "琴童",
+      "group": "servants",
+      "role": "小厮",
+      "firstCh": 7,
+      "lastCh": 87,
+      "bio": "孟玉楼的陪嫁小厮，管花园。潘金莲看上他，事发后挨了打。金莲的事败露前后，他仍在府里。"
+    },
+    {
+      "id": "shutong",
+      "name": "书童",
+      "group": "servants",
+      "role": "小厮",
+      "firstCh": 31,
+      "lastCh": 67,
+      "bio": "西门庆收在身边的小厮，生得清秀，又与玉箫有染。第三十五回前后最得宠，第六十七回前离开了府。"
+    },
+    {
+      "id": "laibao",
+      "name": "来保",
+      "group": "servants",
+      "role": "家奴",
+      "firstCh": 1,
+      "lastCh": 97,
+      "bio": "西门庆的家奴，进京送礼、揽货都用他。第八十一回拐了货款欺主，人还在后面的章节里露脸。"
+    },
+    {
+      "id": "bensi",
+      "name": "贲四",
+      "group": "servants",
+      "role": "伙计",
+      "firstCh": 16,
+      "lastCh": 79,
+      "bio": "西门庆外头的伙计，管工匠和零碎买卖。他媳妇贲四嫂也和西门庆有来往。西门庆一死，这条线就断了。"
+    },
+    {
+      "id": "guiqing",
+      "name": "李桂卿",
+      "group": "outside",
+      "role": "丽春院",
+      "firstCh": 11,
+      "lastCh": 80,
+      "bio": "李桂姐的姐姐，丽春院里的粉头。被淮上客人包在店里，自己出场不多，总挂在桂姐母女那一家上。"
+    },
+    {
+      "id": "wuyiner",
+      "name": "吴银儿",
+      "group": "outside",
+      "role": "丽春院",
+      "firstCh": 1,
+      "lastCh": 80,
+      "bio": "花子虚包占的粉头。瓶儿进府之后，她改认月娘，府里宴席上常来唱。"
+    },
+    {
+      "id": "zhengaiyue",
+      "name": "郑爱月",
+      "group": "outside",
+      "role": "粉头",
+      "firstCh": 58,
+      "lastCh": 80,
+      "bio": "郑家姊妹里西门庆后来迷上的一个。把林太太的事透给西门庆，也是他晚年和院子来往的一处。"
+    },
+    {
+      "id": "wangsanguan",
+      "name": "王三官",
+      "group": "outside",
+      "role": "招宣府",
+      "firstCh": 42,
+      "lastCh": 80,
+      "bio": "林太太的儿子，成天在院子里混。西门庆先占了他的母亲，再收他做干儿子。"
+    },
+    {
+      "id": "zhaiqian",
+      "name": "翟谦",
+      "group": "outside",
+      "role": "管家",
+      "firstCh": 18,
+      "lastCh": 81,
+      "bio": "蔡京府里的翟管家。西门庆的寿礼、书信、官职，都从他这只手过。"
+    },
+    {
+      "id": "miaoqing",
+      "name": "苗青",
+      "group": "outside",
+      "role": "家人",
+      "firstCh": 47,
+      "lastCh": 81,
+      "bio": "苗员外的家人，与主母私通，又把主人害在船上。拿银子买通西门庆，案子就这么压下去。"
+    },
+    {
+      "id": "hejiu",
+      "name": "何九",
+      "group": "outside",
+      "role": "团头",
+      "firstCh": 5,
+      "lastCh": 77,
+      "bio": "验尸的团头。武大中毒死后，西门庆买通他，遮过了破绽。后文只剩别人提起这件事。"
+    },
+    {
+      "id": "yunge",
+      "name": "郓哥",
+      "group": "outside",
+      "role": "卖果子",
+      "firstCh": 4,
+      "lastCh": 10,
+      "bio": "县前卖果子的孩子。看不惯王婆做牵头，帮武大去捉奸，闹过茶坊之后就退出了这条线。"
+    },
+    {
+      "id": "yangguniang",
+      "name": "杨姑娘",
+      "group": "outside",
+      "role": "姑姑",
+      "firstCh": 7,
+      "lastCh": 91,
+      "bio": "孟玉楼的嫡亲姑娘。主张把侄儿媳妇嫁给西门庆，和张四舅对着吵。玉楼改嫁李衙内，她还在场。"
+    },
+    {
+      "id": "liyanei",
+      "name": "李衙内",
+      "group": "outside",
+      "role": "知县之子",
+      "firstCh": 90,
+      "lastCh": 92,
+      "bio": "知县的儿子李拱璧。第九十一回娶了守寡的孟玉楼，婚后因一个丫头吃醋，把人打了一顿。"
+    },
+    {
+      "id": "zhoushoubei",
+      "name": "周守备",
+      "group": "outside",
+      "role": "守备",
+      "firstCh": 12,
+      "lastCh": 100,
+      "bio": "清河的周守备，西门庆的官场酒友。春梅后来做了他的夫人，陈敬济、张胜的结局也挂在他府上。"
+    },
+    {
+      "id": "hanaimei",
+      "name": "韩爱姐",
+      "group": "outside",
+      "role": "韩家女",
+      "firstCh": 37,
+      "lastCh": 100,
+      "bio": "王六儿和韩道国的女儿，小名爱姐。第三十七回冯妈妈来说亲。西门庆死后她流落临清，与陈敬济相好，第一百回还在路上。"
+    },
+    {
+      "id": "wangchaoer",
+      "name": "王潮儿",
+      "group": "outside",
+      "role": "王婆之子",
+      "firstCh": 86,
+      "lastCh": 88,
+      "bio": "王婆的儿子。潘金莲被月娘发卖到王家之后，与他勾搭。这段很短，就夹在金莲被杀之前。"
+    },
+    {
+      "id": "pujing",
+      "name": "普静",
+      "group": "outside",
+      "role": "禅师",
+      "firstCh": 84,
+      "lastCh": 100,
+      "bio": "雪涧洞的禅师。第八十四回月娘在岱岳遇见他，第一百回他在永福寺点破孝哥是西门庆托生，把孩子度去出家。"
+    },
+    {
+      "id": "fengmama",
+      "name": "冯妈妈",
+      "group": "outside",
+      "role": "媒婆",
+      "firstCh": 13,
+      "lastCh": 86,
+      "bio": "跟着李瓶儿的老婆子，跑腿说媒。王六儿和韩爱姐的事，都是她递的话。"
+    },
+    {
+      "id": "zhangsheng",
+      "name": "张胜",
+      "group": "outside",
+      "role": "过街鼠",
+      "firstCh": 19,
+      "lastCh": 100,
+      "bio": "绰号过街鼠，西门庆门下的光棍，打蒋竹山就用过他。后来跟了周守备，第九十九回杀了陈敬济。"
+    },
+    {
+      "id": "wushenxian",
+      "name": "吴神仙",
+      "group": "outside",
+      "role": "相士",
+      "firstCh": 29,
+      "lastCh": 79,
+      "bio": "周守备荐来的相面先生。第二十九回给西门庆和妻妾逐一看相，后文应验的地方，书里自己会回来提。"
+    },
+    {
+      "id": "zhangdahu",
+      "name": "张大户",
+      "group": "outside",
+      "role": "财主",
+      "firstCh": 1,
+      "lastCh": 4,
+      "bio": "清河的财主。买了潘金莲，年老收用，再把她白白嫁给武大，自己不久就死了。武大住的临街房也是他家的。"
+    },
+    {
+      "id": "wensao",
+      "name": "文嫂",
+      "group": "outside",
+      "role": "媒婆",
+      "firstCh": 3,
+      "lastCh": 88,
+      "bio": "说媒的婆子。陈敬济娶西门大姐时她就在场，后来专给林太太和王三官牵线。"
+    },
+    {
+      "id": "liuer",
+      "name": "刘二",
+      "group": "outside",
+      "role": "坐地虎",
+      "firstCh": 93,
+      "lastCh": 100,
+      "bio": "洒家店的坐地虎，周守备的小舅子一类地方棍徒。第九十四回在酒楼撒泼，把孙雪娥扯进一场祸，第九十九回又醉骂王六儿。"
+    }
+  ]
+}

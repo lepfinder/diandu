@@ -1,0 +1,26 @@
+{
+  "name": "@diandu/jinpingmei",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "NEXT_DIST_DIR=.next-dev next dev -p 3490",
+    "build": "NEXT_DIST_DIR=.next next build",
+    "build:cf": "NEXT_DIST_DIR=.next NEXT_PUBLIC_BASE_PATH=/jinpingmei next build",
+    "start": "NEXT_DIST_DIR=.next next start -p 3490",
+    "book": "python3 scripts/build-book.py"
+  },
+  "dependencies": {
+    "@classic/ui": "workspace:*",
+    "next": "^15.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "@classic/reader": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.7.0",
+    "opencc-js": "^1.0.5"
+  }
+}

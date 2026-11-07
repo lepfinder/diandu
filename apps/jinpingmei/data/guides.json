@@ -1,0 +1,584 @@
+{
+  "pieces": [
+    {
+      "id": "open-hua",
+      "kind": "开卷诗",
+      "title": "豪华去后行人绝",
+      "chapter": 1,
+      "lines": [
+        "豪华去后行人绝，箫筝不响歌喉咽。",
+        "雄剑无威光彩沉，宝琴零落金星灭。",
+        "玉阶寂寞坠秋露，月照当时歌舞处。",
+        "当时歌舞人不回，化为今日西陵灰。"
+      ],
+      "note": "第一回开篇。全书还没写西门庆，先把「豪华去后」说破了。",
+      "image": "/pieces/open-hua.webp"
+    },
+    {
+      "id": "open-ershi",
+      "kind": "开卷诗",
+      "title": "二八佳人体似酥",
+      "chapter": 1,
+      "lines": [
+        "二八佳人体似酥，腰间仗剑斩愚夫。",
+        "虽然不见人头落，暗里教君骨髓枯。"
+      ],
+      "note": "紧接上一首。以色欲作戒，也是后文西门庆结局的影子。",
+      "image": "/pieces/open-ershi.webp"
+    },
+    {
+      "id": "curtain-ci",
+      "kind": "词",
+      "title": "芙蓉面",
+      "chapter": 2,
+      "lines": [
+        "芙蓉面，冰雪肌，生来娉婷年已笄。",
+        "袅袅倚门余。梅花半含蕊，似开还闭。"
+      ],
+      "note": "第二回写金莲帘下。词比诗更贴着人的样子。",
+      "image": "/pieces/curtain-ci.webp"
+    },
+    {
+      "id": "heat",
+      "kind": "词",
+      "title": "祝融南来鞭火龙",
+      "chapter": 27,
+      "lines": [
+        "祝融南来鞭火龙，火云焰焰烧天空。",
+        "日轮当午凝不去，万国如在红炉中。"
+      ],
+      "note": "葡萄架那一回的暑热。先写天热，再写府里闹。",
+      "image": "/pieces/heat.webp"
+    },
+    {
+      "id": "pinger-elegy",
+      "kind": "诗",
+      "title": "玉钗重合两无缘",
+      "chapter": 62,
+      "lines": [
+        "玉钗重合两无缘，鱼在深潭鹤在天。",
+        "得意紫鸾休舞镜，传言青鸟罢衔笺。",
+        "金盆已覆难收水，玉轸长笼不续弦。",
+        "若向蘼芜山下过，遥将红泪洒穷泉。"
+      ],
+      "note": "瓶儿将死前回前诗。比西门庆灵前那场哭更早把结局说定。",
+      "image": "/pieces/pinger-elegy.webp"
+    },
+    {
+      "id": "death-ci",
+      "kind": "词",
+      "title": "青玉案 · 人生南北如岐路",
+      "chapter": 79,
+      "lines": [
+        "人生南北如岐路，世事悠悠等风絮，造化弄人无定据。",
+        "翻来覆去，倒横直竖，眼见都如许。",
+        "到如今空嗟前事，功名富贵何须慕，坎止流行随所寓。",
+        "玉堂金马，竹篱茅舍，总是伤心处。"
+      ],
+      "note": "西门庆丧命回开篇。功名、外宅、府里，到这一回都收成「伤心处」。",
+      "image": "/pieces/death-ci.webp"
+    },
+    {
+      "id": "close",
+      "kind": "收束诗",
+      "title": "楼月善良终有寿",
+      "chapter": 100,
+      "lines": [
+        "闲阅遗书思惘然，谁知天道有循环。",
+        "西门豪横难存嗣，敬济颠狂定被歼。",
+        "楼月善良终有寿，瓶梅淫佚早归泉。",
+        "可怪金莲遭恶报，遗臭千年作话传。"
+      ],
+      "note": "第一百回收煞。书名三字和月娘，都在这两联里分了结局。",
+      "image": "/pieces/close.webp"
+    }
+  ],
+  "goods": [
+    {
+      "id": "luyi",
+      "name": "潞绸",
+      "kind": "衣料",
+      "chapter": 21,
+      "text": "山西潞安所出。月娘家常穿大红潞绸对衿袄，惠莲也有红潞绸裤。府里身份，有一半写在料子上。",
+      "image": "/goods/luyi.webp"
+    },
+    {
+      "id": "nanjing-duan",
+      "name": "南京纻缎",
+      "kind": "衣料",
+      "chapter": 30,
+      "text": "官哥满月、送礼见官时常见。南京纻缎和潞绸并提，是明人眼里能拿得出手的细货。",
+      "image": "/goods/nanjing-duan.webp"
+    },
+    {
+      "id": "hangjuan",
+      "name": "杭绢",
+      "kind": "衣料",
+      "chapter": 56,
+      "text": "杭州路的绢。常时节买衣、西门庆送人情，书里点名杭绢，和本地粗布不是一路。",
+      "image": "/goods/hangjuan.webp"
+    },
+    {
+      "id": "pi'ao",
+      "name": "皮袄",
+      "kind": "衣饰",
+      "chapter": 74,
+      "text": "金莲争李瓶儿的皮袄，是府里争宠写得最细的一笔器物。一件衣服，能把几房的心气都翻出来。",
+      "image": "/goods/piao.webp"
+    },
+    {
+      "id": "xiuxie",
+      "name": "红绣鞋",
+      "kind": "衣饰",
+      "chapter": 28,
+      "text": "金莲的记号。丢鞋、寻鞋、鞋里藏针，一双鞋能牵出西门庆、蕙莲、秋菊几条线。",
+      "image": "/goods/xiuxie.webp"
+    },
+    {
+      "id": "shouzi-zan",
+      "name": "金寿字簪",
+      "kind": "衣饰",
+      "chapter": 13,
+      "text": "西门庆给金莲的首饰。簪子、头面在书里常是定情和攀比的信物，比空口许愿硬。",
+      "image": "/goods/shouzi-zan.webp"
+    },
+    {
+      "id": "yinsi",
+      "name": "银丝鬏髻",
+      "kind": "衣饰",
+      "chapter": 11,
+      "text": "妇人头上常戴的银丝髻。金莲、瓶儿、惠莲出门见人，先从这一顶髻写起。",
+      "image": "/goods/yinsi.webp"
+    },
+    {
+      "id": "yudai",
+      "name": "玉带",
+      "kind": "衣饰",
+      "chapter": 31,
+      "text": "西门庆做了千户之后才有资格系的东西。忠靖冠、补服、玉带一齐上场，市井暴发户正式入了官场的壳。",
+      "image": "/goods/yudai.webp"
+    },
+    {
+      "id": "jinhua",
+      "name": "金华酒",
+      "kind": "吃食",
+      "chapter": 34,
+      "text": "书里最常点到的酒。请客、打点、外宅走动，桌上摆的往往是这一坛。",
+      "image": "/goods/jinhua.webp"
+    },
+    {
+      "id": "yanggao",
+      "name": "羊羔酒",
+      "kind": "吃食",
+      "chapter": 14,
+      "text": "冬日暖酒的一种。和金华酒、烧酒轮着上席，写的是清河宴饮的层次，不是随便一壶水酒。",
+      "image": "/goods/yanggao.webp"
+    },
+    {
+      "id": "shaojiu",
+      "name": "烧酒",
+      "kind": "吃食",
+      "chapter": 24,
+      "text": "烈酒。夜里私饮、寒天暖身，书里常和金华酒分开写：一坛请客，一壶够劲。",
+      "image": "/goods/shaojiu.webp"
+    },
+    {
+      "id": "putaojiu",
+      "name": "葡萄酒",
+      "kind": "吃食",
+      "chapter": 19,
+      "text": "西门庆在金莲房里筛一壶葡萄酒，细果配着喝。洋味酒名，写的是他嘴里的新鲜。",
+      "image": "/goods/putaojiu.webp"
+    },
+    {
+      "id": "cha",
+      "name": "茶",
+      "kind": "吃食",
+      "chapter": 21,
+      "text": "扫雪烹茶是月娘的场面。茶在这书里不是点缀，是人来人往时要端出来的那一杯。",
+      "image": "/goods/cha.webp"
+    },
+    {
+      "id": "xiangcha",
+      "name": "香茶",
+      "kind": "吃食",
+      "chapter": 11,
+      "text": "待客、调情时递嘴里的小物。金莲一辈人嘴里常有香茶，气味也是人情。",
+      "image": "/goods/xiangcha.webp"
+    },
+    {
+      "id": "guazi",
+      "name": "瓜子",
+      "kind": "吃食",
+      "chapter": 1,
+      "text": "金莲打发武大出门，只在帘子下嗑瓜子儿，把小脚露给人看。一粒瓜子，开场的风情。",
+      "image": "/goods/guazi.webp"
+    },
+    {
+      "id": "shaoya",
+      "name": "烧鸭",
+      "kind": "吃食",
+      "chapter": 3,
+      "text": "王婆设局，桌上摆肥鹅烧鸭、熟肉鲜鲊。吃食是勾引的引子，不是随便加菜。",
+      "image": "/goods/shaoya.webp"
+    },
+    {
+      "id": "xianzha",
+      "name": "鲜鲊",
+      "kind": "吃食",
+      "chapter": 3,
+      "text": "腌鱼一类的下酒物。和烧鸭、果子一起上王婆的桌子，市井「见成」熟食的气味很重。",
+      "image": "/goods/xianzha.webp"
+    },
+    {
+      "id": "shaoe",
+      "name": "烧鹅",
+      "kind": "吃食",
+      "chapter": 15,
+      "text": "元宵热闹处，圆社捧一只烧鹅、两瓶老酒来孝顺。球友的礼物，也是酒桌上的硬菜。",
+      "image": "/goods/shaoe.webp"
+    },
+    {
+      "id": "zhutou",
+      "name": "烧猪头",
+      "kind": "吃食",
+      "chapter": 23,
+      "text": "金莲她们赌东道，专点惠莲烧的猪头。一根柴禾烧得稀烂——厨下手艺，写成房里的较劲。",
+      "image": "/goods/zhutou.webp"
+    },
+    {
+      "id": "pangxie",
+      "name": "螃蟹",
+      "kind": "吃食",
+      "chapter": 35,
+      "text": "秋节宴上的时鲜。西门庆请客讲究河鲜海味，螃蟹上桌，写的是有钱人的口腹。",
+      "image": "/goods/pangxie.webp"
+    },
+    {
+      "id": "shoutao",
+      "name": "寿桃寿面",
+      "kind": "吃食",
+      "chapter": 15,
+      "text": "瓶儿生日，西门庆差玳安送羹菜、酒、寿桃、寿面。礼单上的吃食，就是人情的分量。",
+      "image": "/goods/shoutao.webp"
+    },
+    {
+      "id": "yuanxiao",
+      "name": "元宵",
+      "kind": "吃食",
+      "chapter": 15,
+      "text": "正月十五街上，卖元宵的高堆果馅。节令甜食，和灯市、圆社、唱曲挤在同一回热闹里。",
+      "image": "/goods/yuanxiao.webp"
+    },
+    {
+      "id": "guoxian",
+      "name": "蒸酥果馅",
+      "kind": "吃食",
+      "chapter": 1,
+      "text": "月娘从食箩里拣蒸酥果馅给人当茶。府里待客的细点心，比大鱼大肉更家常。",
+      "image": "/goods/guoxian.webp"
+    },
+    {
+      "id": "muxi",
+      "name": "木樨",
+      "kind": "吃食",
+      "chapter": 21,
+      "text": "桂花。茶汤、香饼里常见木樨气味，和茉莉一起，是府里熏出来的甜香。",
+      "image": "/goods/muxi.webp"
+    },
+    {
+      "id": "shengyao",
+      "name": "生药铺",
+      "kind": "铺面",
+      "chapter": 1,
+      "text": "西门达留下来的根基。西门庆后来开的不止这一处，但「清河县前生药铺」是他起家的招牌。",
+      "image": "/goods/shengyao.webp"
+    },
+    {
+      "id": "duanzi",
+      "name": "缎子铺",
+      "kind": "铺面",
+      "chapter": 58,
+      "text": "韩道国南货船到，新开缎子铺。和绒线铺、绸绢铺并立，伙计、标船、人情都从这些铺面往外走。",
+      "image": "/goods/duanzi.webp"
+    },
+    {
+      "id": "rongxian",
+      "name": "绒线铺",
+      "kind": "铺面",
+      "chapter": 33,
+      "text": "狮子街门面新开的买卖，韩道国做伙计。针线绒线是市井日用，铺面小，却连着外宅和官钱。",
+      "image": "/goods/rongxian.webp"
+    },
+    {
+      "id": "dangpu",
+      "name": "解当库",
+      "kind": "铺面",
+      "chapter": 20,
+      "text": "西门庆放债收当的口子。衣物首饰进出之间，写的是他如何用钱勒住人。",
+      "image": "/goods/dangpu.webp"
+    },
+    {
+      "id": "yanyin",
+      "name": "盐引",
+      "kind": "买卖",
+      "chapter": 48,
+      "text": "扬州兴贩盐引，是西门庆后半部里最大的一笔外财。官场人情和市井算计，在盐引上叠在一起。",
+      "image": "/goods/yanyin.webp"
+    },
+    {
+      "id": "biaochuan",
+      "name": "标船",
+      "kind": "买卖",
+      "chapter": 69,
+      "text": "运货走水路的船队。和缎子铺、盐引并提，西门庆的财不是只堆在柜上，是会走的。",
+      "image": "/goods/biaochuan.webp"
+    },
+    {
+      "id": "luodian",
+      "name": "螺钿床",
+      "kind": "器用",
+      "chapter": 29,
+      "text": "李瓶儿房里一张螺钿敞厅床，金莲眼红，也教西门庆花六十两替她买一张。一张床，两房心气。",
+      "image": "/goods/luodian.webp"
+    },
+    {
+      "id": "jiaoyi",
+      "name": "交椅",
+      "kind": "器用",
+      "chapter": 16,
+      "text": "李瓶儿请客，上面独安一张交椅让西门庆。谁坐交椅、谁坐侧席，书里写得清楚，是人情的硬规矩。",
+      "image": "/goods/jiaoyi.webp"
+    },
+    {
+      "id": "tangpo",
+      "name": "汤婆子",
+      "kind": "器用",
+      "chapter": 67,
+      "text": "熨被窝取暖的铜器。瓶儿死后，如意儿用汤婆熨被伺候西门庆，物件小，场面冷。",
+      "image": "/goods/tangpo.webp"
+    },
+    {
+      "id": "xijiao",
+      "name": "官轿",
+      "kind": "器用",
+      "chapter": 31,
+      "text": "西门庆做官、女人出门拜寿会亲，都要论轿。轿子一抬，市井和官派就接上了。",
+      "image": "/goods/xijiao.webp"
+    },
+    {
+      "id": "chuanshan",
+      "name": "川扇",
+      "kind": "器用",
+      "chapter": 1,
+      "text": "开卷就见的四川扇子。应伯爵一辈帮闲手里常摇，是清河市井的小道具。",
+      "image": "/goods/chuanshan.webp"
+    },
+    {
+      "id": "putao",
+      "name": "葡萄架",
+      "kind": "园亭",
+      "chapter": 27,
+      "text": "花园里的架子。第二十七回「醉闹葡萄架」因为这一处景物，成了府内争宠的样品。",
+      "image": "/goods/putao.webp"
+    },
+    {
+      "id": "cuihua",
+      "name": "藏春坞",
+      "kind": "园亭",
+      "chapter": 27,
+      "text": "花园深处的洞房式亭馆。西门庆与金莲、瓶儿走动的密处，园林不只是景，是埋伏。",
+      "image": "/goods/cuihua.webp"
+    },
+    {
+      "id": "huseng",
+      "name": "胡僧药",
+      "kind": "药物",
+      "chapter": 49,
+      "text": "遇胡僧得药。后文西门庆丧命，药是线，欲是核。器物里最毒的一件。",
+      "image": "/goods/huseng.webp"
+    },
+    {
+      "id": "shuanglu",
+      "name": "双陆",
+      "kind": "玩物",
+      "chapter": 1,
+      "text": "应伯爵们帮闲的本事之一。酒桌上双陆、象棋、抹牌，写的是清河市井的闲。",
+      "image": "/goods/shuanglu.webp"
+    },
+    {
+      "id": "xiangqi",
+      "name": "象棋",
+      "kind": "玩物",
+      "chapter": 1,
+      "text": "和双陆并提，是西门庆那一伙人「无不通晓」的赌博技艺。棋盘上消的是白日。",
+      "image": "/goods/xiangqi.webp"
+    },
+    {
+      "id": "cuju",
+      "name": "蹴鞠",
+      "kind": "玩物",
+      "chapter": 15,
+      "text": "西门庆与圆社踢的圆。狮子街旁热闹处，气毬不离身边，蹴鞠和酒色一样是社交润滑。",
+      "image": "/goods/cuju.webp"
+    },
+    {
+      "id": "gupai",
+      "name": "骨牌",
+      "kind": "玩物",
+      "chapter": 21,
+      "text": "月娘行令：一个牌儿名，两个骨牌名，合《西厢》一句。牌上饮酒，闺中也有规矩。",
+      "image": "/goods/gupai.webp"
+    },
+    {
+      "id": "touzi",
+      "name": "骰子",
+      "kind": "玩物",
+      "chapter": 23,
+      "text": "金莲、玉楼房里掷骰赌东道，输了就买酒买猪头。小赌里翻的是大醋意。",
+      "image": "/goods/touzi.webp"
+    },
+    {
+      "id": "zhipai",
+      "name": "纸牌",
+      "kind": "玩物",
+      "chapter": 51,
+      "text": "大姐与敬济灯下斗纸牌，金莲在旁指点。后宅夜里，牌声也是一场暗斗。",
+      "image": "/goods/zhipai.webp"
+    },
+    {
+      "id": "touhu",
+      "name": "投壶",
+      "kind": "玩物",
+      "chapter": 19,
+      "text": "李桂姐家里，酒罢到院子里投壶耍子。旧时宴乐的雅戏，落在院中也不改热闹。",
+      "image": "/goods/touhu.webp"
+    },
+    {
+      "id": "qiuqian",
+      "name": "秋千",
+      "kind": "玩物",
+      "chapter": 25,
+      "text": "花园里蹴罢秋千，薄汗轻衣。这一回用词开篇，把女眷的闲与露写进架子上。",
+      "image": "/goods/qiuqian.webp"
+    },
+    {
+      "id": "pipa",
+      "name": "琵琶",
+      "kind": "玩物",
+      "chapter": 11,
+      "text": "谢希大会一手好琵琶；院里桂姐们金樽玉阮、弹唱递酒。弦索是帮闲和粉头的随身本事。",
+      "image": "/goods/pipa.webp"
+    },
+    {
+      "id": "zheng",
+      "name": "筝",
+      "kind": "玩物",
+      "chapter": 11,
+      "text": "开卷诗就写「箫筝不响」。府里请客、院中劝酒，筝弦常在，是声色场里的底噪。",
+      "image": "/goods/zheng.webp"
+    },
+    {
+      "id": "shoujuan",
+      "name": "春意手卷",
+      "kind": "器用",
+      "chapter": 13,
+      "text": "西门庆房里的画卷。书里用画把欲望写实，物件本身也成了情节的推手。",
+      "image": "/goods/shoujuan.webp"
+    }
+  ],
+  "editions": [
+    {
+      "id": "systems",
+      "title": "三大版本系统",
+      "chapter": 1,
+      "paras": [
+        "明清刊印本，学界通常分三个系统，不是「每种铅印都算一版」。系统之内还有翻刻、配补，差别较小。",
+        "一、词话本系统：《新刻金瓶梅词话》，习称万历本。现存最早刻本，约万历四十五年前后。韵文多、说书口吻重，山东方言更浓。一九三二年前后在山西发现，才重新广为人知。",
+        "二、崇祯本系统：《新刻绣像批评金瓶梅》，习称绣像本或说散本。约明崇祯间刊行，有绣像二百幅。回目更整齐，删去不少词话韵语，叙事更像文人长篇。本站正文即这一系。",
+        "三、张评本系统：《皋鹤堂批评第一奇书金瓶梅》，康熙三十四年张竹坡评点。正文以崇祯本为底，加上读法、回评、眉批夹批。清代到民初，普通人读到的多半是这一系。"
+      ]
+    },
+    {
+      "id": "diff",
+      "title": "词话本和崇祯本差在哪",
+      "chapter": 1,
+      "paras": [
+        "第一回就不同：词话本从武松打虎、金莲嫌夫写起；崇祯本改成「西门庆热结十弟兄　武二郎冷遇亲哥嫂」。",
+        "人名也有出入，如女婿词话本常作「陈经济」，崇祯本作「陈敬济」。第五十三、五十四回等处，两系情节也不完全一样。",
+        "所以不能拿词话本的段落补进崇祯本里读，当作「同一部书缺页」。本站不混用。"
+      ]
+    },
+    {
+      "id": "this-site",
+      "title": "本站用哪一种",
+      "chapter": 1,
+      "paras": [
+        "底本是崇祯本《新刻绣像批评金瓶梅》，取维基文库公有领域文本，一百回齐全。",
+        "词话本更早，但文库目前完整可用的崇祯本更适合做全书精读；张评本的价值主要在评点，正文仍属崇祯一系。"
+      ]
+    },
+    {
+      "id": "modern",
+      "title": "洁本、古本和今印",
+      "chapter": 1,
+      "paras": [
+        "清末以来还有删节「洁本」（如《绘成真本金瓶梅》一路）、託名「古本」的改写本，以及今人标点整理本。它们多半附着在上述系统之上，或另做删改，不算第四套正文系统。",
+        "本站不采用现代出版社的整理本做底，避免版权与改字搅在一起。繁体转简体、助词「著」作「着」，只为阅读，不另润色。"
+      ]
+    },
+    {
+      "id": "source",
+      "title": "从哪里导出",
+      "chapter": 1,
+      "paras": [
+        "直连维基文库不稳时，正文取自 Wikimedia 的 zhwikisource 转储，再按页号截出一百回。",
+        "若以后有完整公有领域词话本，可以另开一版对照，不和这一版混排。"
+      ]
+    }
+  ],
+  "market": [
+    {
+      "id": "shops",
+      "label": "铺面",
+      "people": "生药铺 · 缎子铺 · 绒线铺",
+      "chapter": 1,
+      "text": "西门庆不是空有一宅妻妾。铺面、伙计、标船，才是他在清河站得住的根。府里的排场，钱从这些门里进来。"
+    },
+    {
+      "id": "yamen",
+      "label": "提刑",
+      "people": "西门庆 · 夏提刑",
+      "chapter": 30,
+      "text": "生子前后加官，做到山东提刑所理刑。官司、人情、苗青一案，都要经过这衙门。"
+    },
+    {
+      "id": "caijing",
+      "label": "蔡京门路",
+      "people": "蔡京 · 翟谦 · 西门庆",
+      "chapter": 27,
+      "text": "生辰担、干父子、管家传书。西门庆的官，不是考来的，是东京这座门路上买来的。"
+    },
+    {
+      "id": "lichun",
+      "label": "丽春院",
+      "people": "李桂姐 · 李娇儿 · 应伯爵",
+      "chapter": 11,
+      "text": "院里不只是嫖。梳笼、帮闲、打听、翻脸，外宅的消息有一半从这里走。"
+    },
+    {
+      "id": "salt",
+      "label": "盐引与标船",
+      "people": "来保 · 韩道国 · 西门庆",
+      "chapter": 27,
+      "text": "扬州盐引、江湖标船，是后半部最大的买卖线。家里热闹时，货还在路上。"
+    },
+    {
+      "id": "xuanfu",
+      "label": "招宣府",
+      "people": "林太太 · 王三官 · 文嫂",
+      "chapter": 68,
+      "text": "官家门户。西门庆借着王三官这条线进门，官场体面和私情在同一座府里叠着。"
+    }
+  ]
+}

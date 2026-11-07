@@ -1,0 +1,39 @@
+# 清洗 AI Studio 的 sources 注解后的 Cloud Run 服务声明（仅需首次执行）
+# gcloud run services replace scripts/clean_service.yaml --project=myxxyagent --region=us-west1
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  annotations:
+    generativelanguage.googleapis.com/applet-id: 118b1edb-b66c-43e3-a4e5-5384d145f5d2
+    generativelanguage.googleapis.com/type: fullstack-applet
+    run.googleapis.com/ingress: all
+    run.googleapis.com/invoker-iam-disabled: 'true'
+    run.googleapis.com/maxScale: '1'
+  labels:
+    cloud.googleapis.com/location: us-west1
+    managed-by: google-ai-studio
+  name: honglou
+  namespace: '117490560652'
+spec:
+  template:
+    metadata:
+      annotations:
+        autoscaling.knative.dev/minScale: '0'
+        run.googleapis.com/cpu-throttling: 'true'
+    spec:
+      containerConcurrency: 1000
+      containers:
+      - image: us-docker.pkg.dev/cloudrun/container/hello
+        name: app-container
+        ports:
+        - containerPort: 8080
+          name: http1
+        resources:
+          limits:
+            cpu: '1'
+            memory: 256Mi
+      serviceAccountName: 117490560652-compute@developer.gserviceaccount.com
+      timeoutSeconds: 300
+  traffic:
+  - latestRevision: true
+    percent: 100

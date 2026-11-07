@@ -1,0 +1,32 @@
+steps:
+  # 1. 构建 Docker 镜像（Next 静态导出 + nginx）
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/${_SERVICE}:$COMMIT_SHA', '-f', 'Dockerfile', '.']
+
+  # 2. 推送镜像
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/${_SERVICE}:$COMMIT_SHA']
+
+  # 3. 部署到 AI Studio 创建的同名 Cloud Run 服务
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'gcloud'
+    args: [
+      'run', 'deploy', '${_SERVICE}',
+      '--image', 'gcr.io/$PROJECT_ID/${_SERVICE}:$COMMIT_SHA',
+      '--region', '${_REGION}',
+      '--project', '$PROJECT_ID',
+      '--port', '8080',
+      '--memory', '256Mi'
+    ]
+
+images:
+  - 'gcr.io/$PROJECT_ID/${_SERVICE}:$COMMIT_SHA'
+
+substitutions:
+  # TODO: 改成 Cloud Run 控制台里 honglou.ai.studio 对应的服务名与区域
+  _SERVICE: honglou
+  _REGION: us-west1
+
+options:
+  logging: CLOUD_LOGGING_ONLY
+  substitutionOption: ALLOW_LOOSE

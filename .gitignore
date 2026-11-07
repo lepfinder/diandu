@@ -1,0 +1,15 @@
+node_modules
+.DS_Store
+*.log
+.next
+.next-dev
+out
+dist
+deploy
+tsconfig.tsbuildinfo
+.turbo
+.cache
+.image-backups
+.env
+.env.*
+!.env.example

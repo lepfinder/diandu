@@ -1,0 +1,131 @@
+{
+  "kinds": [
+    {
+      "id": "fox",
+      "name": "狐",
+      "blurb": "聊斋写狐最多。有侠、有媚、有报恩、有知己，不全是惑人的。",
+      "stories": ["娇娜", "青凤", "婴宁", "莲香", "红玉", "小翠"],
+      "image": "/kinds/fox.webp"
+    },
+    {
+      "id": "ghost",
+      "name": "鬼",
+      "blurb": "女鬼未必皆厉。小倩、连琐、九娘，写的是漂泊与托付。",
+      "stories": ["画皮", "聂小倩", "连琐", "公孙九娘"],
+      "image": "/kinds/ghost.webp"
+    },
+    {
+      "id": "flower",
+      "name": "花妖",
+      "blurb": "牡丹、菊、耐冬，花开成精，一疑心便散。",
+      "stories": ["香玉", "黄英", "葛巾", "白秋练"],
+      "image": "/kinds/flower.webp"
+    },
+    {
+      "id": "satire",
+      "name": "刺世",
+      "blurb": "促织、席方平、考城隍。狐鬼之外，官场与科举的冷。",
+      "stories": ["考城隍", "促织", "席方平", "胭脂", "梦狼"],
+      "image": "/kinds/satire.webp"
+    },
+    {
+      "id": "dao",
+      "name": "仙道奇术",
+      "blurb": "穿墙、换心、画壁入画。求仙的心术，一眼能看穿。",
+      "stories": ["劳山道士", "画壁", "种梨", "陆判"],
+      "image": "/kinds/dao.webp"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "huabi",
+      "plate": "壁",
+      "title": "画壁",
+      "chapter": 6,
+      "summary": "朱孝廉入寺院看壁画，恍惚走进画里，与垂髻女相昵。僧一呼，他跌回尘世。壁上人影已变，朱生惆怅不已。",
+      "people": ["朱孝廉", "垂髻女"],
+      "image": "/scenes/huabi.webp"
+    },
+    {
+      "id": "huapi",
+      "plate": "皮",
+      "title": "画皮",
+      "chapter": 40,
+      "summary": "王生把披着人皮的厉鬼带回家。道士的木剑他不信，心被掏走。妻子跪乞道士，终以痰唾救回这条命。",
+      "people": ["王生", "画皮女", "道士"],
+      "image": "/scenes/huapi.webp"
+    },
+    {
+      "id": "yingning",
+      "plate": "笑",
+      "title": "婴宁",
+      "chapter": 48,
+      "summary": "王子服追一个只会笑的女郎到山村。婴宁爱花，也爱恶作剧。入门之后仍不改天真，却能在关事上护住这一家。",
+      "people": ["婴宁", "王子服"],
+      "image": "/scenes/yingning.webp"
+    },
+    {
+      "id": "nie",
+      "plate": "倩",
+      "title": "聂小倩",
+      "chapter": 49,
+      "summary": "宁采臣夜宿金华，拒色不拒义。小倩说破自己被妖物驱使，宁生助她迁葬。人鬼夫妻，从寺里那一夜开始。",
+      "people": ["聂小倩", "宁采臣"],
+      "image": "/scenes/nie.webp"
+    },
+    {
+      "id": "cuzhi",
+      "plate": "虫",
+      "title": "促织",
+      "chapter": 136,
+      "summary": "成名因贡促织倾家。儿子扑死促织后投井，魂却化成一头善斗的促织。宫里的玩物，压垮一户人家。",
+      "people": ["成名", "成子"],
+      "image": "/scenes/cuzhi.webp"
+    },
+    {
+      "id": "xifangping",
+      "plate": "讼",
+      "title": "席方平",
+      "chapter": 397,
+      "summary": "席方平为父入冥告状，城隍、郡司、冥王层层受贿。他受炮烙、锯解仍不屈，终得二郎神昭雪。",
+      "people": ["席方平", "二郎神"],
+      "image": "/scenes/xifangping.webp"
+    },
+    {
+      "id": "xiangyu",
+      "plate": "花",
+      "title": "香玉",
+      "chapter": 441,
+      "summary": "黄生爱上一株白牡丹的精魂香玉。花被移走后香玉死去，黄生哭坟；耐冬绛雪来慰，香玉终又重生。",
+      "people": ["香玉", "绛雪", "黄生"],
+      "image": "/scenes/xiangyu.webp"
+    },
+    {
+      "id": "huangying",
+      "plate": "菊",
+      "title": "黄英",
+      "chapter": 413,
+      "summary": "马子才清高爱菊，黄英却靠卖菊治生。陶生醉后化为菊。雅人要面子，花精更懂过日子。",
+      "people": ["黄英", "陶生", "马子才"],
+      "image": "/scenes/huangying.webp"
+    },
+    {
+      "id": "yanzhi",
+      "plate": "案",
+      "title": "胭脂",
+      "chapter": 400,
+      "summary": "胭脂一念慕鄂生，牵出宿介、毛大富连环冤案。施愚山复审，才把真凶钉住。公案里仍有人情。",
+      "people": ["胭脂", "鄂秋隼", "施愚山"],
+      "image": "/scenes/yanzhi.webp"
+    },
+    {
+      "id": "laoshan",
+      "plate": "墙",
+      "title": "劳山道士",
+      "chapter": 15,
+      "summary": "王生求仙怕苦，只学得穿墙术。回家一试，头触硬壁。异史氏说：心术不正，神仙也难传。",
+      "people": ["王生", "劳山道士"],
+      "image": "/scenes/laoshan.webp"
+    }
+  ]
+}

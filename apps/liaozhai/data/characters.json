@@ -1,0 +1,414 @@
+{
+  "groups": [
+    {
+      "id": "fox",
+      "name": "狐",
+      "color": "#9a4a28"
+    },
+    {
+      "id": "ghost",
+      "name": "鬼",
+      "color": "#3d5a6c"
+    },
+    {
+      "id": "flower",
+      "name": "花妖",
+      "color": "#6b5344"
+    },
+    {
+      "id": "human",
+      "name": "人间",
+      "color": "#2f5a48"
+    },
+    {
+      "id": "immortal",
+      "name": "仙道",
+      "color": "#5a4a73"
+    },
+    {
+      "id": "other",
+      "name": "异类",
+      "color": "#4a6b5c"
+    }
+  ],
+  "list": [
+    {
+      "id": "niexiaoqian",
+      "name": "聂小倩",
+      "group": "ghost",
+      "role": "女鬼",
+      "firstCh": 49,
+      "lastCh": 49,
+      "bio": "第二卷《聂小倩》。浙人宁采臣夜宿金华寺，遇被妖物驱使的女鬼小倩。宁生义不受色，终助她迁葬，结为夫妇。"
+    },
+    {
+      "id": "yingning",
+      "name": "婴宁",
+      "group": "fox",
+      "role": "狐女",
+      "firstCh": 48,
+      "lastCh": 48,
+      "bio": "第二卷《婴宁》。王子服郊外遇笑容不断的女郎，后知其为狐。喜花喜笑，嫁入王家后仍天真，却能护家惩恶。"
+    },
+    {
+      "id": "jiaona",
+      "name": "娇娜",
+      "group": "fox",
+      "role": "狐女",
+      "firstCh": 22,
+      "lastCh": 22,
+      "bio": "第一卷《娇娜》。孔生遇狐家姊妹松娘、娇娜。松娘嫁孔生，娇娜以术救其心痛。后孔生救娇娜于雷劫，结为知己。"
+    },
+    {
+      "id": "qingfeng",
+      "name": "青凤",
+      "group": "fox",
+      "role": "狐女",
+      "firstCh": 39,
+      "lastCh": 39,
+      "bio": "第一卷《青凤》。耿去病入废宅遇狐，属意青凤。青凤羞怯回避，后难中遇救，终与耿生偕老。"
+    },
+    {
+      "id": "hongyu",
+      "name": "红玉",
+      "group": "fox",
+      "role": "侠狐",
+      "firstCh": 80,
+      "lastCh": 80,
+      "bio": "第二卷《红玉》。冯相如家破人亡后，红玉暗助其复仇兴家，又自引去。侠而有情，不恋名分。"
+    },
+    {
+      "id": "lianxiang",
+      "name": "莲香",
+      "group": "fox",
+      "role": "狐女",
+      "firstCh": 69,
+      "lastCh": 69,
+      "bio": "第二卷《莲香》。桑生先后遇狐女莲香与女鬼李氏。莲香教他养身，李氏亦改过。两女同事一生，成聊斋里少见的和解。"
+    },
+    {
+      "id": "xiaocui",
+      "name": "小翠",
+      "group": "fox",
+      "role": "狐女",
+      "firstCh": 287,
+      "lastCh": 287,
+      "bio": "第七卷《小翠》。报恩来的狐女，嫁给痴公子王元丰，治好他的痴病，又在公案里机智护家，功成身退。"
+    },
+    {
+      "id": "huapi",
+      "name": "画皮女",
+      "group": "ghost",
+      "role": "厉鬼",
+      "firstCh": 40,
+      "lastCh": 40,
+      "bio": "第一卷《画皮》。王生路遇美女，实为披人皮的厉鬼。道士赐木剑，王生不听，终被掏心；其妻乞术救回。"
+    },
+    {
+      "id": "liansuo",
+      "name": "连琐",
+      "group": "ghost",
+      "role": "女鬼",
+      "firstCh": 97,
+      "lastCh": 97,
+      "bio": "第三卷《连琐》。杨于畏夜读，听墙外吟诗，遂识女鬼连琐。两人联句谈心，后连琐借尸还魂。"
+    },
+    {
+      "id": "jiuniang",
+      "name": "公孙九娘",
+      "group": "ghost",
+      "role": "女鬼",
+      "firstCh": 135,
+      "lastCh": 135,
+      "bio": "第四卷《公孙九娘》。莱阳生入冥，见于七一案中冤死的诸女。与九娘成婚，醒后觅坟，终不得其处。"
+    },
+    {
+      "id": "xiangyu",
+      "name": "香玉",
+      "group": "flower",
+      "role": "牡丹精",
+      "firstCh": 441,
+      "lastCh": 441,
+      "bio": "第十一卷《香玉》。崂山下一白牡丹成精，名香玉；耐冬花精绛雪为友。黄生与香玉相爱，花被移走后枯而复生。"
+    },
+    {
+      "id": "huangying",
+      "name": "黄英",
+      "group": "flower",
+      "role": "菊精",
+      "firstCh": 413,
+      "lastCh": 413,
+      "bio": "第十一卷《黄英》。马子才好菊，遇黄英姐弟。黄英善艺菊治生，弟陶生醉化为菊。世俗与雅趣在这篇里碰在一起。"
+    },
+    {
+      "id": "gejin",
+      "name": "葛巾",
+      "group": "flower",
+      "role": "牡丹精",
+      "firstCh": 411,
+      "lastCh": 411,
+      "bio": "第十卷《葛巾》。常大用爱牡丹，遇曹州牡丹精葛巾与玉版。疑心一起，花精遂去，只留牡丹丛生。"
+    },
+    {
+      "id": "baiqiulian",
+      "name": "白秋练",
+      "group": "flower",
+      "role": "白鲥精",
+      "firstCh": 419,
+      "lastCh": 419,
+      "bio": "第十一卷《白秋练》。慕蟾宫夜闻吟诗，识白秋练。她识书知商，助慕家贩运，后随潮信往来。"
+    },
+    {
+      "id": "xifangping",
+      "name": "席方平",
+      "group": "human",
+      "role": "孝子",
+      "firstCh": 397,
+      "lastCh": 397,
+      "bio": "第十卷《席方平》。父被羊姓贿通冥吏搒掠，席方平赴地下告状，层层受刑，终得二郎神申雪。刚肠在鬼域里也不折。"
+    },
+    {
+      "id": "chengming",
+      "name": "成名",
+      "group": "human",
+      "role": "里正",
+      "firstCh": 136,
+      "lastCh": 136,
+      "bio": "第四卷《促织》。因征促织倾家，子化促织又得而复失。一篇小虫，写尽官役之酷。"
+    },
+    {
+      "id": "yanzhi",
+      "name": "胭脂",
+      "group": "human",
+      "role": "绣户女",
+      "firstCh": 400,
+      "lastCh": 400,
+      "bio": "第十卷《胭脂》。东昌卞氏女因一念之慕牵入命案。施愚山审出真凶，人情与公案缠在一处。"
+    },
+    {
+      "id": "lupan",
+      "name": "陆判",
+      "group": "immortal",
+      "role": "冥判",
+      "firstCh": 47,
+      "lastCh": 47,
+      "bio": "第二卷《陆判》。陆判官为朱尔旦换心、为友人换美首。酒人与冥吏同席，聊斋里少见的豪爽。"
+    },
+    {
+      "id": "laoshan",
+      "name": "劳山道士",
+      "group": "immortal",
+      "role": "道士",
+      "firstCh": 15,
+      "lastCh": 15,
+      "bio": "第一卷《劳山道士》。王生求仙却怕苦，学穿墙术归家一试，头触硬壁。异史氏笑其心术不正。"
+    },
+    {
+      "id": "ruiyun",
+      "name": "瑞云",
+      "group": "human",
+      "role": "名妓",
+      "firstCh": 402,
+      "lastCh": 402,
+      "bio": "第十卷《瑞云》。杭妓瑞云慧眼识贺生。后脸忽变丑，贺生仍娶之；仙人点破，色衰而情真。"
+    },
+    {
+      "id": "xinshisiniang",
+      "name": "辛十四娘",
+      "group": "fox",
+      "role": "狐女",
+      "firstCh": 152,
+      "lastCh": 152,
+      "bio": "第四卷《辛十四娘》。冯生误入狐宅，娶十四娘。她预知祸福，助冯生脱难，终因族法离去。柔而能断。"
+    },
+    {
+      "id": "yatou",
+      "name": "鸦头",
+      "group": "fox",
+      "role": "狐女",
+      "firstCh": 173,
+      "lastCh": 173,
+      "bio": "第五卷《鸦头》。鸦头不愿做娼，与王文私奔。后被追回受虐，仍守志不移。狐而有烈性。"
+    },
+    {
+      "id": "qingmei",
+      "name": "青梅",
+      "group": "fox",
+      "role": "狐婢",
+      "firstCh": 130,
+      "lastCh": 130,
+      "bio": "第四卷《青梅》。阿喜家婢青梅慧眼识张生贫而可依，先自嫁，后促成阿喜婚事。以婢而能主。"
+    },
+    {
+      "id": "fengsanniang",
+      "name": "封三娘",
+      "group": "fox",
+      "role": "狐女",
+      "firstCh": 176,
+      "lastCh": 176,
+      "bio": "第五卷《封三娘》。范十一娘的闺中密友，实为狐。为友择婿、代受牢狱，情义深于人。"
+    },
+    {
+      "id": "axiu",
+      "name": "阿绣",
+      "group": "fox",
+      "role": "狐女",
+      "firstCh": 285,
+      "lastCh": 285,
+      "bio": "第七卷《阿绣》。刘子固恋杂货肆中女郎阿绣，又遇容貌相同的狐女。真假之间，情仍专一。"
+    },
+    {
+      "id": "xiaoxie",
+      "name": "小谢",
+      "group": "ghost",
+      "role": "女鬼",
+      "firstCh": 223,
+      "lastCh": 223,
+      "bio": "第六卷《小谢》。陶生夜居荒第，遇小谢、秋容二鬼。嬉闹中生情，后借尸还魂，结局圆满。"
+    },
+    {
+      "id": "wuqiuyue",
+      "name": "伍秋月",
+      "group": "ghost",
+      "role": "女鬼",
+      "firstCh": 193,
+      "lastCh": 193,
+      "bio": "第五卷《伍秋月》。王鼎于旅舍遇女鬼伍秋月，结为夫妇，并助她报杀身之仇。"
+    },
+    {
+      "id": "meinv",
+      "name": "梅女",
+      "group": "ghost",
+      "role": "女鬼",
+      "firstCh": 261,
+      "lastCh": 261,
+      "bio": "第七卷《梅女》。梅女因诬自尽，封氏宅中为鬼。后得汪生为之昭雪，冤气始消。"
+    },
+    {
+      "id": "huanniang",
+      "name": "宦娘",
+      "group": "ghost",
+      "role": "女鬼",
+      "firstCh": 284,
+      "lastCh": 284,
+      "bio": "第七卷《宦娘》。温如春善琴，遇鬼女宦娘。她不成其私，却暗中玉成温生与葛氏女之婚。"
+    },
+    {
+      "id": "abao",
+      "name": "阿宝",
+      "group": "human",
+      "role": "巨家女",
+      "firstCh": 70,
+      "lastCh": 70,
+      "bio": "第二卷《阿宝》。孙子楚性迂，因爱阿宝魂化鹦鹉。阿宝感其诚，终成眷属。情能通物。"
+    },
+    {
+      "id": "qiaonv",
+      "name": "乔女",
+      "group": "human",
+      "role": "奇丑妇",
+      "firstCh": 382,
+      "lastCh": 382,
+      "bio": "第九卷《乔女》。貌丑而义极。孟生敬之，乔女不受身而为之抚孤、理家、报仇。"
+    },
+    {
+      "id": "xianv",
+      "name": "侠女",
+      "group": "human",
+      "role": "剑侠",
+      "firstCh": 67,
+      "lastCh": 67,
+      "bio": "第二卷《侠女》。顾生邻女以母病相依，实报父仇的剑侠。事了携子而去，来去无踪。"
+    },
+    {
+      "id": "shangsanguan",
+      "name": "商三官",
+      "group": "human",
+      "role": "孝女",
+      "firstCh": 106,
+      "lastCh": 106,
+      "bio": "第三卷《商三官》。父为豪绅所杀，三官伪为优伶潜入仇家，手刃仇人后自尽。"
+    },
+    {
+      "id": "xiliu",
+      "name": "细柳",
+      "group": "human",
+      "role": "贤妇",
+      "firstCh": 293,
+      "lastCh": 293,
+      "bio": "第七卷《细柳》。高生继室细柳治家严明，教子有方。柔能克刚，家业因之复振。"
+    },
+    {
+      "id": "lvyinv",
+      "name": "绿衣女",
+      "group": "other",
+      "role": "蜂精",
+      "firstCh": 195,
+      "lastCh": 195,
+      "bio": "第五卷《绿衣女》。于生夜遇绿衣长裙女郎，歌喉极妙，实为蜂精。后于生救之于蛛网。"
+    },
+    {
+      "id": "zhuqing",
+      "name": "竹青",
+      "group": "other",
+      "role": "鸟精",
+      "firstCh": 431,
+      "lastCh": 431,
+      "bio": "第十一卷《竹青》。鱼客于吴地救一乌，乌化女竹青报恩成婚。后鱼客贵，竹青仍来去江汉。"
+    },
+    {
+      "id": "axian",
+      "name": "阿纤",
+      "group": "other",
+      "role": "鼠精",
+      "firstCh": 401,
+      "lastCh": 401,
+      "bio": "第十卷《阿纤》。奚山遇少女阿纤，善积粟治家。后知其为鼠精，仍两情不渝。"
+    },
+    {
+      "id": "huaguzi",
+      "name": "花姑子",
+      "group": "other",
+      "role": "香獐精",
+      "firstCh": 183,
+      "lastCh": 183,
+      "bio": "第五卷《花姑子》。安幼舆入山遇花姑子，得其父报恩相救。人兽之间，仍有深情。"
+    },
+    {
+      "id": "hehuasan",
+      "name": "荷花三娘子",
+      "group": "other",
+      "role": "荷花精",
+      "firstCh": 197,
+      "lastCh": 197,
+      "bio": "第五卷《荷花三娘子》。宗湘若遇荷花三娘子，教以固精之术。花落人去，只留池塘一梦。"
+    },
+    {
+      "id": "xihuzhu",
+      "name": "西湖主",
+      "group": "immortal",
+      "role": "龙女",
+      "firstCh": 185,
+      "lastCh": 185,
+      "bio": "第五卷《西湖主》。陈弼教误入西湖主苑，得龙女厚遇。后重逢江上，再续仙缘。"
+    },
+    {
+      "id": "pianpian",
+      "name": "翩翩",
+      "group": "immortal",
+      "role": "仙女",
+      "firstCh": 125,
+      "lastCh": 125,
+      "bio": "第三卷《翩翩》。罗子浮入山，遇仙女翩翩。她剪叶为衣、以芋作饼，治其轻薄，终使之归正。"
+    },
+    {
+      "id": "change",
+      "name": "嫦娥",
+      "group": "immortal",
+      "role": "月仙",
+      "firstCh": 314,
+      "lastCh": 314,
+      "bio": "第八卷《嫦娥》。宗子美先后遇颠当与嫦娥。月中仙人谪落人间，聚散仍系于天意。"
+    }
+  ]
+}

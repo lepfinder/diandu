@@ -1,0 +1,23 @@
+node_modules
+.next
+.next-dev
+out
+.DS_Store
+*.log
+tsconfig.tsbuildinfo
+.playwright-cli
+output
+look_cand*.jpg
+
+# publish.mjs 拷贝到根目录的静态产物（构建时由 CI 重新生成）
+/404
+/404.html
+/_next
+/characters
+/graph
+/images
+/read
+/search
+/topics
+/index.html
+/index.txt

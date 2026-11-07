@@ -1,0 +1,428 @@
+{
+  "title": "红楼饮食",
+  "intro": "《红楼梦》写吃，写的是阶层、节令与人情。此处不考据复原菜谱，只整理书中出现的吃食——谁在吃、何时吃、吃出什么故事。点回目可回正文。",
+  "categories": [
+    {
+      "id": "dish",
+      "name": "菜肴"
+    },
+    {
+      "id": "soup",
+      "name": "汤羹粥点"
+    },
+    {
+      "id": "tea",
+      "name": "茶酒饮子"
+    },
+    {
+      "id": "fruit",
+      "name": "果子零食"
+    }
+  ],
+  "items": [
+    {
+      "id": "qiexiang",
+      "category": "dish",
+      "term": "茄鲞",
+      "brief": "刘姥姥尝不出茄子味的「细菜」",
+      "detail": "凤姐喂刘姥姥：去皮切丁，用鸡油炸、鸡汤煨、糟油拌、收干——十几只鸡配一只茄子。是贾府饮食精致到「吃不出本味」的标本，也是贫富对照最狠的一笔。",
+      "scene": "两宴大观园",
+      "chars": [
+        "刘姥姥",
+        "王熙凤"
+      ],
+      "chRef": 41,
+      "image": "/images/food-qiexiang.webp"
+    },
+    {
+      "id": "lianyegeng",
+      "category": "soup",
+      "term": "莲叶羹 / 荷叶羹",
+      "brief": "宝玉挨打后的「小荷叶莲蓬羹」",
+      "detail": "银模子打出荷叶莲蓬花样，汤极清极淡。宝玉伤后思饮食，玉钏亲尝——一碗羹里有娇养、有余痛、有宽恕。",
+      "scene": "宝玉挨打后",
+      "chars": [
+        "贾宝玉",
+        "玉钏"
+      ],
+      "chRef": 35,
+      "image": "/images/food-lianyegeng.webp"
+    },
+    {
+      "id": "suanmeitang",
+      "category": "tea",
+      "term": "酸梅汤",
+      "brief": "宝玉挨打后要喝的凉饮",
+      "detail": "宝玉说只想喝酸梅汤，王夫人不许多喝凉的，改吃荷叶羹。写饮食也是写管束与心疼。",
+      "scene": "挨打调养",
+      "chars": [
+        "贾宝玉",
+        "王夫人"
+      ],
+      "chRef": 35,
+      "image": "/images/food-suanmeitang.webp"
+    },
+    {
+      "id": "chanzheng",
+      "category": "dish",
+      "term": "鹌鹑",
+      "brief": "芦雪庵烤鹿肉之外的野味席面",
+      "detail": "冬日鹿肉、鹌鹑等野味入馔，芦雪庵「割腥啖膻」是大观园最放肆的一顿——真名士自风流。",
+      "scene": "芦雪庵联诗",
+      "chars": [
+        "史湘云",
+        "贾宝玉"
+      ],
+      "chRef": 49,
+      "image": "/images/food-chanzheng.webp"
+    },
+    {
+      "id": "lurou",
+      "category": "dish",
+      "term": "烤鹿肉",
+      "brief": "割腥啖膻，湘云带头大嚼",
+      "detail": "生烤鹿肉，湘云说「是真名士自风流」。与随后即景联诗对照：最俗的吃相，最高的才情。",
+      "scene": "琉璃世界白雪红梅",
+      "chars": [
+        "史湘云",
+        "贾宝玉",
+        "平儿"
+      ],
+      "chRef": 49,
+      "image": "/images/food-lurou.webp"
+    },
+    {
+      "id": "niunai",
+      "category": "soup",
+      "term": "牛乳蒸羊羔 / 酥酪",
+      "brief": "冬日补品与酪",
+      "detail": "富贵冬补与「糖蒸酥酪」等乳食，见贾府冬日饮食；酥酪还牵出宝玉留给袭人、李嬷嬷赌气的家务戏。",
+      "scene": "冬日 / 家常",
+      "chars": [
+        "贾宝玉",
+        "袭人"
+      ],
+      "chRef": 19,
+      "image": "/images/food-niunai.webp"
+    },
+    {
+      "id": "tangsulong",
+      "category": "fruit",
+      "term": "糖蒸酥酪",
+      "brief": "宝玉留给袭人的宫中酪",
+      "detail": "元春赐的酥酪，宝玉惦记袭人留着；李嬷嬷倚老吃了，引发一场气。食物作人情筹码。",
+      "scene": "花解语前后",
+      "chars": [
+        "花袭人",
+        "李嬷嬷"
+      ],
+      "chRef": 19,
+      "image": "/images/food-tangsulong.webp"
+    },
+    {
+      "id": "fenglu",
+      "category": "tea",
+      "term": "枫露茶",
+      "brief": "茜雪被撵的导火索之一",
+      "detail": "宝玉早起要的茶，被李嬷嬷吃了；宝玉怒摔茶杯，茜雪受累。一杯茶牵出奴才替罪。",
+      "scene": "早起风波",
+      "chars": [
+        "贾宝玉",
+        "茜雪",
+        "李嬷嬷"
+      ],
+      "chRef": 8,
+      "image": "/images/food-fenglu.webp"
+    },
+    {
+      "id": "luanchao",
+      "category": "dish",
+      "term": "鹌子",
+      "brief": "细巧小馔",
+      "detail": "鹌鹑、鹌子等小件野味，常见于宴席冷碟与宵夜，见饮食「细」字诀。",
+      "scene": "宴饮",
+      "chars": [],
+      "chRef": 53,
+      "image": "/images/food-luanchao.webp"
+    },
+    {
+      "id": "xie",
+      "category": "dish",
+      "term": "螃蟹",
+      "brief": "赏桂吃蟹，宝钗作螃蟹咏",
+      "detail": "螃蟹宴：黛玉吃一点夹子肉即罢，宝钗吃得多并作《螃蟹咏》讽世。「眼前道路无经纬」——吃蟹也是写人。",
+      "scene": "菊花螃蟹宴",
+      "chars": [
+        "薛宝钗",
+        "林黛玉",
+        "史湘云"
+      ],
+      "chRef": 38,
+      "image": "/images/food-xie.webp"
+    },
+    {
+      "id": "gengyuan",
+      "category": "fruit",
+      "term": "菱角 / 鸡头 / 鲜藕",
+      "brief": "时令果子与湖鲜",
+      "detail": "菱角、鸡头米、鲜藕、鲜荔等时令物，串起大观园节令与女儿们的零嘴场景。",
+      "scene": "夏日园中",
+      "chars": [
+        "香菱"
+      ],
+      "chRef": 19,
+      "image": "/images/food-gengyuan.webp"
+    },
+    {
+      "id": "lizhi",
+      "category": "fruit",
+      "term": "鲜荔枝",
+      "brief": "「白玉钏亲尝莲叶羹」旁的南果",
+      "detail": "南边鲜果入贾府，见物流与富贵；也见宝玉、凤姐分派食物的人情网络。",
+      "scene": "夏果入府",
+      "chars": [
+        "贾宝玉"
+      ],
+      "chRef": 37,
+      "image": "/images/food-lizhi.webp"
+    },
+    {
+      "id": "yanyan",
+      "category": "soup",
+      "term": "燕窝",
+      "brief": "黛玉调养的「燕窝粥」",
+      "detail": "宝钗劝黛玉每日用燕窝滋阴；黛玉说自己是客，不好多要。后宝钗送燕窝、冰糖——金兰契的物质一面。",
+      "scene": "金兰契前后",
+      "chars": [
+        "林黛玉",
+        "薛宝钗"
+      ],
+      "chRef": 45,
+      "image": "/images/food-yanyan.webp"
+    },
+    {
+      "id": "lingjiao",
+      "category": "fruit",
+      "term": "菱粉糕 / 藕粉桂糖糕",
+      "brief": "点心匣子里的细点",
+      "detail": "贾府点心分送：菱粉糕、藕粉桂糖糕等，见「吃食当礼」的内宅经济学。",
+      "scene": "分送点心",
+      "chars": [
+        "贾母"
+      ],
+      "chRef": 41,
+      "image": "/images/food-lingjiao.webp"
+    },
+    {
+      "id": "yajin",
+      "category": "dish",
+      "term": "鸡髓笋 / 糟鹌鹑",
+      "brief": "糟制与清供小菜",
+      "detail": "糟、腌、清供是贾府下酒下饭的常备；凤姐、尤氏桌上多见，写「富」在细节。",
+      "scene": "夜宴 / 小酌",
+      "chars": [
+        "王熙凤",
+        "尤氏"
+      ],
+      "chRef": 53,
+      "image": "/images/food-yajin.webp"
+    },
+    {
+      "id": "huang",
+      "category": "dish",
+      "term": "火腿炖肘子",
+      "brief": "年节硬菜",
+      "detail": "年下火腿、肘子、烧野猪等硬菜进府，除夕祭宗祠后的家宴席面。",
+      "scene": "除夕元宵",
+      "chars": [
+        "贾母"
+      ],
+      "chRef": 53,
+      "image": "/images/food-huang.webp"
+    },
+    {
+      "id": "shoutao",
+      "category": "fruit",
+      "term": "寿桃 / 面点",
+      "brief": "生日寿面寿桃",
+      "detail": "做寿必有点心寿桃、寿面；凤姐、贾母、宝玉生日皆有寿食，也是人情往来的道具。",
+      "scene": "寿诞",
+      "chars": [
+        "贾母",
+        "王熙凤"
+      ],
+      "chRef": 43,
+      "image": "/images/food-shoutao.webp"
+    },
+    {
+      "id": "zhuyou",
+      "category": "dish",
+      "term": "牛乳蒸羊羔",
+      "brief": "冬日补身的羊羔",
+      "detail": "冬令羊羔、牛乳等温补，见北地贵族食单与节气。",
+      "scene": "冬补",
+      "chars": [
+        "贾宝玉"
+      ],
+      "chRef": 49,
+      "image": "/images/food-zhuyou.webp"
+    },
+    {
+      "id": "jiaxun",
+      "category": "dish",
+      "term": "炸野鸡 / 炸鹌鹑",
+      "brief": "下酒的炸货",
+      "detail": "野味炸制下酒，酒令席上常见；与「割腥啖膻」同属大观园的野趣一面。",
+      "scene": "酒令",
+      "chars": [
+        "薛蟠"
+      ],
+      "chRef": 28,
+      "image": "/images/food-jiaxun.webp"
+    },
+    {
+      "id": "jiu",
+      "category": "tea",
+      "term": "惠泉酒 / 合欢花浸酒",
+      "brief": "宴席用酒",
+      "detail": "惠泉酒是名酿；又有合欢花浸的酒，取「合欢」吉意。酒也误事：薛蟠、贾琏、刘姥姥皆因酒出戏。",
+      "scene": "宴饮",
+      "chars": [
+        "刘姥姥",
+        "薛蟠"
+      ],
+      "chRef": 41,
+      "image": "/images/food-jiu.webp"
+    },
+    {
+      "id": "chayin",
+      "category": "tea",
+      "term": "茶（日常与雅集）",
+      "brief": "栊翠庵茶是最雅的一次",
+      "detail": "六安茶、老君眉、枫露茶、暹罗茶……茶是礼、是试探、是洁癖。妙玉收梅花雪水、旧年雨水，器与泉皆讲究。",
+      "scene": "品茶栊翠庵",
+      "chars": [
+        "妙玉",
+        "贾母",
+        "林黛玉"
+      ],
+      "chRef": 41,
+      "image": "/images/food-chayin.webp"
+    },
+    {
+      "id": "chayou",
+      "category": "tea",
+      "term": "暹罗茶 / 六安茶",
+      "brief": "贾母评茶：「我吃不大好」",
+      "detail": "贾母说不爱六安茶，改老君眉——老太太一句话即食单风向。黛玉体弱、宝钗吃冷香，饮食亦写性格。",
+      "scene": "栊翠庵",
+      "chars": [
+        "贾母"
+      ],
+      "chRef": 41,
+      "image": "/images/food-chayou.webp"
+    },
+    {
+      "id": "dianxin",
+      "category": "fruit",
+      "term": "奶油松瓤卷酥 / 鹅油卷",
+      "brief": "细点心的「卷」「酥」",
+      "detail": "奶油、松瓤、鹅油入点心，是「精细」二字的油脂版本；宝玉、姑娘们午歇后常用。",
+      "scene": "茶果",
+      "chars": [
+        "贾宝玉"
+      ],
+      "chRef": 41,
+      "image": "/images/food-dianxin.webp"
+    },
+    {
+      "id": "qingke",
+      "category": "soup",
+      "term": "小荷叶莲蓬汤的银模子",
+      "brief": "吃的是形状，不是味道",
+      "detail": "银模子打出二三十种花样——贾府饮食的「形式感」有时大于滋味，是贵族审美的物化。",
+      "scene": "莲叶羹",
+      "chars": [
+        "薛姨妈"
+      ],
+      "chRef": 35,
+      "image": "/images/food-qingke.webp"
+    },
+    {
+      "id": "liulaolao-jiu",
+      "category": "tea",
+      "term": "刘姥姥的黄酒与醉卧",
+      "brief": "两宴大观园的失态喜剧",
+      "detail": "黄酒配鸽子蛋、茄鲞，刘姥姥吃相与醉卧怡红院，是全书最有人味的饮食戏——笑里有阶层。",
+      "scene": "两宴大观园",
+      "chars": [
+        "刘姥姥"
+      ],
+      "chRef": 41,
+      "image": "/images/food-liulaolao-jiu.webp"
+    },
+    {
+      "id": "gezi",
+      "category": "dish",
+      "term": "鸽子蛋",
+      "brief": "「一两银子一个」的炫富",
+      "detail": "凤姐说鸽子蛋一两银子一个，刘姥姥夹不起来滚了。贵与贱、巧与拙，一颗蛋里全有。",
+      "scene": "两宴大观园",
+      "chars": [
+        "刘姥姥",
+        "王熙凤"
+      ],
+      "chRef": 40,
+      "image": "/images/food-gezi.webp"
+    },
+    {
+      "id": "jiuniang",
+      "category": "fruit",
+      "term": "果子酒 / 花果酿",
+      "brief": "女儿们的微醺",
+      "detail": "群芳夜宴、行令吃酒，果酒花酿较「惠泉酒」更闺阁；湘云醉眠即此路数。",
+      "scene": "寿怡红群芳开夜宴",
+      "chars": [
+        "史湘云"
+      ],
+      "chRef": 63,
+      "image": "/images/food-jiuniang.webp"
+    },
+    {
+      "id": "yuanyang-hu",
+      "category": "dish",
+      "term": "牛乳茶 / 酥油茶（点心配）",
+      "brief": "北地乳食入贵族餐桌",
+      "detail": "牛乳、酥油一类见于满汉交融的贵族食单，与南边鲜果、湖鲜并存。",
+      "scene": "日常",
+      "chars": [],
+      "chRef": 62,
+      "image": "/images/food-yuanyang-hu.webp"
+    },
+    {
+      "id": "jiejiu",
+      "category": "tea",
+      "term": "醒酒汤 / 酸汤",
+      "brief": "醉后的解药",
+      "detail": "湘云醉眠、刘姥姥醉卧之后皆有醒酒汤水，写尽「乐极」之后的收拾。",
+      "scene": "醉后",
+      "chars": [
+        "史湘云",
+        "刘姥姥"
+      ],
+      "chRef": 62,
+      "image": "/images/food-jiejiu.webp"
+    },
+    {
+      "id": "chunbing",
+      "category": "fruit",
+      "term": "春饼 / 荷叶饼",
+      "brief": "节令面点",
+      "detail": "立春咬春一类面点入府，节令食俗写在筵席边角。",
+      "scene": "年节",
+      "chars": [],
+      "chRef": 53,
+      "image": "/images/food-chunbing.webp"
+    }
+  ]
+}

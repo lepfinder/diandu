@@ -1,0 +1,68 @@
+[
+  {
+    "id": "honglou",
+    "title": "红楼梦",
+    "author": "曹雪芹",
+    "basePath": "/honglou",
+    "port": 3434,
+    "kicker": "中国古典长篇小说 · 交互精读",
+    "lead": ["满纸荒唐言，一把辛酸泪。", "都云作者痴，谁解其中味？"],
+    "highlight": "人物星图 · 大观园 · 太虚幻境",
+    "packageName": "@diandu/honglou"
+  },
+  {
+    "id": "sanguo",
+    "title": "三国演义",
+    "author": "罗贯中",
+    "basePath": "/sanguo",
+    "port": 3460,
+    "kicker": "中国古典长篇小说 · 交互精读",
+    "lead": ["滚滚长江东逝水，浪花淘尽英雄。", "是非成败转头空。"],
+    "highlight": "回目形势图 · 大事年表",
+    "packageName": "@diandu/sanguo"
+  },
+  {
+    "id": "shuihu",
+    "title": "水浒传",
+    "author": "施耐庵",
+    "basePath": "/shuihu",
+    "port": 3470,
+    "kicker": "中国古典长篇小说 · 交互精读",
+    "lead": ["话说大宋仁宗天子在位，嘉祐三年三月三日。", "一百单八将聚义梁山。"],
+    "highlight": "一百单八将座次 · 聚义路线",
+    "packageName": "@diandu/shuihu"
+  },
+  {
+    "id": "xiyouji",
+    "title": "西游记",
+    "author": "吴承恩",
+    "basePath": "/xiyouji",
+    "port": 3480,
+    "kicker": "中国古典长篇小说 · 交互精读",
+    "lead": ["混沌未分天地乱，茫茫渺渺无人见。", "自从盘古破鸿蒙，开辟从兹清浊辨。"],
+    "highlight": "西行路线 · 名场面",
+    "packageName": "@diandu/xiyouji"
+  },
+  {
+    "id": "jinpingmei",
+    "title": "金瓶梅",
+    "author": "兰陵笑笑生",
+    "basePath": "/jinpingmei",
+    "port": 3490,
+    "kicker": "中国古典长篇小说 · 交互精读",
+    "lead": ["豪华去后行人绝，箫笙不响歌喉咽。", "雄剑无威光彩灭。"],
+    "highlight": "年表 · 名篇导读 · 市井物产",
+    "packageName": "@diandu/jinpingmei"
+  },
+  {
+    "id": "liaozhai",
+    "title": "聊斋志异",
+    "author": "蒲松龄",
+    "basePath": "/liaozhai",
+    "port": 3510,
+    "kicker": "文言短篇 · 交互精读",
+    "lead": ["才非干宝，雅爱搜神。", "情类黄州，喜人谈鬼。"],
+    "highlight": "狐鬼花妖品类 · 名篇",
+    "packageName": "@diandu/liaozhai"
+  }
+]

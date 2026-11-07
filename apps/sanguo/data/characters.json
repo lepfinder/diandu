@@ -1,0 +1,1237 @@
+{
+  "groups": [
+    {
+      "id": "shu",
+      "name": "蜀",
+      "color": "#2c6b4f"
+    },
+    {
+      "id": "wei",
+      "name": "魏",
+      "color": "#2f4d73"
+    },
+    {
+      "id": "wu",
+      "name": "吴",
+      "color": "#8f2d2d"
+    },
+    {
+      "id": "qun",
+      "name": "群雄",
+      "color": "#6b4c7a"
+    },
+    {
+      "id": "han",
+      "name": "汉室",
+      "color": "#8a7350"
+    }
+  ],
+  "list": [
+    {
+      "id": "liubei",
+      "name": "刘备",
+      "group": "shu",
+      "role": "蜀汉先主",
+      "firstCh": 1,
+      "lastCh": 85,
+      "bio": "涿郡起兵，桃园结义。转战徐州、荆州、益州，章武称帝。夷陵大败后在白帝城托孤。"
+    },
+    {
+      "id": "liushan",
+      "name": "刘禅",
+      "group": "shu",
+      "role": "蜀汉后主",
+      "firstCh": 34,
+      "lastCh": 118,
+      "bio": "长坂坡被赵云救出。刘备死后即位，诸葛亮、姜维先后辅政。邓艾兵临成都，他出降。"
+    },
+    {
+      "id": "zhugeliang",
+      "name": "诸葛亮",
+      "group": "shu",
+      "role": "蜀汉丞相",
+      "firstCh": 36,
+      "lastCh": 104,
+      "bio": "徐庶走马推荐，刘备三顾出山。取成都、平南中、六出祁山，病逝五丈原。"
+    },
+    {
+      "id": "pangtong",
+      "name": "庞统",
+      "group": "shu",
+      "role": "军师中郎将",
+      "firstCh": 35,
+      "lastCh": 63,
+      "bio": "与诸葛亮并称伏龙凤雏。赤壁后归刘备，取西川时在落凤坡中箭而死。"
+    },
+    {
+      "id": "xushu",
+      "name": "徐庶",
+      "group": "shu",
+      "role": "谋士",
+      "firstCh": 36,
+      "lastCh": 48,
+      "bio": "化名单福投刘备，曹军囚其母，他辞行并走马荐诸葛，此后身在曹营。"
+    },
+    {
+      "id": "fazheng",
+      "name": "法正",
+      "group": "shu",
+      "role": "蜀汉尚书令",
+      "firstCh": 60,
+      "lastCh": 81,
+      "bio": "张松引他结交刘备，取蜀、夺汉中都有他的计。刘备要伐吴时，孔明叹他若在，必能劝住。"
+    },
+    {
+      "id": "guanyu",
+      "name": "关羽",
+      "group": "shu",
+      "role": "蜀汉前将军",
+      "firstCh": 1,
+      "lastCh": 77,
+      "bio": "桃园兄弟。降汉不降曹，千里走单骑，守荆州。麦城突围被擒，不屈而死。"
+    },
+    {
+      "id": "guanping",
+      "name": "关平",
+      "group": "shu",
+      "role": "关羽之子",
+      "firstCh": 28,
+      "lastCh": 77,
+      "bio": "随关羽镇守荆州，麦城突围时与关羽一同被擒。"
+    },
+    {
+      "id": "guanxing",
+      "name": "关兴",
+      "group": "shu",
+      "role": "关羽之子",
+      "firstCh": 74,
+      "lastCh": 102,
+      "bio": "关羽死后随刘备、诸葛亮出征，与张苞并称小将。"
+    },
+    {
+      "id": "zhangfei",
+      "name": "张飞",
+      "group": "shu",
+      "role": "蜀汉车骑将军",
+      "firstCh": 1,
+      "lastCh": 81,
+      "bio": "桃园兄弟。鞭督邮、喝长坂、义释严颜。为关羽报仇起兵，出征前被部将所害。"
+    },
+    {
+      "id": "zhangbao",
+      "name": "张苞",
+      "group": "shu",
+      "role": "张飞之子",
+      "firstCh": 81,
+      "lastCh": 99,
+      "bio": "张飞死后与关兴一同随军，诸葛亮北伐时仍在阵前。"
+    },
+    {
+      "id": "zhaoyun",
+      "name": "赵云",
+      "group": "shu",
+      "role": "蜀汉镇东将军",
+      "firstCh": 7,
+      "lastCh": 97,
+      "bio": "初随公孙瓒，长坂坡救出阿斗。此后一直随刘备、诸葛亮，建兴六年病故。"
+    },
+    {
+      "id": "machao",
+      "name": "马超",
+      "group": "shu",
+      "role": "骠骑将军",
+      "firstCh": 10,
+      "lastCh": 91,
+      "bio": "西凉马腾之子。潼关与曹操大战，后归刘备。诸葛亮南征回来时，已经病故。"
+    },
+    {
+      "id": "huangzhong",
+      "name": "黄忠",
+      "group": "shu",
+      "role": "后将军",
+      "firstCh": 53,
+      "lastCh": 91,
+      "bio": "长沙老将，归刘备后定军山刀劈夏侯渊，列为五虎上将。"
+    },
+    {
+      "id": "weiyan",
+      "name": "魏延",
+      "group": "shu",
+      "role": "蜀汉大将",
+      "firstCh": 41,
+      "lastCh": 105,
+      "bio": "襄阳开城迎刘备，长沙归顺。诸葛亮死后与杨仪争权，在南谷口被马岱所斩。"
+    },
+    {
+      "id": "jiangwei",
+      "name": "姜维",
+      "group": "shu",
+      "role": "大将军",
+      "firstCh": 92,
+      "lastCh": 119,
+      "bio": "天水人，诸葛亮收服后把北伐托给他。蜀亡时假降钟会，事败，与钟会同死于成都之乱。"
+    },
+    {
+      "id": "maliang",
+      "name": "马良",
+      "group": "shu",
+      "role": "侍中",
+      "firstCh": 52,
+      "lastCh": 87,
+      "bio": "白眉马良。夷陵之战为刘备画营图，战败后身死，其弟马谡挂孝来见诸葛亮。"
+    },
+    {
+      "id": "masu",
+      "name": "马谡",
+      "group": "shu",
+      "role": "参军",
+      "firstCh": 65,
+      "lastCh": 96,
+      "bio": "随诸葛亮南征献攻心计。街亭违令失守，诸葛亮挥泪斩他。"
+    },
+    {
+      "id": "wangping",
+      "name": "王平",
+      "group": "shu",
+      "role": "蜀汉大将",
+      "firstCh": 71,
+      "lastCh": 105,
+      "bio": "街亭之战劝马谡不听。此后随诸葛亮、姜维守汉中。"
+    },
+    {
+      "id": "jiangwan",
+      "name": "蒋琬",
+      "group": "shu",
+      "role": "大司马",
+      "firstCh": 63,
+      "lastCh": 107,
+      "bio": "诸葛亮临终推荐的继任者，掌蜀中国政，病故于姜维屡次北伐之前。"
+    },
+    {
+      "id": "feiyi",
+      "name": "费祎",
+      "group": "shu",
+      "role": "尚书令",
+      "firstCh": 65,
+      "lastCh": 107,
+      "bio": "诸葛亮死后与蒋琬先后主持朝政，主和而劝姜维不宜轻动。"
+    },
+    {
+      "id": "liufeng",
+      "name": "刘封",
+      "group": "shu",
+      "role": "副军将军",
+      "firstCh": 36,
+      "lastCh": 79,
+      "bio": "刘备的养子。关羽败走时不发救兵，后又与孟达失和，被赐死。"
+    },
+    {
+      "id": "mengda",
+      "name": "孟达",
+      "group": "shu",
+      "role": "上庸守将",
+      "firstCh": 60,
+      "lastCh": 94,
+      "bio": "本随刘璋，后降刘备。关羽求救不救，惧罪降魏，又欲归蜀，被司马懿袭杀。"
+    },
+    {
+      "id": "mizhu",
+      "name": "糜竺",
+      "group": "shu",
+      "role": "安汉将军",
+      "firstCh": 11,
+      "lastCh": 80,
+      "bio": "徐州富户，把妹妹嫁给刘备，此后一直随军，家财供军用。"
+    },
+    {
+      "id": "mifang",
+      "name": "糜芳",
+      "group": "shu",
+      "role": "南郡太守",
+      "firstCh": 18,
+      "lastCh": 83,
+      "bio": "糜竺之弟。关羽攻樊城时与傅士仁降吴，夷陵之战中被刘备所恨。"
+    },
+    {
+      "id": "mifuren",
+      "name": "糜夫人",
+      "group": "shu",
+      "role": "刘备之妻",
+      "firstCh": 22,
+      "lastCh": 42,
+      "bio": "长坂坡乱军中把阿斗托给赵云，自己投井而死。"
+    },
+    {
+      "id": "sunfuren",
+      "name": "孙夫人",
+      "group": "shu",
+      "role": "刘备之妻",
+      "firstCh": 54,
+      "lastCh": 61,
+      "bio": "孙权之妹，吴国太把她嫁给刘备。后来带回阿斗东归，被张飞、赵云截江夺回。"
+    },
+    {
+      "id": "jianyong",
+      "name": "简雍",
+      "group": "shu",
+      "role": "昭德将军",
+      "firstCh": 18,
+      "lastCh": 65,
+      "bio": "刘备同乡，出使刘璋，劝他开门出降。"
+    },
+    {
+      "id": "sunqian",
+      "name": "孙乾",
+      "group": "shu",
+      "role": "秉忠将军",
+      "firstCh": 12,
+      "lastCh": 65,
+      "bio": "刘备的使者，书中写作孙干。从徐州一直跟到西川。"
+    },
+    {
+      "id": "liyan",
+      "name": "李严",
+      "group": "shu",
+      "role": "中都护",
+      "firstCh": 64,
+      "lastCh": 104,
+      "bio": "刘璋旧将，降刘备后镇守江州。运粮误期，被诸葛亮废为庶人。"
+    },
+    {
+      "id": "huangquan",
+      "name": "黄权",
+      "group": "shu",
+      "role": "镇北将军",
+      "firstCh": 60,
+      "lastCh": 85,
+      "bio": "曾劝刘璋拒刘备。夷陵战败，归路已断，率众降魏。"
+    },
+    {
+      "id": "liaohua",
+      "name": "廖化",
+      "group": "shu",
+      "role": "右车骑将军",
+      "firstCh": 27,
+      "lastCh": 119,
+      "bio": "早年跟随关羽，此后几乎每场大战都在，一直活到蜀汉灭亡。"
+    },
+    {
+      "id": "zhoucang",
+      "name": "周仓",
+      "group": "shu",
+      "role": "关羽部将",
+      "firstCh": 28,
+      "lastCh": 77,
+      "bio": "关羽的亲随。麦城之围，关羽突围时留他与王甫守城。"
+    },
+    {
+      "id": "yiji",
+      "name": "伊籍",
+      "group": "shu",
+      "role": "左将军从事中郎",
+      "firstCh": 34,
+      "lastCh": 80,
+      "bio": "刘表的幕宾，后随刘备入蜀，多次往来吴蜀之间传命。"
+    },
+    {
+      "id": "liuqi",
+      "name": "刘琦",
+      "group": "shu",
+      "role": "荆州公子",
+      "firstCh": 34,
+      "lastCh": 53,
+      "bio": "刘表长子，蔡氏不容。赤壁后据荆州，不久病死，州事归刘备。"
+    },
+    {
+      "id": "caocao",
+      "name": "曹操",
+      "group": "wei",
+      "role": "魏王",
+      "firstCh": 1,
+      "lastCh": 78,
+      "bio": "起兵讨董，迎献帝迁许。灭吕布、袁绍，赤壁败退。称魏王，病死洛阳。"
+    },
+    {
+      "id": "caopi",
+      "name": "曹丕",
+      "group": "wei",
+      "role": "魏文帝",
+      "firstCh": 32,
+      "lastCh": 91,
+      "bio": "曹操次子。夺嫡称帝，代汉。在位七年，病死，曹叡即位。"
+    },
+    {
+      "id": "caozhi",
+      "name": "曹植",
+      "group": "wei",
+      "role": "陈思王",
+      "firstCh": 34,
+      "lastCh": 79,
+      "bio": "曹操爱子，与曹丕争嗣。曹丕称帝后命他七步成诗。"
+    },
+    {
+      "id": "caorui",
+      "name": "曹叡",
+      "group": "wei",
+      "role": "魏明帝",
+      "firstCh": 91,
+      "lastCh": 106,
+      "bio": "曹丕之子。诸葛亮北伐的对手，托孤司马懿，病重而亡。"
+    },
+    {
+      "id": "caofang",
+      "name": "曹芳",
+      "group": "wei",
+      "role": "魏帝",
+      "firstCh": 106,
+      "lastCh": 109,
+      "bio": "曹叡养子，司马懿、曹爽辅政。司马师废他为齐王，另立新君。"
+    },
+    {
+      "id": "caoshuang",
+      "name": "曹爽",
+      "group": "wei",
+      "role": "大将军",
+      "firstCh": 106,
+      "lastCh": 107,
+      "bio": "曹真之子，与司马懿同受遗诏。专权后被司马懿赚出洛阳，夷三族。"
+    },
+    {
+      "id": "xiahoudun",
+      "name": "夏侯惇",
+      "group": "wei",
+      "role": "前将军",
+      "firstCh": 5,
+      "lastCh": 91,
+      "bio": "曹操族弟。濮阳被射中左目，拔矢啖睛。随曹操直到汉中之后。"
+    },
+    {
+      "id": "xiahouyuan",
+      "name": "夏侯渊",
+      "group": "wei",
+      "role": "征西将军",
+      "firstCh": 5,
+      "lastCh": 71,
+      "bio": "夏侯惇之族。守汉中，定军山被黄忠刀劈。"
+    },
+    {
+      "id": "caoren",
+      "name": "曹仁",
+      "group": "wei",
+      "role": "大将军",
+      "firstCh": 5,
+      "lastCh": 86,
+      "bio": "曹操堂弟。守南郡、守樊城，关羽放水淹七军时他没有弃城。"
+    },
+    {
+      "id": "caohong",
+      "name": "曹洪",
+      "group": "wei",
+      "role": "骠骑将军",
+      "firstCh": 5,
+      "lastCh": 80,
+      "bio": "曹操堂弟。荥阳献马救曹操，此后常为偏师。"
+    },
+    {
+      "id": "zhangliao",
+      "name": "张辽",
+      "group": "wei",
+      "role": "前将军",
+      "firstCh": 11,
+      "lastCh": 98,
+      "bio": "本随吕布，白门楼归曹。合肥之战逼得孙权跳马过桥，江东小儿不敢夜啼。"
+    },
+    {
+      "id": "zhanghe",
+      "name": "张郃",
+      "group": "wei",
+      "role": "左将军",
+      "firstCh": 22,
+      "lastCh": 101,
+      "bio": "本袁绍部将，官渡降曹。诸葛亮第四次北伐，他在木门道中伏而死。"
+    },
+    {
+      "id": "xuhuang",
+      "name": "徐晃",
+      "group": "wei",
+      "role": "平寇将军",
+      "firstCh": 13,
+      "lastCh": 94,
+      "bio": "杨奉部下归曹。关羽围樊城，他击破围城的蜀军。"
+    },
+    {
+      "id": "xuchu",
+      "name": "许褚",
+      "group": "wei",
+      "role": "武卫将军",
+      "firstCh": 12,
+      "lastCh": 116,
+      "bio": "曹操的贴身护卫，人称虎痴。潼关裸衣斗马超。"
+    },
+    {
+      "id": "dianwei",
+      "name": "典韦",
+      "group": "wei",
+      "role": "校尉",
+      "firstCh": 10,
+      "lastCh": 16,
+      "bio": "曹操卫士。宛城之战张绣反，他守寨门，双戟战死。"
+    },
+    {
+      "id": "xunyu",
+      "name": "荀彧",
+      "group": "wei",
+      "role": "侍中",
+      "firstCh": 10,
+      "lastCh": 61,
+      "bio": "曹操的谋主，劝迎天子。后来反对曹操进爵魏公，在寿春打开空食盒，服毒而亡。"
+    },
+    {
+      "id": "xunyou",
+      "name": "荀攸",
+      "group": "wei",
+      "role": "尚书令",
+      "firstCh": 2,
+      "lastCh": 66,
+      "bio": "荀彧之侄。官渡前后屡献奇计，随曹操至死。"
+    },
+    {
+      "id": "guojia",
+      "name": "郭嘉",
+      "group": "wei",
+      "role": "军师祭酒",
+      "firstCh": 10,
+      "lastCh": 33,
+      "bio": "曹操最倚重的谋士。征乌桓途中病死，曹操哭他死得太早。"
+    },
+    {
+      "id": "jiaxu",
+      "name": "贾诩",
+      "group": "wei",
+      "role": "太尉",
+      "firstCh": 9,
+      "lastCh": 86,
+      "bio": "先为李傕谋，又为张绣谋，宛城之仇后归曹操。曹丕夺嫡，他出了关键的一句。"
+    },
+    {
+      "id": "chengyu",
+      "name": "程昱",
+      "group": "wei",
+      "role": "卫尉",
+      "firstCh": 10,
+      "lastCh": 92,
+      "bio": "兖州时为曹操守三城。性烈，曹操说他的性子太急。"
+    },
+    {
+      "id": "simayi",
+      "name": "司马懿",
+      "group": "wei",
+      "role": "太傅",
+      "firstCh": 39,
+      "lastCh": 108,
+      "bio": "曹营后期主将，与诸葛亮对峙渭水。曹芳时与曹爽辅政，嘉平三年病亡。"
+    },
+    {
+      "id": "simashi",
+      "name": "司马师",
+      "group": "wei",
+      "role": "大将军",
+      "firstCh": 78,
+      "lastCh": 110,
+      "bio": "司马懿长子。废曹芳。淮南军中眼瘤迸裂，第一百一十回姜维奏称他新亡。"
+    },
+    {
+      "id": "simazhao",
+      "name": "司马昭",
+      "group": "wei",
+      "role": "晋王",
+      "firstCh": 94,
+      "lastCh": 119,
+      "bio": "司马懿次子。弑曹髦，灭蜀。他死之后，司马炎才代魏。"
+    },
+    {
+      "id": "simayan",
+      "name": "司马炎",
+      "group": "wei",
+      "role": "晋武帝",
+      "firstCh": 114,
+      "lastCh": 120,
+      "bio": "司马昭之子。受魏禅，派杜预、王濬灭吴，三分归晋。"
+    },
+    {
+      "id": "dengai",
+      "name": "邓艾",
+      "group": "wei",
+      "role": "镇西将军",
+      "firstCh": 110,
+      "lastCh": 119,
+      "bio": "偷渡阴平，逼得刘禅出降。钟会诬他谋反，与钟会同死于成都之乱。"
+    },
+    {
+      "id": "zhonghui",
+      "name": "钟会",
+      "group": "wei",
+      "role": "司徒",
+      "firstCh": 110,
+      "lastCh": 119,
+      "bio": "与邓艾分兵灭蜀，又想据蜀自立。姜维将计就计，两人死于成都之乱。"
+    },
+    {
+      "id": "yangxiu",
+      "name": "杨修",
+      "group": "wei",
+      "role": "主簿",
+      "firstCh": 60,
+      "lastCh": 72,
+      "bio": "杨彪之子，才捷。曹操嫌他看破心意，以惑乱军心斩于汉中。"
+    },
+    {
+      "id": "yujin",
+      "name": "于禁",
+      "group": "wei",
+      "role": "左将军",
+      "firstCh": 10,
+      "lastCh": 82,
+      "bio": "曹操五子良将之一。樊城被关羽水淹七军，部众死的死、降的降。后文只说孙权获于禁而不害。"
+    },
+    {
+      "id": "yuejin",
+      "name": "乐进",
+      "group": "wei",
+      "role": "右将军",
+      "firstCh": 6,
+      "lastCh": 111,
+      "bio": "曹操早期猛将，合肥、官渡都有他。书中后文仍被追述。"
+    },
+    {
+      "id": "lidian",
+      "name": "李典",
+      "group": "wei",
+      "role": "破虏将军",
+      "firstCh": 6,
+      "lastCh": 68,
+      "bio": "与张辽、乐进守合肥。张辽要出战，他放下私怨，一同破孙权。"
+    },
+    {
+      "id": "pangde",
+      "name": "庞德",
+      "group": "wei",
+      "role": "立义将军",
+      "firstCh": 58,
+      "lastCh": 74,
+      "bio": "本随马超，后归曹操。樊城之战抬棺决死，被关羽所擒，不降被斩。"
+    },
+    {
+      "id": "wanglang",
+      "name": "王朗",
+      "group": "wei",
+      "role": "司徒",
+      "firstCh": 15,
+      "lastCh": 93,
+      "bio": "会稽太守，被孙策赶走。后来在魏为司徒，阵前骂诸葛亮，被反骂气死。"
+    },
+    {
+      "id": "huaxin",
+      "name": "华歆",
+      "group": "wei",
+      "role": "司徒",
+      "firstCh": 29,
+      "lastCh": 99,
+      "bio": "先在汉廷，带人入宫收伏皇后。曹丕代汉，他是劝进的人。"
+    },
+    {
+      "id": "guohuai",
+      "name": "郭淮",
+      "group": "wei",
+      "role": "车骑将军",
+      "firstCh": 70,
+      "lastCh": 109,
+      "bio": "长期守雍凉，诸葛亮、姜维北伐时多次与他对阵。"
+    },
+    {
+      "id": "haozhao",
+      "name": "郝昭",
+      "group": "wei",
+      "role": "将军",
+      "firstCh": 97,
+      "lastCh": 98,
+      "bio": "守陈仓。诸葛亮连攻二十余日不能下，他病死后城才被蜀军所得。"
+    },
+    {
+      "id": "manchong",
+      "name": "满宠",
+      "group": "wei",
+      "role": "太尉",
+      "firstCh": 10,
+      "lastCh": 103,
+      "bio": "从兖州跟到魏明帝时。守合肥，用火攻退过孙权。"
+    },
+    {
+      "id": "sunjian",
+      "name": "孙坚",
+      "group": "wu",
+      "role": "乌程侯",
+      "firstCh": 2,
+      "lastCh": 7,
+      "bio": "袁术部下，攻洛阳得玉玺。后被刘表军射死于岘山。"
+    },
+    {
+      "id": "sunce",
+      "name": "孙策",
+      "group": "wu",
+      "role": "长沙桓王",
+      "firstCh": 7,
+      "lastCh": 29,
+      "bio": "孙坚长子，扫平江东。许贡门客刺伤他，又因于吉一事，金疮迸裂而死。"
+    },
+    {
+      "id": "sunquan",
+      "name": "孙权",
+      "group": "wu",
+      "role": "吴大帝",
+      "firstCh": 15,
+      "lastCh": 108,
+      "bio": "孙策临终把江东交给他。联合刘备破曹操，称帝，第一百零八回病亡。"
+    },
+    {
+      "id": "zhouyu",
+      "name": "周瑜",
+      "group": "wu",
+      "role": "大都督",
+      "firstCh": 15,
+      "lastCh": 57,
+      "bio": "孙策至交，赤壁之战的都督。与诸葛亮争荆州不成，死于巴丘，遗书荐鲁肃。"
+    },
+    {
+      "id": "lusu",
+      "name": "鲁肃",
+      "group": "wu",
+      "role": "都督",
+      "firstCh": 29,
+      "lastCh": 69,
+      "bio": "周瑜所荐。主张联刘抗曹，并做了借荆州的保人。病故于陆口。"
+    },
+    {
+      "id": "lvmeng",
+      "name": "吕蒙",
+      "group": "wu",
+      "role": "虎威将军",
+      "firstCh": 38,
+      "lastCh": 77,
+      "bio": "随孙权征黄祖，后来白衣渡江袭取荆州。庆功宴上突发急症而死。"
+    },
+    {
+      "id": "luxun",
+      "name": "陆逊",
+      "group": "wu",
+      "role": "丞相",
+      "firstCh": 38,
+      "lastCh": 108,
+      "bio": "夷陵火烧连营，败刘备。后受孙权重托，又被孙权猜忌，忧愤而死。"
+    },
+    {
+      "id": "lukang",
+      "name": "陆抗",
+      "group": "wu",
+      "role": "大司马",
+      "firstCh": 119,
+      "lastCh": 120,
+      "bio": "陆逊之子。吴国末年的主将，书中写到晋军伐吴。"
+    },
+    {
+      "id": "huanggai",
+      "name": "黄盖",
+      "group": "wu",
+      "role": "偏将军",
+      "firstCh": 5,
+      "lastCh": 67,
+      "bio": "三世老将。赤壁用苦肉计诈降，火船冲进曹寨。"
+    },
+    {
+      "id": "ganning",
+      "name": "甘宁",
+      "group": "wu",
+      "role": "折冲将军",
+      "firstCh": 38,
+      "lastCh": 83,
+      "bio": "锦帆贼出身，百骑劫魏营。夷陵之战带病出阵，死于番王沙摩柯之手。"
+    },
+    {
+      "id": "taishici",
+      "name": "太史慈",
+      "group": "wu",
+      "role": "建昌都尉",
+      "firstCh": 11,
+      "lastCh": 53,
+      "bio": "先与孙策对敌，后归江东。合肥与张辽交战，中箭，不久病死。"
+    },
+    {
+      "id": "zhoutai",
+      "name": "周泰",
+      "group": "wu",
+      "role": "平虏将军",
+      "firstCh": 15,
+      "lastCh": 84,
+      "bio": "宣城救孙权，身被十二枪。此后长期护卫孙权。"
+    },
+    {
+      "id": "lingtong",
+      "name": "凌统",
+      "group": "wu",
+      "role": "偏将军",
+      "firstCh": 38,
+      "lastCh": 84,
+      "bio": "父亲凌操被甘宁射死，他与甘宁有仇，后来在军中和解。"
+    },
+    {
+      "id": "chengpu",
+      "name": "程普",
+      "group": "wu",
+      "role": "荡寇将军",
+      "firstCh": 5,
+      "lastCh": 75,
+      "bio": "从孙坚、孙策到孙权。赤壁时与周瑜争位，后来服他。"
+    },
+    {
+      "id": "zhangzhao",
+      "name": "张昭",
+      "group": "wu",
+      "role": "辅吴将军",
+      "firstCh": 15,
+      "lastCh": 98,
+      "bio": "孙策托孤的文臣。赤壁主降，孙权因此不大用他掌兵。"
+    },
+    {
+      "id": "zhugejin",
+      "name": "诸葛瑾",
+      "group": "wu",
+      "role": "大将军",
+      "firstCh": 37,
+      "lastCh": 108,
+      "bio": "诸葛亮之兄，在吴为官，多次为荆州的事出使蜀汉。"
+    },
+    {
+      "id": "zhugeke",
+      "name": "诸葛恪",
+      "group": "wu",
+      "role": "太傅",
+      "firstCh": 98,
+      "lastCh": 108,
+      "bio": "诸葛瑾之子。孙权死后专吴政，北伐无功，被孙峻所杀。"
+    },
+    {
+      "id": "wuguotai",
+      "name": "吴国太",
+      "group": "wu",
+      "role": "孙坚次妻",
+      "firstCh": 43,
+      "lastCh": 61,
+      "bio": "孙权之母。甘露寺相亲，把女儿许给刘备。"
+    },
+    {
+      "id": "sunhao",
+      "name": "孙皓",
+      "group": "wu",
+      "role": "吴末帝",
+      "firstCh": 113,
+      "lastCh": 120,
+      "bio": "孙和之子，暴虐。晋军顺流而下，他出降，三分到此结束。"
+    },
+    {
+      "id": "dingfeng",
+      "name": "丁奉",
+      "group": "wu",
+      "role": "大将军",
+      "firstCh": 38,
+      "lastCh": 120,
+      "bio": "吴国老将。雪中短兵破魏军，又参与孙綝之死，活到吴亡。"
+    },
+    {
+      "id": "xusheng",
+      "name": "徐盛",
+      "group": "wu",
+      "role": "安东将军",
+      "firstCh": 38,
+      "lastCh": 96,
+      "bio": "守濡须，曾在百里江上设疑城，吓退曹丕。"
+    },
+    {
+      "id": "handang",
+      "name": "韩当",
+      "group": "wu",
+      "role": "昭武将军",
+      "firstCh": 5,
+      "lastCh": 84,
+      "bio": "从孙坚起兵的老将，夷陵之战仍在陆逊军中。"
+    },
+    {
+      "id": "lvfan",
+      "name": "吕范",
+      "group": "wu",
+      "role": "前将军",
+      "firstCh": 15,
+      "lastCh": 85,
+      "bio": "孙策时管财政，后来引兵在濡须一线拒魏。"
+    },
+    {
+      "id": "daqiao",
+      "name": "大乔",
+      "group": "wu",
+      "role": "孙策之妻",
+      "firstCh": 44,
+      "lastCh": 44,
+      "bio": "桥公长女，孙策之妻。书中只在诸葛亮激周瑜时被提及。"
+    },
+    {
+      "id": "xiaoqiao",
+      "name": "小乔",
+      "group": "wu",
+      "role": "周瑜之妻",
+      "firstCh": 44,
+      "lastCh": 57,
+      "bio": "桥公次女。铜雀台的故事由她而起，周瑜死后书中不再写她。"
+    },
+    {
+      "id": "dongzhuo",
+      "name": "董卓",
+      "group": "qun",
+      "role": "相国",
+      "firstCh": 1,
+      "lastCh": 9,
+      "bio": "废少帝，迁都长安，焚洛阳。王允用连环计，吕布在凤仪亭后杀他。"
+    },
+    {
+      "id": "lvbu",
+      "name": "吕布",
+      "group": "qun",
+      "role": "温侯",
+      "firstCh": 3,
+      "lastCh": 19,
+      "bio": "先事丁原，再事董卓，又夺刘备的徐州。下邳城破，白门楼被缢死。"
+    },
+    {
+      "id": "diaochan",
+      "name": "貂蝉",
+      "group": "qun",
+      "role": "王允歌伎",
+      "firstCh": 8,
+      "lastCh": 19,
+      "bio": "王允认她为义女，用她离间董卓、吕布。董卓既死，她随吕布。"
+    },
+    {
+      "id": "wangyun",
+      "name": "王允",
+      "group": "qun",
+      "role": "司徒",
+      "firstCh": 3,
+      "lastCh": 9,
+      "bio": "设连环计除董卓。李傕、郭汜攻入长安，他被杀。"
+    },
+    {
+      "id": "lijue",
+      "name": "李傕",
+      "group": "qun",
+      "role": "车骑将军",
+      "firstCh": 3,
+      "lastCh": 17,
+      "bio": "董卓部将。卓死，他与郭汜攻陷长安，把持献帝，后来自相攻杀。"
+    },
+    {
+      "id": "guosi",
+      "name": "郭汜",
+      "group": "qun",
+      "role": "后将军",
+      "firstCh": 3,
+      "lastCh": 17,
+      "bio": "与李傕一同劫帝。书中后文亦作郭泛。第十七回伍习杀他，把头献到许都。"
+    },
+    {
+      "id": "zhangjiao",
+      "name": "张角",
+      "group": "qun",
+      "role": "天公将军",
+      "firstCh": 1,
+      "lastCh": 2,
+      "bio": "太平道首领，黄巾起事。病死后，头颅被割去请功。"
+    },
+    {
+      "id": "zhangbaodi",
+      "name": "张宝",
+      "group": "qun",
+      "role": "地公将军",
+      "firstCh": 1,
+      "lastCh": 2,
+      "bio": "张角之弟，与张梁分兵。黄巾本阵在第二回被破。"
+    },
+    {
+      "id": "zhangliang",
+      "name": "张梁",
+      "group": "qun",
+      "role": "人公将军",
+      "firstCh": 1,
+      "lastCh": 2,
+      "bio": "张角之弟。与皇甫嵩、曹操交战，兵败而死。"
+    },
+    {
+      "id": "huaxiong",
+      "name": "华雄",
+      "group": "qun",
+      "role": "都督",
+      "firstCh": 5,
+      "lastCh": 5,
+      "bio": "董卓部下，关前连斩数将。关羽温酒斩之。"
+    },
+    {
+      "id": "yuanshao",
+      "name": "袁绍",
+      "group": "qun",
+      "role": "冀州牧",
+      "firstCh": 2,
+      "lastCh": 32,
+      "bio": "四世三公，据河北。官渡、仓亭连败，退回冀州后吐血而死。"
+    },
+    {
+      "id": "yuanshu",
+      "name": "袁术",
+      "group": "qun",
+      "role": "仲家皇帝",
+      "firstCh": 3,
+      "lastCh": 21,
+      "bio": "袁绍之弟，得玉玺后称帝于淮南。粮尽众散，呕血而死。"
+    },
+    {
+      "id": "yuantan",
+      "name": "袁谭",
+      "group": "qun",
+      "role": "青州刺史",
+      "firstCh": 24,
+      "lastCh": 33,
+      "bio": "袁绍长子。绍死后与袁尚相攻，投曹操又反，被曹洪所杀。"
+    },
+    {
+      "id": "yuanshang",
+      "name": "袁尚",
+      "group": "qun",
+      "role": "冀州刺史",
+      "firstCh": 30,
+      "lastCh": 33,
+      "bio": "袁绍幼子，绍死继位。被曹操赶出冀州，逃辽东，公孙康斩其首。"
+    },
+    {
+      "id": "yanliang",
+      "name": "颜良",
+      "group": "qun",
+      "role": "河北大将",
+      "firstCh": 5,
+      "lastCh": 25,
+      "bio": "袁绍先锋，白马被关羽所斩。"
+    },
+    {
+      "id": "wenchou",
+      "name": "文丑",
+      "group": "qun",
+      "role": "河北大将",
+      "firstCh": 5,
+      "lastCh": 26,
+      "bio": "为颜良报仇，延津被关羽所斩。"
+    },
+    {
+      "id": "liubiao",
+      "name": "刘表",
+      "group": "qun",
+      "role": "荆州牧",
+      "firstCh": 6,
+      "lastCh": 40,
+      "bio": "据荆襄，坐观中原。病中想把州事托给刘备，未成，死于襄阳。"
+    },
+    {
+      "id": "caifuren",
+      "name": "蔡夫人",
+      "group": "qun",
+      "role": "刘表后妻",
+      "firstCh": 34,
+      "lastCh": 41,
+      "bio": "蔡瑁之姐。废长立幼。曹操南下时，她随刘琮渡江，捧印出降。"
+    },
+    {
+      "id": "kuaiyue",
+      "name": "蒯越",
+      "group": "qun",
+      "role": "荆州大将",
+      "firstCh": 6,
+      "lastCh": 41,
+      "bio": "刘表谋士，主降曹操。荆州既降，他归了曹营。"
+    },
+    {
+      "id": "caimao",
+      "name": "蔡瑁",
+      "group": "qun",
+      "role": "荆州水军都督",
+      "firstCh": 6,
+      "lastCh": 45,
+      "bio": "蔡夫人之弟。刘备在荆州时多次害他。群英会蒋干盗书，曹操误杀蔡瑁、张允。"
+    },
+    {
+      "id": "zhangyun",
+      "name": "张允",
+      "group": "qun",
+      "role": "荆州水军副将",
+      "firstCh": 40,
+      "lastCh": 45,
+      "bio": "与蔡瑁同领水军。蒋干中计后，与蔡瑁一同被曹操斩首。"
+    },
+    {
+      "id": "jianggan",
+      "name": "蒋干",
+      "group": "qun",
+      "role": "曹营幕宾",
+      "firstCh": 45,
+      "lastCh": 47,
+      "bio": "周瑜的同窗。群英会盗书，后来又一次被庞统送回江北。"
+    },
+    {
+      "id": "huangzu",
+      "name": "黄祖",
+      "group": "qun",
+      "role": "江夏太守",
+      "firstCh": 7,
+      "lastCh": 39,
+      "bio": "刘表部下，射杀孙坚。孙权再征江夏，他弃城而走，被甘宁射死在东门外。"
+    },
+    {
+      "id": "liuzhang",
+      "name": "刘璋",
+      "group": "qun",
+      "role": "益州牧",
+      "firstCh": 16,
+      "lastCh": 65,
+      "bio": "刘焉之子，守成都。请刘备入川御张鲁，城破后让出益州。"
+    },
+    {
+      "id": "zhangsong",
+      "name": "张松",
+      "group": "qun",
+      "role": "益州别驾",
+      "firstCh": 60,
+      "lastCh": 62,
+      "bio": "想把西川献给曹操，受到慢待，改投刘备。事情泄露，被刘璋所斩。"
+    },
+    {
+      "id": "zhanglu",
+      "name": "张鲁",
+      "group": "qun",
+      "role": "汉中太守",
+      "firstCh": 16,
+      "lastCh": 67,
+      "bio": "以五斗米道据汉中。曹操破南郑，他封库投降，被封镇南将军。"
+    },
+    {
+      "id": "mateng",
+      "name": "马腾",
+      "group": "qun",
+      "role": "卫尉",
+      "firstCh": 5,
+      "lastCh": 57,
+      "bio": "马超之父，西凉起兵。曹操诱他入京，与儿子马休一同被杀。"
+    },
+    {
+      "id": "hansui",
+      "name": "韩遂",
+      "group": "qun",
+      "role": "镇西将军",
+      "firstCh": 10,
+      "lastCh": 59,
+      "bio": "与马腾结拜。潼关之战曹操涂改书信离间他和马超，左手被砍落。"
+    },
+    {
+      "id": "gongsunzan",
+      "name": "公孙瓒",
+      "group": "qun",
+      "role": "北平太守",
+      "firstCh": 1,
+      "lastCh": 21,
+      "bio": "刘备的举荐人，与袁绍争河北，困于易京楼。第二十一回满宠回报他已死。"
+    },
+    {
+      "id": "taoqian",
+      "name": "陶谦",
+      "group": "qun",
+      "role": "徐州牧",
+      "firstCh": 5,
+      "lastCh": 12,
+      "bio": "曹操为父报仇来攻。他三让徐州给刘备，病死。"
+    },
+    {
+      "id": "chengong",
+      "name": "陈宫",
+      "group": "qun",
+      "role": "谋士",
+      "firstCh": 4,
+      "lastCh": 19,
+      "bio": "兖州时放过曹操，后来跟随吕布。白门楼不降，与吕布同死。"
+    },
+    {
+      "id": "zhangxiu",
+      "name": "张绣",
+      "group": "qun",
+      "role": "破羌将军",
+      "firstCh": 16,
+      "lastCh": 23,
+      "bio": "宛城用贾诩之计夜袭曹操，典韦死于此役。后来贾诩劝他归降曹操。"
+    },
+    {
+      "id": "huatuo",
+      "name": "华佗",
+      "group": "qun",
+      "role": "神医",
+      "firstCh": 15,
+      "lastCh": 78,
+      "bio": "为关羽刮骨，又要为曹操开颅。曹操疑他害己，下狱而死。"
+    },
+    {
+      "id": "zuoci",
+      "name": "左慈",
+      "group": "qun",
+      "role": "方士",
+      "firstCh": 68,
+      "lastCh": 69,
+      "bio": "在许都戏弄曹操，杯酒、鲈鱼都成了幻术。曹操捉他不住。"
+    },
+    {
+      "id": "xiandi",
+      "name": "汉献帝",
+      "group": "han",
+      "role": "汉帝",
+      "firstCh": 1,
+      "lastCh": 80,
+      "bio": "董卓所立。曹操迁他到许都，曹丕代汉时禅位，被封山阳公。"
+    },
+    {
+      "id": "dongcheng",
+      "name": "董承",
+      "group": "han",
+      "role": "车骑将军",
+      "firstCh": 13,
+      "lastCh": 24,
+      "bio": "献帝衣带诏的受诏人。事情泄露，全家被曹操所杀。"
+    },
+    {
+      "id": "fuhuanghou",
+      "name": "伏皇后",
+      "group": "han",
+      "role": "皇后",
+      "firstCh": 13,
+      "lastCh": 66,
+      "bio": "密书其父伏完，想联孙权除曹操。事发，被华歆从壁中搜出，处死。"
+    },
+    {
+      "id": "jiping",
+      "name": "吉平",
+      "group": "han",
+      "role": "太医",
+      "firstCh": 23,
+      "lastCh": 23,
+      "bio": "参与衣带诏，下毒害曹操不成，被拷打至死。"
+    }
+  ]
+}

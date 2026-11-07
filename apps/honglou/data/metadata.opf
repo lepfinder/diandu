@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">bf283233-5a06-4bd4-bc5f-7975d58e5903</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">a67290f3-88a4-480d-87c8-436caad65502</dc:identifier>
+        <dc:title>紅樓夢</dc:title>
+        <dc:creator opf:file-as="Unknown" opf:role="aut">Unknown</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">Wikisource</dc:contributor>
+        <dc:language>C</dc:language>
+    </metadata>
+    <guide/>
+</package>

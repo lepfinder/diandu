@@ -1,0 +1,21 @@
+{
+  "name": "diandu",
+  "private": true,
+  "version": "0.1.0",
+  "description": "典读 · 中国古典交互精读 monorepo",
+  "packageManager": "pnpm@10.33.2",
+  "scripts": {
+    "dev:portal": "pnpm --filter @diandu/portal dev",
+    "dev:honglou": "pnpm --filter @diandu/honglou dev",
+    "dev:sanguo": "pnpm --filter @diandu/sanguo dev",
+    "dev:shuihu": "pnpm --filter @diandu/shuihu dev",
+    "dev:xiyouji": "pnpm --filter @diandu/xiyouji dev",
+    "dev:jinpingmei": "pnpm --filter @diandu/jinpingmei dev",
+    "dev:liaozhai": "pnpm --filter @diandu/liaozhai dev",
+    "build": "pnpm -r --filter=./apps/* build",
+    "build:portal": "pnpm --filter @diandu/portal build",
+    "assemble": "node scripts/assemble.mjs",
+    "compress:images": "node scripts/compress-images.mjs",
+    "deploy:build": "pnpm -r --filter=./apps/* run build:cf && node scripts/assemble.mjs"
+  }
+}

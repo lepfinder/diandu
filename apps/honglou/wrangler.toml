@@ -1,0 +1,4 @@
+# Cloudflare Pages：静态导出（Next output: 'export'）
+name = "honglou"
+compatibility_date = "2026-09-24"
+pages_build_output_dir = "./out"
