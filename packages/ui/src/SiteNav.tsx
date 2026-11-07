@@ -23,7 +23,20 @@ export type SiteNavProps = {
   items: SiteNavItem[];
   /** 主题切换按钮 title */
   themeTitle?: string;
+  /**
+   * 返回聚合站。默认自动推断：
+   * assemble 部署为 `/`，本地为 `http://localhost:3400/`。
+   * 传 `null` 可关闭。
+   */
+  portalHref?: string | null;
+  portalLabel?: string;
 };
+
+/** 子站返回典读主站的地址（需用原生 a，以跳出 Next basePath）。 */
+export function getPortalHref() {
+  if (process.env.NEXT_PUBLIC_SITE_MODE === 'assemble') return '/';
+  return process.env.NEXT_PUBLIC_PORTAL_URL || 'http://localhost:3400/';
+}
 
 function Icon({ name }: { name: string }) {
   const common = { viewBox: '0 0 24 24' };
@@ -90,6 +103,13 @@ function Icon({ name }: { name: string }) {
         <path d="M9 9h6M9 13h6M9 17h4" />
       </svg>
     );
+  if (name === 'portal')
+    return (
+      <svg {...common}>
+        <path d="M4 7.5 12 3l8 4.5V20a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z" />
+        <path d="M9 21v-7h6v7" />
+      </svg>
+    );
   return (
     <svg {...common}>
       <circle cx="11" cy="11" r="6.5" />
@@ -117,10 +137,13 @@ export function SiteNav({
   storagePrefix,
   items,
   themeTitle = '切换主题',
+  portalHref,
+  portalLabel = '典读',
 }: SiteNavProps) {
   const pathname = usePathname();
   const [theme, setTheme] = useState('paper');
   const [continueCh, setContinueCh] = useState(1);
+  const backHref = portalHref === null ? null : portalHref ?? getPortalHref();
 
   useEffect(() => {
     const saved = localStorage.getItem(`${storagePrefix}:theme`) || 'paper';
@@ -145,6 +168,12 @@ export function SiteNav({
         {brand}
       </Link>
       <nav className="rail-nav">
+        {backHref ? (
+          <a href={backHref} className="rail-btn rail-portal" title={`返回${portalLabel}`}>
+            <Icon name="portal" />
+            <span>{portalLabel}</span>
+          </a>
+        ) : null}
         {items.map((it) => {
           const href =
             it.continueReading || it.id === 'read' ? `/read/${continueCh}/` : it.href;

@@ -15,7 +15,7 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const deploy = join(root, 'deploy');
 const BOOKS = JSON.parse(readFileSync(join(root, 'packages/catalog/books.json'), 'utf8'));
 const TEXT_EXT = new Set(['.html', '.js', '.css', '.json', '.txt', '.svg', '.xml', '.webmanifest']);
-const ASSET_EXT = /\.(webp|png|jpe?g|gif|svg|avif|ico|mp3|mp4|woff2?)$/i;
+const ASSET_EXT = /\.(webp|png|jpe?g|gif|svg|avif|ico|mp3|mp4|woff2?|js|json)$/i;
 
 rmSync(deploy, { recursive: true, force: true });
 mkdirSync(deploy, { recursive: true });
@@ -42,8 +42,12 @@ for (const book of BOOKS) {
 }
 
 writeFileSync(
-  join(deploy, '_routes.json'),
-  JSON.stringify({ version: 1, include: ['/*'], exclude: [] }, null, 2),
+  join(deploy, '_headers'),
+  `/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: DENY
+`,
 );
 
 console.log(`\nDone → ${deploy}`);

@@ -9,6 +9,7 @@ export type BookEntry = {
   kicker: string;
   lead: string[];
   highlight: string;
+  cover: string;
   packageName: string;
 };
 

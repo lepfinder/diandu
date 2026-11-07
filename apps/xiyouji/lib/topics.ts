@@ -14,6 +14,7 @@ export type Scene = {
   chapter: number;
   summary: string;
   people: string[];
+  image?: string;
 };
 
 export type Topics = {

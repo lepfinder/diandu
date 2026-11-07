@@ -107,9 +107,15 @@ export function ReaderChrome({ chapter, prev, next, toc }: {
   const list = toc;
 
   useEffect(() => {
-    const fs = Number(localStorage.getItem('hl:fontSize') || 19);
-    const lh = Number(localStorage.getItem('hl:lineHeight') || 1.95);
-    const rw = Number(localStorage.getItem('hl:width') || 38);
+    const clamp = (raw: string | null, fallback: number, min: number, max: number) => {
+      if (raw == null || raw === '') return fallback;
+      const n = Number(raw);
+      if (!Number.isFinite(n) || n < min || n > max) return fallback;
+      return n;
+    };
+    const fs = clamp(localStorage.getItem('hl:fontSize'), 19, 16, 26);
+    const lh = clamp(localStorage.getItem('hl:lineHeight'), 1.95, 1.4, 2.6);
+    const rw = clamp(localStorage.getItem('hl:width'), 38, 28, 52);
     const th = localStorage.getItem('hl:theme') || 'paper';
     const fm = (localStorage.getItem('hl:font') as 'song' | 'kai') || 'song';
     setFontSize(fs);

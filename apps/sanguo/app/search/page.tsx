@@ -1,23 +1,35 @@
 'use client';
 
-import { Suspense, useMemo, useState } from 'react';
+import { Suspense, useEffect, useMemo, useState } from 'react';
 import Link from '@/components/Link';
 import { useSearchParams } from 'next/navigation';
+import { loadBookScript, type BookPayload } from '@classic/ui';
 import { searchInChapters } from '@/lib/cn';
-import book from '@/data/book.json';
-import type { Chapter } from '@/lib/types';
 
 function SearchInner() {
   const params = useSearchParams();
   const initial = params.get('q') || '';
   const [q, setQ] = useState(initial);
   const [query, setQuery] = useState(initial);
-  const chapters = (book as { chapters: Chapter[] }).chapters;
+  const [book, setBook] = useState<BookPayload | null>(null);
+  const [ready, setReady] = useState(false);
+
+  useEffect(() => {
+    let cancelled = false;
+    loadBookScript().then((payload) => {
+      if (cancelled) return;
+      setBook(payload);
+      setReady(true);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   const results = useMemo(() => {
-    if (!query) return [];
-    return searchInChapters(chapters, query);
-  }, [query, chapters]);
+    if (!query || !book) return [];
+    return searchInChapters(book.chapters as Parameters<typeof searchInChapters>[0], query);
+  }, [query, book]);
 
   return (
     <div className="page-scroll">
@@ -41,9 +53,13 @@ function SearchInner() {
             onChange={(e) => setQ(e.target.value)}
             autoFocus
           />
-          <button className="btn accent" type="submit">检索</button>
+          <button className="btn accent" type="submit" disabled={!ready}>
+            {ready ? '检索' : '加载中…'}
+          </button>
         </form>
-        {!query ? (
+        {!ready ? (
+          <div className="empty">正在加载全文索引…</div>
+        ) : !query ? (
           <div className="empty">输入关键词开始检索</div>
         ) : results.length === 0 ? (
           <div className="empty">未找到「{query}」</div>

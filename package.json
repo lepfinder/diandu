@@ -16,6 +16,7 @@
     "build:portal": "pnpm --filter @diandu/portal build",
     "assemble": "node scripts/assemble.mjs",
     "compress:images": "node scripts/compress-images.mjs",
-    "deploy:build": "pnpm -r --filter=./apps/* run build:cf && node scripts/assemble.mjs"
+    "deploy:build": "pnpm -r --filter=./apps/* run build:cf && node scripts/assemble.mjs",
+    "sync:books": "node scripts/sync-book-public.mjs"
   }
 }

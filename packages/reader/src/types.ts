@@ -31,7 +31,10 @@ export type ReaderChromeProps = {
   /** localStorage 前缀，如 sh / hl / sg，站点隔离 */
   storagePrefix: string;
   chapter: ReaderChapter;
+  /** 初始目录；可与 tocUrl 配合，先渲染当前章再拉取全量 */
   toc: ReaderTocItem[];
+  /** 全量目录 JSON（组装部署下为 /书名/data/toc.json），用于减小章节 HTML */
+  tocUrl?: string;
   prev: Pick<ReaderTocItem, 'n' | 'label' | 't1'> | null;
   next: Pick<ReaderTocItem, 'n' | 'label' | 't1'> | null;
   /** 站内 Link；不传则用原生 a */

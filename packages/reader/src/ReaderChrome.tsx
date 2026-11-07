@@ -26,6 +26,7 @@ export function ReaderChrome({
   storagePrefix,
   chapter,
   toc,
+  tocUrl,
   prev,
   next,
   linkComponent,
@@ -38,6 +39,7 @@ export function ReaderChrome({
   const notesEnabled = features?.notes !== false;
   const compact = useCompact();
 
+  const [tocItems, setTocItems] = useState(toc);
   const [tocOpen, setTocOpen] = useState(false);
   const [setOpen, setSetOpen] = useState(false);
   const [notesOpen, setNotesOpen] = useState(false);
@@ -73,7 +75,26 @@ export function ReaderChrome({
   notesRef.current = notes;
   const [marginPos, setMarginPos] = useState<Array<{ id: string; top: number }>>([]);
 
-  const index = toc.findIndex((item) => item.n === chapter.n);
+  useEffect(() => {
+    setTocItems(toc);
+  }, [toc]);
+
+  useEffect(() => {
+    if (!tocUrl) return;
+    let cancelled = false;
+    fetch(tocUrl)
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data) => {
+        if (cancelled || !Array.isArray(data)) return;
+        setTocItems(data as typeof toc);
+      })
+      .catch(() => {});
+    return () => {
+      cancelled = true;
+    };
+  }, [tocUrl]);
+
+  const index = tocItems.findIndex((item) => item.n === chapter.n);
   const position = index >= 0 ? index + 1 : 0;
 
   useEffect(() => {
@@ -467,7 +488,7 @@ export function ReaderChrome({
     showToast(`已导出 ${ext.toUpperCase()}`);
   }
 
-  const filtered = toc.filter((item) => {
+  const filtered = tocItems.filter((item) => {
     const q = tocFilter.trim();
     if (!q) return true;
     return item.label.includes(q) || item.t1.includes(q) || (item.t2 || '').includes(q) || String(item.n) === q;
@@ -560,7 +581,7 @@ export function ReaderChrome({
         <div className="cr-title">
           <div className="cr-ch">
             {chapter.label}
-            <span className="cr-pos">{position} / {toc.length}</span>
+            <span className="cr-pos">{position} / {tocItems.length}</span>
           </div>
           <h2>{chapter.t1}</h2>
         </div>

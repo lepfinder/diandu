@@ -5,6 +5,8 @@ import Link from '@/components/Link';
 import { ReadRelated } from '@/components/ReadRelated';
 import type { Chapter, TocItem } from '@/lib/types';
 
+const tocUrl = `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/data/toc.json`;
+
 export function ReaderChrome({
   chapter,
   prev,
@@ -22,6 +24,7 @@ export function ReaderChrome({
       bookTitle="水浒笔记"
       chapter={chapter}
       toc={toc}
+      tocUrl={tocUrl}
       prev={prev}
       next={next}
       linkComponent={Link}

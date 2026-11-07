@@ -20,5 +20,6 @@ export default async function ReadPage({ params }: { params: Promise<{ n: string
   const list = getChapterList();
   const prev = n > 1 ? list[n - 2] : null;
   const next = n < list.length ? list[n] : null;
-  return <ReaderChrome chapter={chapter} prev={prev} next={next} toc={list} />;
+  const seed = [{ n: chapter.n, label: chapter.label, title: chapter.title || chapter.t1, t1: chapter.t1, t2: chapter.t2 }];
+  return <ReaderChrome chapter={chapter} prev={prev} next={next} toc={seed} />;
 }

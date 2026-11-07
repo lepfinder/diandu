@@ -16,10 +16,10 @@ export default async function ReadPage({ params }: { params: Promise<{ n: string
   const { n: ns } = await params;
   const n = Number(ns);
   const chapter = getChapter(n);
-  if (!chapter || Number.isNaN(n)) notFound();
+  if (!chapter) notFound();
   const list = getChapterList();
-  const index = list.findIndex((item) => item.n === n);
-  const prev = index > 0 ? list[index - 1] : null;
-  const next = index >= 0 && index < list.length - 1 ? list[index + 1] : null;
-  return <ReaderChrome chapter={chapter} prev={prev} next={next} toc={list} />;
+  const prev = n > 1 ? list[n - 2] : null;
+  const next = n < list.length ? list[n] : null;
+  const seed = [{ n: chapter.n, label: chapter.label, title: chapter.title || chapter.t1, t1: chapter.t1, t2: chapter.t2 }];
+  return <ReaderChrome chapter={chapter} prev={prev} next={next} toc={seed} />;
 }

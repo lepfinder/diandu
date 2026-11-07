@@ -1165,3 +1165,6 @@ input[type="range"] { width: 100%; accent-color: var(--accent); }
   .seat-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .seat-face { width: 30px; height: 40px; }
 }
+
+.rail-btn.rail-portal { color: var(--accent); }
+.rail-btn.rail-portal:hover { color: var(--accent); }

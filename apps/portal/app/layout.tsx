@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
-import { Noto_Serif_SC, ZCOOL_XiaoWei } from 'next/font/google';
+import { Ma_Shan_Zheng, Noto_Serif_SC } from 'next/font/google';
 import './globals.css';
 
-const display = ZCOOL_XiaoWei({
+const display = Ma_Shan_Zheng({
   weight: '400',
   subsets: ['latin'],
   variable: '--font-display',

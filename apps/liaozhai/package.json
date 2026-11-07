@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "NEXT_DIST_DIR=.next-dev next dev -p 3510",
-    "build": "NEXT_DIST_DIR=.next next build",
-    "build:cf": "NEXT_DIST_DIR=.next NEXT_PUBLIC_BASE_PATH=/liaozhai next build",
+    "build": "node ../../scripts/sync-book-public.mjs liaozhai && NEXT_DIST_DIR=.next next build",
+    "build:cf": "node ../../scripts/sync-book-public.mjs liaozhai && NEXT_DIST_DIR=.next NEXT_PUBLIC_BASE_PATH=/liaozhai NEXT_PUBLIC_SITE_MODE=assemble next build",
     "start": "NEXT_DIST_DIR=.next next start -p 3510",
     "book": "python3 scripts/build-book.py"
   },

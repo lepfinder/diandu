@@ -3283,3 +3283,6 @@ body[data-route='zanghua'] { overflow: hidden; }
   background: #b5442e;
   transform: scale(1.06);
 }
+
+.rail-btn.rail-portal { color: var(--accent); }
+.rail-btn.rail-portal:hover { color: var(--accent); }

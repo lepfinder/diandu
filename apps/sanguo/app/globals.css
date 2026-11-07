@@ -1014,3 +1014,6 @@ input[type="range"] { width: 100%; accent-color: var(--accent); }
   .tl-act-img { min-width: 0; height: 150px; }
   .map-board { height: 520px; }
 }
+
+.rail-btn.rail-portal { color: var(--accent); }
+.rail-btn.rail-portal:hover { color: var(--accent); }

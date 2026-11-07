@@ -8,6 +8,7 @@
     "kicker": "中国古典长篇小说 · 交互精读",
     "lead": ["满纸荒唐言，一把辛酸泪。", "都云作者痴，谁解其中味？"],
     "highlight": "人物星图 · 大观园 · 太虚幻境",
+    "cover": "/covers/honglou.webp",
     "packageName": "@diandu/honglou"
   },
   {
@@ -19,6 +20,7 @@
     "kicker": "中国古典长篇小说 · 交互精读",
     "lead": ["滚滚长江东逝水，浪花淘尽英雄。", "是非成败转头空。"],
     "highlight": "回目形势图 · 大事年表",
+    "cover": "/covers/sanguo.webp",
     "packageName": "@diandu/sanguo"
   },
   {
@@ -30,6 +32,7 @@
     "kicker": "中国古典长篇小说 · 交互精读",
     "lead": ["话说大宋仁宗天子在位，嘉祐三年三月三日。", "一百单八将聚义梁山。"],
     "highlight": "一百单八将座次 · 聚义路线",
+    "cover": "/covers/shuihu.webp",
     "packageName": "@diandu/shuihu"
   },
   {
@@ -41,6 +44,7 @@
     "kicker": "中国古典长篇小说 · 交互精读",
     "lead": ["混沌未分天地乱，茫茫渺渺无人见。", "自从盘古破鸿蒙，开辟从兹清浊辨。"],
     "highlight": "西行路线 · 名场面",
+    "cover": "/covers/xiyouji.webp",
     "packageName": "@diandu/xiyouji"
   },
   {
@@ -52,6 +56,7 @@
     "kicker": "中国古典长篇小说 · 交互精读",
     "lead": ["豪华去后行人绝，箫笙不响歌喉咽。", "雄剑无威光彩灭。"],
     "highlight": "年表 · 名篇导读 · 市井物产",
+    "cover": "/covers/jinpingmei.webp",
     "packageName": "@diandu/jinpingmei"
   },
   {
@@ -63,6 +68,7 @@
     "kicker": "文言短篇 · 交互精读",
     "lead": ["才非干宝，雅爱搜神。", "情类黄州，喜人谈鬼。"],
     "highlight": "狐鬼花妖品类 · 名篇",
+    "cover": "/covers/liaozhai.webp",
     "packageName": "@diandu/liaozhai"
   }
 ]

@@ -12,44 +12,59 @@ const seals: Record<string, string> = {
 
 export default function HomePage() {
   return (
-    <div className="shell">
+    <div className="page">
+      <div className="grain" aria-hidden />
+
       <header className="topbar">
-        <div className="mark">典读</div>
-        <div className="hint">CLASSICAL CLOSE READING</div>
+        <div className="brand">典读</div>
+        <div className="top-meta">六部古典 · 一门而入</div>
       </header>
 
       <section className="hero">
-        <p className="tag">中国古典 · 交互精读</p>
+        <p className="eyebrow">中国古典 · 交互精读</p>
         <h1>典读</h1>
         <p className="lead">
-          把六部古典请进同一座书斋：全文阅读、人物图谱、专题与检索，各自成章，一门而入。
+          把六部古典请进同一座书斋：全文阅读、人物图谱、专题与检索，各自成章。
         </p>
       </section>
 
-      <div className="shelf-head">
-        <h2>书目</h2>
-        <p>{BOOKS.length} 部 · 点开即读</p>
-      </div>
+      <section className="shelf" aria-label="书目">
+        <div className="shelf-head">
+          <h2>书目</h2>
+          <span>{BOOKS.length} 部</span>
+        </div>
 
-      <section className="shelf">
-        {BOOKS.map((book) => (
-          <a key={book.id} className="book" href={bookHref(book)}>
-            <span className="seal" aria-hidden>
-              {seals[book.id] || book.title.slice(0, 1)}
-            </span>
-            <p className="kicker">{book.kicker}</p>
-            <h3>{book.title}</h3>
-            <p className="quote">
-              {book.lead[0]}
-              <br />
-              {book.lead[1]}
-            </p>
-            <div className="meta">
-              <span className="hl">{book.highlight}</span>
-              <span className="go">进入 →</span>
-            </div>
-          </a>
-        ))}
+        <div className="grid">
+          {BOOKS.map((book, i) => (
+            <a
+              key={book.id}
+              className="tome"
+              href={bookHref(book)}
+              style={{ animationDelay: `${0.08 + i * 0.06}s` }}
+            >
+              <div className="tome-media">
+                <img src={book.cover} alt="" loading={i < 3 ? 'eager' : 'lazy'} />
+                <div className="tome-shade" />
+                <span className="seal" aria-hidden>
+                  {seals[book.id] || book.title.slice(0, 1)}
+                </span>
+              </div>
+              <div className="tome-body">
+                <p className="kicker">{book.author}</p>
+                <h3>{book.title}</h3>
+                <p className="quote">
+                  {book.lead[0]}
+                  <br />
+                  {book.lead[1]}
+                </p>
+                <div className="meta">
+                  <span className="hl">{book.highlight}</span>
+                  <span className="go">进入精读</span>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
       </section>
 
       <footer className="foot">正文多取维基文库公有领域文本 · 典读</footer>

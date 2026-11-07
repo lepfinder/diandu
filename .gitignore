@@ -13,3 +13,15 @@ tsconfig.tsbuildinfo
 .env
 .env.*
 !.env.example
+
+# 构建中间物 / 研究用大图（勿进主仓）
+apps/honglou/data/紅樓夢.txt
+apps/honglou/data/index.html
+apps/honglou/data/book.js
+apps/honglou/assets/research/
+packages/reader/package-lock.json
+
+# 由 pnpm sync:books / build:cf 生成的检索索引
+apps/*/public/data/book.js
+apps/*/public/data/book.json
+apps/*/public/data/toc.json

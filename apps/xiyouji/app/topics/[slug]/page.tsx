@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { RouteMap } from '@/components/RouteMap';
 import { getChapterList } from '@/lib/book';
 import { TOPIC_TABS, getTopics } from '@/lib/topics';
+import { asset } from '@classic/ui';
 
 export function generateStaticParams() {
   return TOPIC_TABS.map((tab) => ({ slug: tab.id }));
@@ -56,8 +57,12 @@ export default async function TopicPage({ params }: { params: Promise<{ slug: st
               {topics.scenes.map((scene) => {
                 const chapter = toc.find((item) => item.n === scene.chapter);
                 return (
-                  <article key={scene.id} className="scene-card">
-                    <div className="scene-plate" aria-hidden="true">{scene.plate}</div>
+                  <article key={scene.id} className={scene.image ? 'scene-card has-art' : 'scene-card'}>
+                    {scene.image ? (
+                      <img className="scene-art" src={asset(scene.image)} alt={scene.title} />
+                    ) : (
+                      <div className="scene-plate" aria-hidden="true">{scene.plate}</div>
+                    )}
                     <div className="scene-body">
                       <div className="num">{chapter?.label}　{chapter?.t1}</div>
                       <h2>{scene.title}</h2>

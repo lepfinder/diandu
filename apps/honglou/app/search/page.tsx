@@ -3,16 +3,8 @@
 import { Suspense, useEffect, useMemo, useState } from 'react';
 import Link from '@/components/Link';
 import { useSearchParams } from 'next/navigation';
+import { loadBookScript, type BookPayload } from '@classic/ui';
 import { searchInChapters } from '@/lib/cn';
-import type { Chapter } from '@/lib/types';
-
-type BookPayload = { chapters: Chapter[] };
-
-declare global {
-  interface Window {
-    __BOOK__?: BookPayload;
-  }
-}
 
 function SearchInner() {
   const params = useSearchParams();
@@ -23,28 +15,20 @@ function SearchInner() {
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    if (window.__BOOK__) {
-      setBook(window.__BOOK__);
+    let cancelled = false;
+    loadBookScript().then((payload) => {
+      if (cancelled) return;
+      setBook(payload);
       setReady(true);
-      return;
-    }
-    const s = document.createElement('script');
-    s.src = '/data/book.js';
-    s.onload = () => {
-      setBook(window.__BOOK__ || null);
-      setReady(true);
-    };
-    s.onerror = () => setReady(true);
-    document.body.appendChild(s);
+    });
     return () => {
-      s.onload = null;
-      s.onerror = null;
+      cancelled = true;
     };
   }, []);
 
   const results = useMemo(() => {
     if (!query || !book) return [];
-    return searchInChapters(book.chapters, query);
+    return searchInChapters(book.chapters as Parameters<typeof searchInChapters>[0], query);
   }, [query, book]);
 
   return (

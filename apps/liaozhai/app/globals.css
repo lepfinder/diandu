@@ -917,3 +917,6 @@ input[type="range"] { width: 100%; accent-color: var(--accent); }
   .home-grid { grid-template-columns: 1fr; }
   .map-board, .route-board { max-height: 520px; }
 }
+
+.rail-btn.rail-portal { color: var(--accent); }
+.rail-btn.rail-portal:hover { color: var(--accent); }

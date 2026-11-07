@@ -596,6 +596,14 @@ input[type="range"] { width: 100%; accent-color: var(--accent); }
   font-family: var(--serif);
   font-size: 42px;
 }
+.scene-card.has-art { grid-template-columns: 1fr; }
+.scene-art {
+  display: block;
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  object-position: center;
+}
 .scene-body { padding: 18px 18px 16px; display: flex; flex-direction: column; }
 .scene-body p { flex: 1; }
 .people { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
@@ -741,3 +749,6 @@ input[type="range"] { width: 100%; accent-color: var(--accent); }
   .scene-plate { min-height: 120px; }
   .map-board, .route-board { max-height: 520px; }
 }
+
+.rail-btn.rail-portal { color: var(--accent); }
+.rail-btn.rail-portal:hover { color: var(--accent); }
