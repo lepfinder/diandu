@@ -1,3 +1,4 @@
+import { asset } from '@classic/ui';
 import charactersJson from '@/data/characters.json';
 
 export type CharacterGroup = {
@@ -17,6 +18,10 @@ export type Person = {
 };
 
 const data = charactersJson as { groups: CharacterGroup[]; list: Person[] };
+
+export function portraitUrl(id: string): string {
+  return asset(`/portraits/${id}.webp`);
+}
 
 export function getGroups(): CharacterGroup[] {
   return data.groups;

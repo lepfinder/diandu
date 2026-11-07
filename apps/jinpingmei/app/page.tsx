@@ -1,10 +1,13 @@
 import Image from 'next/image';
 import Link from '@/components/Link';
+import { HomeProgress } from '@/components/HomeProgress';
 import { getBook, getChapterList } from '@/lib/book';
 
 const spots = [
   { n: 1, note: '十兄弟结拜，武松打虎，潘金莲已在帘内。' },
   { n: 27, note: '翡翠轩私语，葡萄架一闹。' },
+  { n: 39, note: '官哥永福寺寄名，后文还要回到这座寺。' },
+  { n: 59, note: '雪狮子惊吓官哥，瓶儿的病从此缠住。' },
   { n: 62, note: '李瓶儿病死，西门庆大哭。' },
   { n: 79, note: '西门庆纵欲身亡，吴月娘生下孝哥。' },
   { n: 100, note: '普静幻度孝哥，西门一家的收场。' },
@@ -37,22 +40,12 @@ export default function HomePage() {
             </div>
           </div>
           <div className="side-stack">
-            <div className="progress-card">
-              <div className="label">
-                <strong>全书概览</strong>
-                <span>一百回 · 约 {Math.round(chars / 10000)} 万字</span>
-              </div>
-              <div className="bar"><i style={{ width: '100%' }} /></div>
-              <p className="meta-note">
-                {book.meta.author}
-                <br />
-                {book.meta.edition}
-                <br />
-                导出于 {book.meta.exported}
-                <br />
-                原文照录，含直白的情欲描写。
-              </p>
-            </div>
+            <HomeProgress
+              author={book.meta.author}
+              edition={book.meta.edition}
+              exported={book.meta.exported}
+              charsWan={Math.round(chars / 10000)}
+            />
             <Link className="mini-card" href="/read/27/">
               <div className="t">葡萄架 · 第二十七回</div>
               <div className="d">{byN.get(27)?.t1}　{byN.get(27)?.t2}</div>

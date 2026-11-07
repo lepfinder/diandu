@@ -1,5 +1,7 @@
+import Image from 'next/image';
 import Link from '@/components/Link';
 import { getBook, getChapterList } from '@/lib/book';
+import { getTopics } from '@/lib/topics';
 
 const spots = [
   { n: 1, note: '花果山，石猴出世。' },
@@ -17,12 +19,14 @@ export default function HomePage() {
   const chapters = getChapterList();
   const byN = new Map(chapters.map((c) => [c.n, c]));
   const chars = book.chapters.reduce((sum, chapter) => sum + chapter.paras.reduce((n, para) => n + para.length, 0), 0);
+  const sceneCount = getTopics().scenes.length;
 
   return (
     <div className="page-scroll">
       <div className="home">
         <section className="hero">
           <div className="hero-card">
+            <Image src="/cover.webp" alt="" fill priority sizes="(max-width: 960px) 100vw, 60vw" />
             <div className="hero-content">
               <div className="hero-kicker">中国古典长篇小说 · 交互精读</div>
               <h1>西游记</h1>
@@ -63,21 +67,30 @@ export default function HomePage() {
         <div className="section-head">
           <div>
             <h1>专题</h1>
-            <p className="sub">西行跟着回目走。名场面先写短述，链回那一回。</p>
+            <p className="sub">西行跟着回目走。名场面与器物先写短述，链回那一回。</p>
           </div>
         </div>
         <section className="home-grid">
-          <Link className="topic-card" href="/topics/route/">
+          <Link className="topic-card has-img" href="/topics/route/">
+            <Image src="/topics/topic-route.webp" alt="" fill sizes="(max-width: 720px) 100vw, 33vw" />
             <div className="icon">途</div>
             <h3>西行</h3>
             <p>十八站。拖到第几回，就看到取经人走到哪一站。</p>
           </Link>
-          <Link className="topic-card" href="/topics/scenes/">
+          <Link className="topic-card has-img" href="/topics/scenes/">
+            <Image src="/topics/topic-scenes.webp" alt="" fill sizes="(max-width: 720px) 100vw, 33vw" />
             <div className="icon">戏</div>
             <h3>名场面</h3>
-            <p>从龙宫借宝、白骨精、车迟国到狮驼岭。二十一场短述，各链回那一回。</p>
+            <p>从龙宫借宝、白骨精、车迟国到狮驼岭。{sceneCount} 场短述，各链回那一回。</p>
           </Link>
-          <Link className="topic-card" href="/characters/">
+          <Link className="topic-card has-img" href="/topics/relics/">
+            <Image src="/topics/topic-relics.webp" alt="" fill sizes="(max-width: 720px) 100vw, 33vw" />
+            <div className="icon">器</div>
+            <h3>器物</h3>
+            <p>金箍棒、紧箍、芭蕉扇、人参果。十二件叫得响的兵器法宝，各链回出处。</p>
+          </Link>
+          <Link className="topic-card has-img" href="/characters/">
+            <Image src="/topics/topic-characters.webp" alt="" fill sizes="(max-width: 720px) 100vw, 33vw" />
             <div className="icon">人</div>
             <h3>人物</h3>
             <p>取经五口之外，天庭、佛门、妖魔和人间按书里有名有事的人补过。五十五人。</p>

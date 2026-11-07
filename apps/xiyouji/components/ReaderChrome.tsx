@@ -2,6 +2,8 @@
 
 import { ReaderChrome as ClassicReader } from '@classic/reader';
 import Link from '@/components/Link';
+import { ReadRelated } from '@/components/ReadRelated';
+import { getXiyoujiSocialLayer } from '@/lib/weread-social';
 import type { Chapter, TocItem } from '@/lib/types';
 
 const tocUrl = `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/data/toc.json`;
@@ -17,6 +19,8 @@ export function ReaderChrome({
   next: { n: number; label: string; t1: string } | null;
   toc: TocItem[];
 }) {
+  const social = getXiyoujiSocialLayer();
+
   return (
     <ClassicReader
       storagePrefix="xy"
@@ -28,6 +32,9 @@ export function ReaderChrome({
       next={next}
       linkComponent={Link}
       features={{ notes: true }}
+      social={social}
+      headerExtra={<ReadRelated chapterN={chapter.n} mode="header" />}
+      footer={<ReadRelated chapterN={chapter.n} mode="footer" />}
     />
   );
 }

@@ -12,7 +12,7 @@ const nextConfig = {
     loaderFile: './image-loader.js',
   },
   reactStrictMode: true,
-  transpilePackages: ['@classic/ui'],
+  transpilePackages: ['@classic/reader', '@classic/ui'],
 };
 
 export default nextConfig;

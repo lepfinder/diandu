@@ -125,9 +125,6 @@ function defaultMatch(id: string, pathname: string) {
   if (id === 'topics') return pathname.startsWith('/topics');
   if (id === 'search') return pathname.startsWith('/search');
   if (id === 'starmap') return pathname.startsWith('/star') || pathname.startsWith('/graph');
-  if (id === 'garden') return pathname.startsWith('/garden');
-  if (id === 'taixu') return pathname.startsWith('/taixu');
-  if (id === 'zanghua') return pathname.startsWith('/zanghua');
   return pathname.startsWith(`/${id}`);
 }
 

@@ -28,8 +28,8 @@ export default function StarPage() {
           <Link className="btn ghost sm" href="/characters/">
             人物百科
           </Link>
-          <Link className="btn ghost sm" href="/garden/">
-            三维园林
+          <Link className="btn ghost sm" href="/topics/places/">
+            大观园图鉴
           </Link>
         </div>
       </header>

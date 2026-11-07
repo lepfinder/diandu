@@ -7,7 +7,7 @@
     "port": 3434,
     "kicker": "中国古典长篇小说 · 交互精读",
     "lead": ["满纸荒唐言，一把辛酸泪。", "都云作者痴，谁解其中味？"],
-    "highlight": "人物星图 · 大观园 · 太虚幻境",
+    "highlight": "人物星图 · 十二钗 · 大观园图鉴",
     "cover": "/covers/honglou.webp",
     "packageName": "@diandu/honglou"
   },
@@ -43,7 +43,7 @@
     "port": 3480,
     "kicker": "中国古典长篇小说 · 交互精读",
     "lead": ["混沌未分天地乱，茫茫渺渺无人见。", "自从盘古破鸿蒙，开辟从兹清浊辨。"],
-    "highlight": "西行路线 · 名场面",
+    "highlight": "西行路线 · 名场面 · 器物法宝",
     "cover": "/covers/xiyouji.webp",
     "packageName": "@diandu/xiyouji"
   },

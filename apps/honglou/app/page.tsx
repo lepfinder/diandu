@@ -23,9 +23,9 @@ export default function HomePage() {
                 都云作者痴，谁解其中味？
               </p>
               <div className="hero-actions">
-                <Link className="btn accent" href="/taixu/">太虚幻境 · 入梦</Link>
-                <Link className="btn ghost" href="/zanghua/">葬花吟</Link>
+                <Link className="btn accent" href="/read/1/">开始精读</Link>
                 <Link className="btn ghost" href="/star/">人物关系</Link>
+                <Link className="btn ghost" href="/topics/twelve/">十二钗</Link>
               </div>
             </div>
           </div>
@@ -57,33 +57,15 @@ export default function HomePage() {
         <div className="section-head">
           <div>
             <h1>专题导读</h1>
-            <p className="sub">把人物、园林、判词与版本拆开读，再回到正文——第二遍、第三遍会有完全不同的风景。</p>
+            <p className="sub">把人物、判词、诗词与版本拆开读，再回到正文——第二遍、第三遍会有完全不同的风景。</p>
           </div>
         </div>
         <section className="home-grid">
-          <Link className="topic-card has-img" href="/taixu/">
-            <Image src="/images/taixu.webp" alt="" fill sizes="(max-width: 720px) 100vw, 33vw" />
-            <div className="icon">梦</div>
-            <h3>太虚幻境</h3>
-            <p>滚动叙事门面：顽石、点化、太虚、薄命司十二册。</p>
-          </Link>
-          <Link className="topic-card has-img" href="/zanghua/">
-            <Image src="/images/poem-zanghua.webp" alt="" fill sizes="(max-width: 720px) 100vw, 33vw" />
-            <div className="icon">花</div>
-            <h3>葬花吟</h3>
-            <p>落花粒子场，六幕诗句随风飘散，末句归于花冢。</p>
-          </Link>
           <Link className="topic-card has-img" href="/star/">
             <Image src="/images/graph-banner.webp" alt="" fill sizes="(max-width: 720px) 100vw, 33vw" />
             <div className="icon">缘</div>
             <h3>人物关系</h3>
             <p>三维星座中的贾府群芳。血缘、姻亲、情缘一图看清，拖回目轴看兴衰明灭。</p>
-          </Link>
-          <Link className="topic-card has-img" href="/garden/">
-            <Image src="/images/place-yihong.webp" alt="" fill sizes="(max-width: 720px) 100vw, 33vw" />
-            <div className="icon">园</div>
-            <h3>三维园林</h3>
-            <p>大观园微缩沙盘：沁芳溪、怡红院、潇湘馆……五幕气候可切换。</p>
           </Link>
           <Link className="topic-card has-img" href="/characters/">
             <Image src="/images/place-xiaoxiang.webp" alt="" fill sizes="(max-width: 720px) 100vw, 33vw" />

@@ -5,7 +5,7 @@ const nextConfig = {
   distDir: process.env.NEXT_DIST_DIR || '.next',
   images: { unoptimized: true },
   reactStrictMode: true,
-  transpilePackages: ['@classic/catalog'],
+  transpilePackages: ['@classic/catalog', '@classic/ui'],
 };
 
 export default nextConfig;

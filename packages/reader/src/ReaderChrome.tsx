@@ -7,7 +7,7 @@ import {
   type ElementType,
   type MouseEvent as ReactMouseEvent,
 } from 'react';
-import { annotateParagraph } from './annotate';
+import { annotateParagraph, formatSocialCount } from './annotate';
 import { loadNotes, readClampedNumber, readNumber, readString, saveNotes, write } from './storage';
 import type { ReaderChromeProps, ReaderLinkProps, ReaderNote } from './types';
 import { useCompact } from './useCompact';
@@ -32,20 +32,32 @@ export function ReaderChrome({
   linkComponent,
   footer,
   headerExtra,
+  tocLead,
+  overlays,
+  social,
+  decoratePlain,
+  onBodyClick: onBodyClickProp,
   features,
   bookTitle = '笔记',
 }: ReaderChromeProps) {
   const Link = (linkComponent || DefaultLink) as ElementType<ReaderLinkProps>;
   const notesEnabled = features?.notes !== false;
   const compact = useCompact();
+  const socialHighlights = social?.highlights || [];
+  const socialReviews = social?.reviews || [];
+  const chapterSocial = socialHighlights.filter((h) => h.ch === chapter.n && h.quote);
+  const hasSocial = socialHighlights.length > 0 || socialReviews.length > 0;
+  const notesPanelEnabled = notesEnabled || hasSocial;
 
   const [tocItems, setTocItems] = useState(toc);
   const [tocOpen, setTocOpen] = useState(false);
   const [setOpen, setSetOpen] = useState(false);
   const [notesOpen, setNotesOpen] = useState(false);
+  const [reviewsOpen, setReviewsOpen] = useState(false);
+  const [expandedReviewId, setExpandedReviewId] = useState<string | null>(null);
   const [marginVisible, setMarginVisible] = useState(true);
   const [tocFilter, setTocFilter] = useState('');
-  const [noteFilter, setNoteFilter] = useState<'all' | 'note' | 'mark'>('all');
+  const [noteFilter, setNoteFilter] = useState<'all' | 'note' | 'mark' | 'social'>('all');
   const [fontSize, setFontSize] = useState(19);
   const [lineHeight, setLineHeight] = useState(1.95);
   const [readWidth, setReadWidth] = useState(38);
@@ -157,15 +169,17 @@ export function ReaderChrome({
         return;
       }
       if ((e.target as HTMLElement)?.matches('input, textarea')) return;
+      // 不拦截 ⌘/Ctrl/Alt 组合键（如 ⌘R 刷新、⌘T 新标签）
+      if (e.metaKey || e.ctrlKey || e.altKey) return;
       if ((e.key === 'ArrowRight' || e.key === 'k') && next) location.href = `/read/${next.n}/`;
       if ((e.key === 'ArrowLeft' || e.key === 'j') && prev) location.href = `/read/${prev.n}/`;
       if (e.key === '/') {
         e.preventDefault();
         location.href = '/search/';
       }
-      if (notesEnabled && (e.key === 'n' || e.key === 'N')) {
+      if (notesPanelEnabled && (e.key === 'n' || e.key === 'N')) {
         // 桌面：切换侧栏批注；手机：打开笔记总览
-        if (compact) {
+        if (compact || !notesEnabled) {
           setNotesOpen((v) => !v);
           setTocOpen(false);
           setSetOpen(false);
@@ -177,8 +191,16 @@ export function ReaderChrome({
           });
         }
       }
-      if (notesEnabled && (e.key === 'b' || e.key === 'B')) {
+      if (notesPanelEnabled && (e.key === 'b' || e.key === 'B')) {
         setNotesOpen((v) => !v);
+        setReviewsOpen(false);
+        setTocOpen(false);
+        setSetOpen(false);
+      }
+      if (socialReviews.length > 0 && (e.key === 'r' || e.key === 'R')) {
+        e.preventDefault();
+        setReviewsOpen((v) => !v);
+        setNotesOpen(false);
         setTocOpen(false);
         setSetOpen(false);
       }
@@ -189,7 +211,7 @@ export function ReaderChrome({
     }
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
-  }, [compact, composer, composerText, next, notesEnabled, prev, selBar, storagePrefix, theme]);
+  }, [compact, composer, composerText, next, notesEnabled, notesPanelEnabled, prev, selBar, socialReviews.length, storagePrefix, theme]);
 
   function syncSelBar() {
     if (!notesEnabled) return;
@@ -244,9 +266,32 @@ export function ReaderChrome({
     setTocOpen(false);
     setSetOpen(false);
     setNotesOpen(false);
+    setReviewsOpen(false);
     setSelBar(null);
     setFocusedNoteId(null);
     setComposer(null);
+  }
+
+  function openReviewsPanel() {
+    setReviewsOpen(true);
+    setTocOpen(false);
+    setSetOpen(false);
+    setNotesOpen(false);
+    if (!expandedReviewId && socialReviews[0]) {
+      setExpandedReviewId(socialReviews[0].id || '0');
+    }
+  }
+
+  function starLabel(star?: number) {
+    if (star == null || !Number.isFinite(star)) return '';
+    const n = Math.max(1, Math.min(5, Math.round(star / 20)));
+    return '★'.repeat(n);
+  }
+
+  function reviewPreview(text: string, max = 96) {
+    const t = text.replace(/\s+/g, ' ').trim();
+    if (t.length <= max) return t;
+    return `${t.slice(0, max)}…`;
   }
 
   function flashNoteEl(el: HTMLElement) {
@@ -412,10 +457,13 @@ export function ReaderChrome({
     });
   }, [focusedNoteId, notesOpen, noteFilter]);
 
-  function onBodyClick(e: ReactMouseEvent) {
-    const noteEl = (e.target as HTMLElement).closest('.cr-note-wave, .cr-hl') as HTMLElement | null;
+  function onBodyClick(e: ReactMouseEvent<HTMLDivElement>) {
+    if (onBodyClickProp?.(e)) return;
+
+    const noteEl = (e.target as HTMLElement).closest('.cr-note-wave, .cr-hl, .cr-hl-social') as HTMLElement | null;
     if (noteEl?.dataset.noteId) {
-      focusNote(noteEl.dataset.noteId, noteEl, false);
+      const id = noteEl.dataset.noteId;
+      focusNote(id, noteEl, false);
       return;
     }
     if (skipSelClearRef.current) {
@@ -496,26 +544,52 @@ export function ReaderChrome({
 
   const chapterNotes = notes.filter((note) => note.ch === chapter.n);
   const marginNotes = chapterNotes.filter((note) => note.type === 'note');
-  const showMargin = notesEnabled && !compact && marginVisible && marginNotes.length > 0;
+
+  function openNotesDrawer(filter?: 'all' | 'note' | 'mark' | 'social') {
+    if (filter) setNoteFilter(filter);
+    setNotesOpen(true);
+    setTocOpen(false);
+    setSetOpen(false);
+  }
+
+  type MarginItem = {
+    id: string;
+    kind: 'note' | 'social';
+    body: string;
+    quote: string;
+  };
+  const marginItems: MarginItem[] = [
+    ...marginNotes.map((note) => ({
+      id: note.id,
+      kind: 'note' as const,
+      body: note.comment?.trim() || clipQuote(note.quote, 36),
+      quote: note.comment?.trim() ? note.quote : '',
+    })),
+    ...chapterSocial.map((h) => ({
+      id: h.id,
+      kind: 'social' as const,
+      body: `${formatSocialCount(h.totalCount)} 人划线`,
+      quote: h.quote,
+    })),
+  ];
+  const showMargin = !compact && marginVisible && marginItems.length > 0;
 
   function toggleMarginVisible() {
-    if (compact) {
-      setNotesOpen(true);
-      setTocOpen(false);
-      setSetOpen(false);
+    if (compact || !notesEnabled) {
+      openNotesDrawer('all');
       return;
     }
     const next = !marginVisible;
     setMarginVisible(next);
     write(storagePrefix, 'margin', next ? '1' : '0');
-    if (next && marginNotes.length === 0) {
+    if (next && marginItems.length === 0) {
       showToast('本回暂无批注，选中正文可添加');
     } else {
       showToast(next ? '已显示侧栏批注' : '已隐藏侧栏批注');
     }
   }
-  const marginNoteKey = marginNotes.map((note) => note.id).join('|');
-  const panelOpen = tocOpen || setOpen || notesOpen;
+  const marginNoteKey = marginItems.map((item) => item.id).join('|');
+  const panelOpen = tocOpen || setOpen || notesOpen || reviewsOpen;
 
   useEffect(() => {
     if (!showMargin) {
@@ -575,7 +649,7 @@ export function ReaderChrome({
     <div className={`cr-shell${compact ? ' is-compact' : ''}${showMargin ? ' has-margin' : ''}`}>
       <div className="cr-progress" ref={progressRef} />
       <header className="cr-top">
-        <button type="button" className="cr-icon" onClick={() => { setTocOpen(true); setSetOpen(false); setNotesOpen(false); }} title="目录" aria-label="目录">
+        <button type="button" className="cr-icon" onClick={() => { setTocOpen(true); setSetOpen(false); setNotesOpen(false); setReviewsOpen(false); }} title="目录" aria-label="目录">
           <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10" /></svg>
         </button>
         <div className="cr-title">
@@ -585,14 +659,14 @@ export function ReaderChrome({
           </div>
           <h2>{chapter.t1}</h2>
         </div>
-        {notesEnabled ? (
+        {notesPanelEnabled ? (
           <button
             type="button"
-            className={`cr-icon${(!compact && marginVisible) ? ' on' : ''}`}
+            className={`cr-icon${(!compact && notesEnabled && marginVisible) ? ' on' : ''}`}
             onClick={toggleMarginVisible}
-            title={compact ? '笔记' : (marginVisible ? '隐藏侧栏批注' : '显示侧栏批注')}
-            aria-label={compact ? '笔记' : (marginVisible ? '隐藏侧栏批注' : '显示侧栏批注')}
-            aria-pressed={!compact ? marginVisible : undefined}
+            title={compact || !notesEnabled ? '笔记' : (marginVisible ? '隐藏侧栏批注' : '显示侧栏批注')}
+            aria-label={compact || !notesEnabled ? '笔记' : (marginVisible ? '隐藏侧栏批注' : '显示侧栏批注')}
+            aria-pressed={!compact && notesEnabled ? marginVisible : undefined}
           >
             <svg viewBox="0 0 24 24" aria-hidden>
               <rect x="3" y="4" width="18" height="16" rx="2" />
@@ -600,7 +674,19 @@ export function ReaderChrome({
             </svg>
           </button>
         ) : null}
-        <button type="button" className="cr-icon" onClick={() => { setSetOpen(true); setTocOpen(false); setNotesOpen(false); }} title="版式" aria-label="版式">
+        {socialReviews.length > 0 ? (
+          <button
+            type="button"
+            className={`cr-icon cr-reviews-btn${reviewsOpen ? ' on' : ''}`}
+            onClick={() => (reviewsOpen ? setReviewsOpen(false) : openReviewsPanel())}
+            title="书评"
+            aria-label="书评"
+            aria-pressed={reviewsOpen}
+          >
+            <span className="cr-reviews-label">书评</span>
+          </button>
+        ) : null}
+        <button type="button" className="cr-icon" onClick={() => { setSetOpen(true); setTocOpen(false); setNotesOpen(false); setReviewsOpen(false); }} title="版式" aria-label="版式">
           <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" /><path d="M12 3v2M12 19v2M3 12H5M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M18.4 5.6 17 7M7 17l-1.4 1.4" /></svg>
         </button>
       </header>
@@ -624,6 +710,23 @@ export function ReaderChrome({
               <div className="cr-num">{chapter.label}</div>
               <h1>{chapter.t1}</h1>
               <div className="cr-pair">{chapter.t2}</div>
+              {chapterSocial.length > 0 ? (
+                <button
+                  type="button"
+                  className="cr-social-banner"
+                  onClick={() => {
+                    if (compact) openNotesDrawer('social');
+                    else {
+                      setMarginVisible(true);
+                      write(storagePrefix, 'margin', '1');
+                      showToast('右侧栏可见众人热门');
+                    }
+                  }}
+                >
+                  本回众人热门 · {chapterSocial.length} 条
+                  {social?.sourceLabel ? ` · ${social.sourceLabel}` : ''}
+                </button>
+              ) : null}
               {headerExtra}
             </header>
             {chapter.paras.map((para, i) => (
@@ -631,8 +734,11 @@ export function ReaderChrome({
                 key={i}
                 className={i === 0 ? 'open' : undefined}
                 dangerouslySetInnerHTML={{
-                  __html: notesEnabled
-                    ? annotateParagraph(para, chapterNotes)
+                  __html: (notesEnabled || chapterSocial.length > 0 || decoratePlain)
+                    ? annotateParagraph(para, notesEnabled ? chapterNotes : [], {
+                        social: chapterSocial,
+                        decoratePlain,
+                      })
                     : para.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'),
                 }}
               />
@@ -655,29 +761,27 @@ export function ReaderChrome({
           </article>
           {showMargin ? (
             <aside className="cr-margin" aria-label="本回批注">
-              {marginNotes.map((note) => {
-                const pos = marginPos.find((item) => item.id === note.id);
+              {marginItems.map((item) => {
+                const pos = marginPos.find((p) => p.id === item.id);
                 return (
                   <button
-                    key={note.id}
+                    key={item.id}
                     type="button"
-                    data-margin-note={note.id}
-                    className={`cr-margin-note${focusedNoteId === note.id ? ' active' : ''}`}
+                    data-margin-note={item.id}
+                    className={`cr-margin-note${item.kind === 'social' ? ' social' : ''}${focusedNoteId === item.id ? ' active' : ''}`}
                     style={{ top: pos?.top ?? 0 }}
                     onClick={() => {
                       const el = frameRef.current?.querySelector(
-                        `[data-note-id="${CSS.escape(note.id)}"]`,
+                        `[data-note-id="${CSS.escape(item.id)}"]`,
                       ) as HTMLElement | null;
-                      focusNote(note.id, el, false);
+                      focusNote(item.id, el, false);
                       el?.scrollIntoView({ behavior: 'smooth', block: 'center' });
                     }}
                   >
-                    <span className="cr-margin-kicker">批</span>
-                    <span className="cr-margin-body">
-                      {note.comment?.trim() || clipQuote(note.quote, 36)}
-                    </span>
-                    {note.comment?.trim() ? (
-                      <span className="cr-margin-quote">{clipQuote(note.quote, 22)}</span>
+                    <span className="cr-margin-kicker">{item.kind === 'social' ? '众' : '批'}</span>
+                    <span className="cr-margin-body">{item.body}</span>
+                    {item.quote ? (
+                      <span className="cr-margin-quote">{clipQuote(item.quote, 22)}</span>
                     ) : null}
                   </button>
                 );
@@ -793,6 +897,7 @@ export function ReaderChrome({
         <div className="cr-drawer-search">
           <input placeholder="搜回目，或输入回数" value={tocFilter} onChange={(e) => setTocFilter(e.target.value)} />
         </div>
+        {tocLead ? <div className="cr-toc-lead">{tocLead}</div> : null}
         <div className="cr-toc-list" ref={tocListRef}>
           {filtered.map((item) => (
             <Link
@@ -849,31 +954,88 @@ export function ReaderChrome({
           </div>
           <p className="cr-tip">
             快捷键：← → / j k 翻回，t 换纸色
-            {notesEnabled ? (compact ? '，n 笔记' : '，n 侧栏批注，b 笔记总览') : ''}
+            {notesPanelEnabled ? (compact || !notesEnabled ? '，n 笔记' : '，n 侧栏批注，b 笔记总览') : ''}
+            {socialReviews.length > 0 ? '，r 书评' : ''}
             ，Esc 关闭，/ 检索
           </p>
         </div>
       </aside>
 
-      {notesEnabled ? (
+      {socialReviews.length > 0 ? (
+        <aside className={`cr-drawer right reviews${reviewsOpen ? ' open' : ''}`}>
+          <div className="cr-drawer-head">
+            <h3>精选书评</h3>
+            <button type="button" className="cr-icon" onClick={() => setReviewsOpen(false)} aria-label="关闭">×</button>
+          </div>
+          <p className="cr-notes-hint">
+            {social?.sourceLabel || '来源'}
+            {social?.bookTitle ? ` · ${social.bookTitle}` : ''}
+            <span className="cr-reviews-count"> · {socialReviews.length} 篇</span>
+          </p>
+          <div className="cr-reviews-list">
+            {socialReviews.map((r, i) => {
+              const id = r.id || String(i);
+              const open = expandedReviewId === id;
+              return (
+                <article
+                  key={id}
+                  className={`cr-review-card${open ? ' open' : ''}`}
+                >
+                  <button
+                    type="button"
+                    className="cr-review-head"
+                    onClick={() => setExpandedReviewId(open ? null : id)}
+                    aria-expanded={open}
+                  >
+                    <span className="cr-review-meta">
+                      <span className="cr-review-author">{r.authorName || '读者'}</span>
+                      {starLabel(r.star) ? <span className="cr-review-stars">{starLabel(r.star)}</span> : null}
+                    </span>
+                    <span className="cr-review-toggle">{open ? '收起' : '展开'}</span>
+                  </button>
+                  {!open ? (
+                    <p className="cr-review-preview">{reviewPreview(r.content)}</p>
+                  ) : (
+                    <div className="cr-review-body">{r.content}</div>
+                  )}
+                </article>
+              );
+            })}
+            {social?.sourceUrl ? (
+              <a className="cr-review-source" href={social.sourceUrl} target="_blank" rel="noreferrer">
+                在{social.sourceLabel || '来源'}阅读更多书评 →
+              </a>
+            ) : null}
+          </div>
+        </aside>
+      ) : null}
+
+      {notesPanelEnabled ? (
         <aside className={`cr-drawer right notes${notesOpen ? ' open' : ''}`}>
           <div className="cr-drawer-head">
             <h3>{bookTitle}</h3>
             <button type="button" className="cr-icon" onClick={() => setNotesOpen(false)} aria-label="关闭">×</button>
           </div>
-          {!compact ? (
+          {!compact && notesEnabled ? (
             <p className="cr-notes-hint">
               本回批注可在正文右侧常驻显示（顶栏侧栏按钮或按 n 切换）。此处用于总览、导出与管理全书笔记。
             </p>
           ) : null}
           <div className="cr-notes-tools">
-            <button type="button" className="cr-btn" onClick={addBookmark}>书签本回</button>
+            {notesEnabled ? (
+              <button type="button" className="cr-btn" onClick={addBookmark}>书签本回</button>
+            ) : null}
             <div className="cr-seg">
               {([
-                { id: 'all', name: '全部' },
-                { id: 'note', name: '批注' },
-                { id: 'mark', name: '划线' },
-              ] as const).map((item) => (
+                { id: 'all' as const, name: '全部' },
+                ...(notesEnabled
+                  ? [
+                      { id: 'note' as const, name: '批注' },
+                      { id: 'mark' as const, name: '划线' },
+                    ]
+                  : []),
+                ...(hasSocial ? [{ id: 'social' as const, name: '众人' }] : []),
+              ]).map((item) => (
                 <button
                   key={item.id}
                   type="button"
@@ -884,69 +1046,119 @@ export function ReaderChrome({
                 </button>
               ))}
             </div>
-            <div className="cr-export">
-              <button type="button" className="cr-btn" onClick={() => exportNotes('md')}>MD</button>
-              <button type="button" className="cr-btn" onClick={() => exportNotes('txt')}>TXT</button>
-              <button type="button" className="cr-btn" onClick={() => exportNotes('json')}>JSON</button>
-            </div>
+            {notesEnabled ? (
+              <div className="cr-export">
+                <button type="button" className="cr-btn" onClick={() => exportNotes('md')}>MD</button>
+                <button type="button" className="cr-btn" onClick={() => exportNotes('txt')}>TXT</button>
+                <button type="button" className="cr-btn" onClick={() => exportNotes('json')}>JSON</button>
+              </div>
+            ) : null}
           </div>
           <div className="cr-notes-list" ref={notesListRef}>
-            {notes.filter((note) => noteFilter === 'all' || note.type === noteFilter).length === 0 ? (
+            {(noteFilter === 'all' || noteFilter === 'social') && chapterSocial.length > 0 ? (
+              <>
+                <div className="cr-social-kicker">
+                  本回众人热门
+                  {social?.sourceLabel ? ` · ${social.sourceLabel}` : ''}
+                </div>
+                {chapterSocial
+                  .slice()
+                  .sort((a, b) => b.totalCount - a.totalCount)
+                  .map((h) => (
+                    <div key={h.id} className="cr-note-item social">
+                      <div className="cr-note-top">
+                        <span className="cr-pill social">众人</span>
+                        <span className="cr-note-ch">{formatSocialCount(h.totalCount)} 人</span>
+                      </div>
+                      <div className="cr-note-quote">{h.quote || h.markText}</div>
+                    </div>
+                  ))}
+              </>
+            ) : null}
+            {noteFilter === 'social' && chapterSocial.length === 0 ? (
+              <div className="cr-empty">本回暂无热门划线</div>
+            ) : null}
+            {noteFilter === 'social' && socialReviews.length > 0 ? (
+              <>
+                <div className="cr-social-kicker">
+                  精选书评
+                  {social?.bookTitle ? ` · ${social.bookTitle}` : ''}
+                </div>
+                {socialReviews.map((r, i) => (
+                  <div key={r.id || i} className="cr-note-item social">
+                    <div className="cr-note-top">
+                      <span className="cr-pill">书评</span>
+                      <span className="cr-note-ch">{r.authorName || '读者'}</span>
+                    </div>
+                    <div className="cr-note-comment">{r.content}</div>
+                  </div>
+                ))}
+                {social?.sourceUrl ? (
+                  <a className="cr-note-jump" href={social.sourceUrl} target="_blank" rel="noreferrer">
+                    在{social.sourceLabel || '来源'}打开 →
+                  </a>
+                ) : null}
+              </>
+            ) : null}
+            {noteFilter !== 'social' && notes.filter((note) => noteFilter === 'all' || note.type === noteFilter).length === 0 && chapterSocial.length === 0 ? (
               <div className="cr-empty">暂无内容<br /><span>选中正文可批注或划线</span></div>
             ) : null}
-            {notes
-              .filter((note) => noteFilter === 'all' || note.type === noteFilter)
-              .map((note) => {
-                const active = focusedNoteId === note.id;
-                return (
-                  <div
-                    key={note.id}
-                    data-sidebar-note={note.id}
-                    className={`cr-note-item${active ? ' active' : ''}${note.ch === chapter.n ? ' here' : ''}`}
-                    onClick={() => setFocusedNoteId(note.id)}
-                  >
-                    <div className="cr-note-top">
-                      <span className={`cr-pill${note.type === 'mark' ? ' gold' : ''}`}>
-                        {note.type === 'mark' ? '划线' : '批注'}
-                      </span>
-                      <Link
-                        href={`/read/${note.ch}/#note-${encodeURIComponent(note.id)}`}
-                        className="cr-note-ch"
-                        onClick={(e: ReactMouseEvent) => jumpToNote(note, e)}
+            {noteFilter !== 'social'
+              ? notes
+                  .filter((note) => noteFilter === 'all' || note.type === noteFilter)
+                  .map((note) => {
+                    const active = focusedNoteId === note.id;
+                    return (
+                      <div
+                        key={note.id}
+                        data-sidebar-note={note.id}
+                        className={`cr-note-item${active ? ' active' : ''}${note.ch === chapter.n ? ' here' : ''}`}
+                        onClick={() => setFocusedNoteId(note.id)}
                       >
-                        第 {note.ch} 回
-                      </Link>
-                      {note.ch === chapter.n ? <span className="cr-note-here">本回</span> : null}
-                    </div>
-                    <div className="cr-note-quote">{active ? note.quote : clipQuote(note.quote, 64)}</div>
-                    {note.comment ? <div className="cr-note-comment">{note.comment}</div> : null}
-                    <div className={`cr-note-foot${active ? ' show' : ''}`}>
-                      <Link
-                        href={`/read/${note.ch}/#note-${encodeURIComponent(note.id)}`}
-                        className="cr-note-jump"
-                        onClick={(e: ReactMouseEvent) => jumpToNote(note, e)}
-                      >
-                        查看正文 →
-                      </Link>
-                      <button
-                        type="button"
-                        className="cr-btn danger"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          delNote(note.id);
-                          showToast('已删除');
-                        }}
-                      >
-                        删除
-                      </button>
-                    </div>
-                  </div>
-                );
-              })}
+                        <div className="cr-note-top">
+                          <span className={`cr-pill${note.type === 'mark' ? ' gold' : ''}`}>
+                            {note.type === 'mark' ? '划线' : '批注'}
+                          </span>
+                          <Link
+                            href={`/read/${note.ch}/#note-${encodeURIComponent(note.id)}`}
+                            className="cr-note-ch"
+                            onClick={(e: ReactMouseEvent) => jumpToNote(note, e)}
+                          >
+                            第 {note.ch} 回
+                          </Link>
+                          {note.ch === chapter.n ? <span className="cr-note-here">本回</span> : null}
+                        </div>
+                        <div className="cr-note-quote">{active ? note.quote : clipQuote(note.quote, 64)}</div>
+                        {note.comment ? <div className="cr-note-comment">{note.comment}</div> : null}
+                        <div className={`cr-note-foot${active ? ' show' : ''}`}>
+                          <Link
+                            href={`/read/${note.ch}/#note-${encodeURIComponent(note.id)}`}
+                            className="cr-note-jump"
+                            onClick={(e: ReactMouseEvent) => jumpToNote(note, e)}
+                          >
+                            查看正文 →
+                          </Link>
+                          <button
+                            type="button"
+                            className="cr-btn danger"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              delNote(note.id);
+                              showToast('已删除');
+                            }}
+                          >
+                            删除
+                          </button>
+                        </div>
+                      </div>
+                    );
+                  })
+              : null}
           </div>
         </aside>
       ) : null}
 
+      {overlays}
       {toast ? <div className="cr-toast">{toast}</div> : null}
     </div>
   );

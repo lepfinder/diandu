@@ -50,7 +50,7 @@ export default async function TopicPage({ params }: { params: Promise<{ slug: st
             <header className="section-head">
               <div>
                 <h1>名场面</h1>
-                <p className="sub">二十一场，按回目排。每场一条短述，链回那一回。八十一难的全表不在这里。</p>
+                <p className="sub">二十一场都配了图。每场一条短述，链回那一回。八十一难的全表不在这里。</p>
               </div>
             </header>
             <section className="scene-grid">
@@ -73,6 +73,37 @@ export default async function TopicPage({ params }: { params: Promise<{ slug: st
                         ))}
                       </div>
                       <Link href={`/read/${scene.chapter}/`}>阅读此回 →</Link>
+                    </div>
+                  </article>
+                );
+              })}
+            </section>
+          </>
+        ) : null}
+
+        {slug === 'relics' ? (
+          <>
+            <header className="section-head">
+              <div>
+                <h1>器物</h1>
+                <p className="sub">书里叫得响的兵器、法宝和坐骑。各一段出处，链回相关回目。</p>
+              </div>
+            </header>
+            <section className="relic-grid">
+              {topics.relics.map((relic) => {
+                const chapter = toc.find((item) => item.n === relic.chapter);
+                return (
+                  <article key={relic.id} className="relic-card">
+                    {relic.image ? <img className="relic-art" src={asset(relic.image)} alt={relic.name} /> : null}
+                    <div className="relic-body">
+                      <div className="num">
+                        {relic.kind} · {relic.owner}
+                      </div>
+                      <h2>{relic.name}</h2>
+                      <p>{relic.blurb}</p>
+                      <Link href={`/read/${relic.chapter}/`}>
+                        {chapter?.label ?? `第 ${relic.chapter} 回`} →
+                      </Link>
                     </div>
                   </article>
                 );

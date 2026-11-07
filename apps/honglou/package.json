@@ -12,6 +12,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@classic/reader": "workspace:*",
     "@classic/ui": "workspace:*",
     "next": "^15.1.0",
     "react": "^19.0.0",

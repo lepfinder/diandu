@@ -1,4 +1,5 @@
 import { BOOKS } from '@classic/catalog';
+import { absoluteUrl, getSiteUrl } from '@classic/ui';
 import { bookHref } from '@/lib/links';
 
 const seals: Record<string, string> = {
@@ -10,9 +11,47 @@ const seals: Record<string, string> = {
   liaozhai: '聊',
 };
 
+function jsonLd() {
+  const site = getSiteUrl();
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebSite',
+        name: '典读',
+        url: `${site}/`,
+        description: '中国古典交互精读：六部古典全文阅读、人物图谱、专题与检索。',
+        inLanguage: 'zh-CN',
+      },
+      {
+        '@type': 'ItemList',
+        name: '典读书目',
+        numberOfItems: BOOKS.length,
+        itemListElement: BOOKS.map((book, i) => ({
+          '@type': 'ListItem',
+          position: i + 1,
+          item: {
+            '@type': 'Book',
+            name: book.title,
+            author: { '@type': 'Person', name: book.author },
+            url: absoluteUrl(`${book.basePath}/`),
+            image: absoluteUrl(book.cover),
+            inLanguage: 'zh-CN',
+          },
+        })),
+      },
+    ],
+  };
+}
+
 export default function HomePage() {
+  const ld = jsonLd();
   return (
     <div className="page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }}
+      />
       <div className="grain" aria-hidden />
 
       <header className="topbar">

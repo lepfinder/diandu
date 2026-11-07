@@ -1,8 +1,11 @@
 /**
  * 把 apps/<book>/data/book.json 同步为 public/data/book.js（window.__BOOK__=…）
  * 以及精简 toc.json，供检索懒加载 / 阅读目录按需拉取。
+ *
+ * 不写 public/data/book.json：构建期正文已从 apps/<book>/data/book.json import，
+ * 上线检索只依赖 book.js，双份 json 会白占部署体积。
  */
-import { mkdirSync, readFileSync, writeFileSync, existsSync } from 'node:fs';
+import { mkdirSync, readFileSync, writeFileSync, existsSync, unlinkSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -23,7 +26,10 @@ for (const book of BOOKS) {
   mkdirSync(outDir, { recursive: true });
 
   writeFileSync(join(outDir, 'book.js'), `window.__BOOK__=${raw}`);
-  writeFileSync(join(outDir, 'book.json'), raw);
+
+  // 清掉历史双份，避免下次 build 再拷进 out/
+  const staleJson = join(outDir, 'book.json');
+  if (existsSync(staleJson)) unlinkSync(staleJson);
 
   const toc = (parsed.chapters || []).map((c) => ({
     n: c.n,

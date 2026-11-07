@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from '@/components/Link';
-import { getGroup, getGroups, getPeople, type Person } from '@/lib/characters';
+import { getGroup, getGroups, getPeople, portraitUrl, type Person } from '@/lib/characters';
 
 const filters = [{ id: 'all', name: '全部' }, ...getGroups()];
 
@@ -37,7 +37,7 @@ export default function CharactersPage() {
             const camp = getGroup(person.group);
             return (
               <button key={person.id} type="button" className="char-card" onClick={() => setOpen(person)}>
-                <span className="avatar" style={{ background: camp?.color }}>{person.name.slice(0, 1)}</span>
+                <img className="avatar" src={portraitUrl(person.id)} alt="" />
                 <span>
                   <span className="name">{person.name}</span>
                   <span className="role">{person.role} · {camp?.name}</span>
@@ -58,6 +58,7 @@ export default function CharactersPage() {
               </div>
               <button type="button" className="icon-btn" onClick={() => setOpen(null)} aria-label="关闭">×</button>
             </header>
+            <img className="char-portrait" src={portraitUrl(open.id)} alt={open.name} />
             <p>{open.bio}</p>
             <div className="modal-links">
               <Link href={`/read/${open.firstCh}/`}>登场 · 第 {open.firstCh} 回</Link>

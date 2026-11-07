@@ -5,6 +5,7 @@ export type Station = {
   name: string;
   chapter: number;
   blurb: string;
+  image?: string;
 };
 
 export type Scene = {
@@ -17,9 +18,20 @@ export type Scene = {
   image?: string;
 };
 
+export type Relic = {
+  id: string;
+  kind: string;
+  name: string;
+  owner: string;
+  chapter: number;
+  blurb: string;
+  image?: string;
+};
+
 export type Topics = {
   stations: Station[];
   scenes: Scene[];
+  relics: Relic[];
 };
 
 const topics = topicsJson as Topics;
@@ -36,4 +48,5 @@ export function stationAt(chapter: number): Station {
 export const TOPIC_TABS = [
   { id: 'route', name: '西行', href: '/topics/route/' },
   { id: 'scenes', name: '名场面', href: '/topics/scenes/' },
+  { id: 'relics', name: '器物', href: '/topics/relics/' },
 ] as const;
