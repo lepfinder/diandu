@@ -8,7 +8,7 @@ import {
   type MouseEvent as ReactMouseEvent,
 } from 'react';
 import { annotateParagraph } from './annotate';
-import { loadNotes, readNumber, readString, saveNotes, write } from './storage';
+import { loadNotes, readClampedNumber, readNumber, readString, saveNotes, write } from './storage';
 import type { ReaderChromeProps, ReaderLinkProps, ReaderNote } from './types';
 import { useCompact } from './useCompact';
 
@@ -77,9 +77,9 @@ export function ReaderChrome({
   const position = index >= 0 ? index + 1 : 0;
 
   useEffect(() => {
-    setFontSize(readNumber(storagePrefix, 'fontSize', 19));
-    setLineHeight(readNumber(storagePrefix, 'lineHeight', 1.95));
-    setReadWidth(readNumber(storagePrefix, 'width', 38));
+    setFontSize(readClampedNumber(storagePrefix, 'fontSize', 19, 16, 26));
+    setLineHeight(readClampedNumber(storagePrefix, 'lineHeight', 1.95, 1.4, 2.6));
+    setReadWidth(readClampedNumber(storagePrefix, 'width', 38, 28, 52));
     const th = readString(storagePrefix, 'theme', 'paper');
     const fm = readString(storagePrefix, 'font', 'song') === 'kai' ? 'kai' : 'song';
     setTheme(th);
