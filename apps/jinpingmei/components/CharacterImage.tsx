@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { asset } from '@classic/ui';
 import { getCharacterArt } from '@/lib/character-art';
 import type { Person } from '@/lib/characters';
 
@@ -17,7 +18,7 @@ export default function CharacterImage({ person, variant, color }: Props) {
   return (
     <img
       className={variant === 'avatar' ? 'avatar avatar-image' : 'character-portrait'}
-      src={art[variant]}
+      src={asset(art[variant])}
       alt={`${person.name}${variant === 'avatar' ? '头像' : '人物像'}`}
       width={variant === 'avatar' ? 240 : 720}
       height={variant === 'avatar' ? 240 : 1280}

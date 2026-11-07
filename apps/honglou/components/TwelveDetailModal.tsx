@@ -3,6 +3,7 @@
 import { useEffect } from 'react';
 import Link from '@/components/Link';
 import type { TwelveDetail } from '@/lib/twelve-detail';
+import { asset } from '@classic/ui';
 
 export function TwelveDetailModal({ detail, onClose }: { detail: TwelveDetail | null; onClose: () => void }) {
   useEffect(() => {
@@ -20,7 +21,7 @@ export function TwelveDetailModal({ detail, onClose }: { detail: TwelveDetail | 
     <div className="modal-wrap open" onClick={onClose}>
       <div className="modal detail-modal" onClick={(e) => e.stopPropagation()}>
         <div className="detail-hero">
-          <img src={detail.image} alt={detail.name} width={960} height={540} />
+          <img src={asset(detail.image)} alt={detail.name} width={960} height={540} />
           <div className="detail-hero-shade">
             <div className="detail-kicker">
               {detail.register === 'zheng' ? '正册' : detail.register === 'fu' ? '副册' : '又副册'} · {detail.role}

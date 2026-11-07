@@ -2,6 +2,7 @@ import Link from '@/components/Link';
 import { notFound } from 'next/navigation';
 import { getChapterList } from '@/lib/book';
 import { TOPIC_TABS, getTopics } from '@/lib/topics';
+import { asset } from '@classic/ui';
 
 export function generateStaticParams() {
   return TOPIC_TABS.map((tab) => ({ slug: tab.id }));
@@ -43,7 +44,7 @@ export default async function TopicPage({ params }: { params: Promise<{ slug: st
             <section className="house-grid">
               {topics.kinds.map((kind) => (
                 <article key={kind.id} className={kind.image ? 'house-card has-art' : 'house-card'}>
-                  {kind.image ? <img className="house-art" src={kind.image} alt={kind.name} /> : null}
+                  {kind.image ? <img className="house-art" src={asset(kind.image)} alt={kind.name} /> : null}
                   <div className="house-body">
                     <header>
                       <div className="num">{kind.stories.length} 篇示例</div>
@@ -82,7 +83,7 @@ export default async function TopicPage({ params }: { params: Promise<{ slug: st
                 return (
                   <article key={scene.id} className={scene.image ? 'scene-card has-art' : 'scene-card'}>
                     {scene.image ? (
-                      <img className="scene-art" src={scene.image} alt={scene.title} />
+                      <img className="scene-art" src={asset(scene.image)} alt={scene.title} />
                     ) : (
                       <div className="scene-plate" aria-hidden="true">{scene.plate}</div>
                     )}

@@ -4,6 +4,7 @@ import { getChapterList } from '@/lib/book';
 import { getGroup, getPersonByName } from '@/lib/characters';
 import { getCharacterArt } from '@/lib/character-art';
 import { TOPIC_TABS, TL_ACTS, actForChapter, getTopics, relationNames } from '@/lib/topics';
+import { asset } from '@classic/ui';
 
 export function generateStaticParams() {
   return TOPIC_TABS.map((tab) => ({ slug: tab.id }));
@@ -49,7 +50,7 @@ export default async function TopicPage({ params }: { params: Promise<{ slug: st
                 <section key={act.id} className="tl-act">
                   <div className="tl-act-head">
                     <div className="tl-act-img" data-label={act.title}>
-                      <img src={act.image} alt={act.title} width={1200} height={360} loading="eager" decoding="async" />
+                      <img src={asset(act.image)} alt={act.title} width={1200} height={360} loading="eager" decoding="async" />
                     </div>
                     <div className="tl-act-meta">
                       <h2>{act.title}</h2>
@@ -106,7 +107,7 @@ export default async function TopicPage({ params }: { params: Promise<{ slug: st
                         return (
                           <div key={name} className="house-face">
                             {art ? (
-                              <img src={art.avatar} alt={name} width={72} height={72} loading="lazy" decoding="async" />
+                              <img src={asset(art.avatar)} alt={name} width={72} height={72} loading="lazy" decoding="async" />
                             ) : (
                               <span className="avatar" style={{ background: camp?.color || 'var(--paper-3)' }}>
                                 {name.slice(0, 1)}
@@ -140,7 +141,7 @@ export default async function TopicPage({ params }: { params: Promise<{ slug: st
                 return (
                   <article key={scene.id} className={scene.image ? 'scene-card has-art' : 'scene-card'}>
                     {scene.image ? (
-                      <img className="scene-art" src={scene.image} alt={scene.title} />
+                      <img className="scene-art" src={asset(scene.image)} alt={scene.title} />
                     ) : (
                       <div className="scene-plate" aria-hidden="true">{scene.plate}</div>
                     )}
@@ -178,7 +179,7 @@ export default async function TopicPage({ params }: { params: Promise<{ slug: st
                 return (
                   <article key={piece.id} className={piece.image ? 'piece has-art' : 'piece'}>
                     {piece.image ? (
-                      <img className="piece-art" src={piece.image} alt={piece.title} loading="lazy" decoding="async" />
+                      <img className="piece-art" src={asset(piece.image)} alt={piece.title} loading="lazy" decoding="async" />
                     ) : null}
                     <div className="piece-body">
                       <header>
@@ -216,7 +217,7 @@ export default async function TopicPage({ params }: { params: Promise<{ slug: st
                 return (
                   <article key={good.id} className={good.image ? 'goods-card has-art' : 'goods-card'}>
                     {good.image ? (
-                      <img className="goods-art" src={good.image} alt={good.name} loading="lazy" decoding="async" />
+                      <img className="goods-art" src={asset(good.image)} alt={good.name} loading="lazy" decoding="async" />
                     ) : null}
                     <div className="num">
                       {good.kind} · {chapter?.label}
@@ -282,7 +283,7 @@ export default async function TopicPage({ params }: { params: Promise<{ slug: st
                         return (
                           <div key={name} className="house-face">
                             {art ? (
-                              <img src={art.avatar} alt={name} width={72} height={72} loading="lazy" decoding="async" />
+                              <img src={asset(art.avatar)} alt={name} width={72} height={72} loading="lazy" decoding="async" />
                             ) : (
                               <span className="avatar" style={{ background: camp?.color || 'var(--paper-3)' }}>
                                 {name.slice(0, 1)}

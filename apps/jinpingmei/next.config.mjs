@@ -6,7 +6,10 @@ const nextConfig = {
   trailingSlash: true,
   basePath: basePath || undefined,
   distDir: process.env.NEXT_DIST_DIR || '.next',
-  images: { unoptimized: true },
+  images: {
+    loader: 'custom',
+    loaderFile: './image-loader.js',
+  },
   reactStrictMode: true,
   transpilePackages: ['@classic/reader', '@classic/ui'],
 };

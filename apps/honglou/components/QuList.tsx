@@ -1,6 +1,7 @@
 'use client';
 
 import Link from '@/components/Link';
+import { asset } from '@classic/ui';
 
 export type QuItem = {
   id: string;
@@ -22,7 +23,7 @@ export function QuList({ items, intro }: { items: QuItem[]; intro: string }) {
         {items.map((q) => (
           <article key={q.id} className="poem-card">
             <div className="poem-img" data-label={q.title}>
-              <img src={q.image} alt={q.title} width={1200} height={420} loading="eager" decoding="async" />
+              <img src={asset(q.image)} alt={q.title} width={1200} height={420} loading="eager" decoding="async" />
             </div>
             <div className="poem-body">
               <h3>

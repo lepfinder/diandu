@@ -8,6 +8,7 @@ import { getAllCharacters, getCharacter, getRelationsFor } from '@/lib/content';
 import { getTwelveDetail, type TwelveDetail } from '@/lib/twelve-detail';
 import { TwelveDetailModal } from '@/components/TwelveDetailModal';
 import type { Character } from '@/lib/types';
+import { asset } from '@classic/ui';
 
 type MarkName = { nm: string; id: string };
 
@@ -666,7 +667,7 @@ export function ReaderChrome({ chapter, prev, next, toc }: {
                 <div className="modal-identity">
                   {art ? (
                     <div className="char-art">
-                      <img src={art} alt={modalChar.name} width={128} height={80} loading="lazy" decoding="async" />
+                      <img src={asset(art)} alt={modalChar.name} width={128} height={80} loading="lazy" decoding="async" />
                     </div>
                   ) : null}
                   <div>

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { asset } from '@classic/ui';
 
 export function Face({
   name,
@@ -17,7 +18,7 @@ export function Face({
   if (image && !failed) {
     return (
       // eslint-disable-next-line @next/next/no-img-element
-      <img className={`${className} portrait`} src={image} alt="" onError={() => setFailed(true)} />
+      <img className={`${className} portrait`} src={asset(image)} alt="" onError={() => setFailed(true)} />
     );
   }
   return (

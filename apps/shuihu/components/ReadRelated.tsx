@@ -4,6 +4,7 @@ import { useMemo } from 'react';
 import Link from '@/components/Link';
 import { getPeople } from '@/lib/characters';
 import { getTopics, stationAt } from '@/lib/topics';
+import { asset } from '@classic/ui';
 
 export function ReadRelated({
   chapterN,
@@ -50,7 +51,7 @@ export function ReadRelated({
               <article key={scene.id} className="related-scene">
                 {scene.image ? (
                   // eslint-disable-next-line @next/next/no-img-element
-                  <img src={scene.image} alt="" />
+                  <img src={asset(scene.image)} alt="" />
                 ) : (
                   <div className="related-scene-plate" aria-hidden="true">{scene.plate}</div>
                 )}

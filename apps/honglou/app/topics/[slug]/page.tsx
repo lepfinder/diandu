@@ -11,6 +11,7 @@ import food from '@/data/food.json';
 import music87 from '@/data/music87.json';
 import glossary from '@/data/glossary.json';
 import { toCN } from '@/lib/cn';
+import { asset } from '@classic/ui';
 
 const tabs = [
   { id: 'places', name: '大观园' },
@@ -52,7 +53,7 @@ export default async function TopicsPage({ params }: { params: Promise<{ slug: s
               <div className="place-img" data-label={p.name.replace(/ /g, '')}>
                 {PLACE_IMAGES[p.id] ? (
                   <img
-                    src={PLACE_IMAGES[p.id]}
+                    src={asset(PLACE_IMAGES[p.id])}
                     alt={p.name}
                     width={640}
                     height={360}
@@ -110,7 +111,7 @@ export default async function TopicsPage({ params }: { params: Promise<{ slug: s
     body = (
       <>
         <div className="topic-hero" data-label="太虚幻境">
-          <img src="/images/taixu.webp" alt="太虚幻境" width={1536} height={520} loading="eager" decoding="async" />
+          <img src={asset("/images/taixu.webp")} alt="太虚幻境" width={1536} height={520} loading="eager" decoding="async" />
           <div className="topic-hero-cap">因空见色，由色生情，传情入色，自色悟空</div>
         </div>
         <p className="sub" style={{ margin: '0 0 22px', color: 'var(--ink-3)', fontSize: 14, lineHeight: 1.8 }}>{T.background.intro}</p>
@@ -119,7 +120,7 @@ export default async function TopicsPage({ params }: { params: Promise<{ slug: s
             <article key={e.id} className="essay-card has-img">
               {BG_IMAGES[e.id] ? (
                 <div className="essay-img" data-label={e.title}>
-                  <img src={BG_IMAGES[e.id]} alt={e.title} width={1200} height={420} loading="eager" decoding="async" />
+                  <img src={asset(BG_IMAGES[e.id])} alt={e.title} width={1200} height={420} loading="eager" decoding="async" />
                 </div>
               ) : null}
               <div className="essay-body" style={{ padding: 20 }}>
@@ -153,7 +154,7 @@ export default async function TopicsPage({ params }: { params: Promise<{ slug: s
             <section key={act.id} className="tl-act">
               <div className="tl-act-head">
                 <div className="tl-act-img" data-label={act.title}>
-                  <img src={act.image} alt={act.title} width={1200} height={360} loading="eager" decoding="async" />
+                  <img src={asset(act.image)} alt={act.title} width={1200} height={360} loading="eager" decoding="async" />
                 </div>
                 <div className="tl-act-meta">
                   <h2>{act.title}</h2>

@@ -4,6 +4,7 @@ import { useState } from 'react';
 import type { TwelveItem } from '@/lib/types';
 import { getTwelveDetail, type TwelveDetail } from '@/lib/twelve-detail';
 import { TwelveDetailModal } from './TwelveDetailModal';
+import { asset } from '@classic/ui';
 
 function Card({
   t,
@@ -16,7 +17,7 @@ function Card({
     <button type="button" className="twelve-card" onClick={() => onOpen(t.id)}>
       <div className="twelve-img" data-label={t.name}>
         {t.image ? (
-          <img src={t.image} alt={t.name} width={640} height={360} loading="eager" decoding="async" />
+          <img src={asset(t.image)} alt={t.name} width={640} height={360} loading="eager" decoding="async" />
         ) : null}
       </div>
       <div className="twelve-body">

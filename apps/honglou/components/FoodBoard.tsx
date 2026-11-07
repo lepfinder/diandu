@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react';
 import Link from '@/components/Link';
+import { asset } from '@classic/ui';
 
 export type FoodItem = {
   id: string;
@@ -72,7 +73,7 @@ export function FoodBoard({ items, intro }: { items: FoodItem[]; intro: string }
           <button key={it.id} type="button" className="glossary-card food-card" onClick={() => setOpen(it)}>
             <div className="food-img" data-label={it.term}>
               {it.image ? (
-                <img src={it.image} alt={it.term} width={640} height={360} loading="eager" decoding="async" />
+                <img src={asset(it.image)} alt={it.term} width={640} height={360} loading="eager" decoding="async" />
               ) : null}
             </div>
             <div className="food-body">
@@ -91,7 +92,7 @@ export function FoodBoard({ items, intro }: { items: FoodItem[]; intro: string }
             <div className="detail-hero" style={{ height: 200 }}>
               {open.image ? (
                 <img
-                  src={open.image}
+                  src={asset(open.image)}
                   alt={open.term}
                   width={960}
                   height={360}

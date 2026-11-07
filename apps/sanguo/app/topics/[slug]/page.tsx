@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { SituationMap } from '@/components/SituationMap';
 import { getChapterList } from '@/lib/book';
 import { TL_ACTS, TOPIC_TABS, actForChapter, getTopics } from '@/lib/topics';
+import { asset } from '@classic/ui';
 
 export function generateStaticParams() {
   return TOPIC_TABS.map((tab) => ({ slug: tab.id }));
@@ -60,7 +61,7 @@ export default async function TopicPage({ params }: { params: Promise<{ slug: st
                 <section key={act.id} className="tl-act">
                   <div className="tl-act-head">
                     <div className="tl-act-img" data-label={act.title}>
-                      <img src={act.image} alt={act.title} width={1200} height={360} loading="eager" decoding="async" />
+                      <img src={asset(act.image)} alt={act.title} width={1200} height={360} loading="eager" decoding="async" />
                     </div>
                     <div className="tl-act-meta">
                       <h2>{act.title}</h2>
@@ -107,7 +108,7 @@ export default async function TopicPage({ params }: { params: Promise<{ slug: st
                 return (
                   <article key={scene.id} className={scene.image ? 'scene-card has-art' : 'scene-card'}>
                     {scene.image ? (
-                      <img className="scene-art" src={scene.image} alt={scene.title} />
+                      <img className="scene-art" src={asset(scene.image)} alt={scene.title} />
                     ) : (
                       <div className="scene-plate" aria-hidden="true">{scene.plate}</div>
                     )}
@@ -144,7 +145,7 @@ export default async function TopicPage({ params }: { params: Promise<{ slug: st
                   <article key={piece.id} className={piece.image ? 'piece has-img' : 'piece'}>
                     {piece.image ? (
                       <div className="piece-img">
-                        <img src={piece.image} alt={piece.title} />
+                        <img src={asset(piece.image)} alt={piece.title} />
                       </div>
                     ) : null}
                     <div className="piece-body">
@@ -226,7 +227,7 @@ export default async function TopicPage({ params }: { params: Promise<{ slug: st
                 const chapter = toc.find((item) => item.n === relic.chapter);
                 return (
                   <article key={relic.id} className="relic-card">
-                    {relic.image ? <img className="relic-art" src={relic.image} alt={relic.name} /> : null}
+                    {relic.image ? <img className="relic-art" src={asset(relic.image)} alt={relic.name} /> : null}
                     <div className="relic-body">
                       <div className="num">
                         {relic.kind} · {relic.owner}

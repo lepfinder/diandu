@@ -4,6 +4,7 @@ import { SeatHall } from '@/components/SeatHall';
 import { StoryPath } from '@/components/StoryPath';
 import { getChapterList } from '@/lib/book';
 import { TOPIC_TABS, getTopics } from '@/lib/topics';
+import { asset } from '@classic/ui';
 
 export function generateStaticParams() {
   return TOPIC_TABS.map((tab) => ({ slug: tab.id }));
@@ -72,7 +73,7 @@ export default async function TopicPage({ params }: { params: Promise<{ slug: st
                   <article key={scene.id} className={`scene-card${scene.image ? ' has-art' : ''}`}>
                     {scene.image ? (
                       // eslint-disable-next-line @next/next/no-img-element
-                      <img className="scene-art" src={scene.image} alt="" />
+                      <img className="scene-art" src={asset(scene.image)} alt="" />
                     ) : (
                       <div className="scene-plate" aria-hidden="true">{scene.plate}</div>
                     )}

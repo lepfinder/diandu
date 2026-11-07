@@ -6,6 +6,7 @@ import { toCN } from '@/lib/cn';
 import { POEM_IMAGES } from '@/lib/content';
 import { getTV87SongByPoem, tv87ListenUrl, TV87_META } from '@/lib/tv87';
 import type { PoemItem, PoemFullItem } from '@/lib/types';
+import { asset } from '@classic/ui';
 
 const TYPE_ORDER = ['诗', '词', '曲', '歌行', '辞赋', '判词', '灯谜', '对联', '偈语'];
 
@@ -68,7 +69,7 @@ export function PoemsBoard({
             <article key={p.id} className="poem-card has-img">
               <div className="poem-img" data-label={p.title}>
                 {POEM_IMAGES[p.id] ? (
-                  <img src={POEM_IMAGES[p.id]} alt={p.title} width={1024} height={1024} loading="eager" decoding="async" />
+                  <img src={asset(POEM_IMAGES[p.id])} alt={p.title} width={1024} height={1024} loading="eager" decoding="async" />
                 ) : null}
               </div>
               <div className="poem-body">

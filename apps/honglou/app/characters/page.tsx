@@ -10,6 +10,7 @@ import { TwelveDetailModal } from '@/components/TwelveDetailModal';
 import { toCN } from '@/lib/cn';
 import type { Character } from '@/lib/types';
 import Link from '@/components/Link';
+import { asset } from '@classic/ui';
 
 export default function CharactersPage() {
   const groups = useMemo(() => [{ id: 'all', name: '全部', color: '' }, ...getGroups()], []);
@@ -28,7 +29,7 @@ export default function CharactersPage() {
     <div className="page-scroll">
       <div className="page">
         <div style={{ position: 'relative', borderRadius: 22, overflow: 'hidden', height: 220, marginBottom: 28, border: '1px solid var(--line)' }}>
-          <Image src="/images/characters.webp" alt="红楼群芳" fill style={{ objectFit: 'cover' }} priority />
+          <Image src={asset("/images/characters.webp")} alt="红楼群芳" fill style={{ objectFit: 'cover' }} priority />
           <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(20,14,10,.1), rgba(20,14,10,.62))', display: 'flex', alignItems: 'flex-end', padding: 24 }}>
             <div>
               <div style={{ color: '#e8c9a8', fontSize: 12, letterSpacing: '0.16em', marginBottom: 8 }}>金陵十二钗 · 贾史王薛</div>
@@ -58,7 +59,7 @@ export default function CharactersPage() {
                 {art ? (
                   <div className="char-card-art">
                     <img
-                      src={art}
+                      src={asset(art)}
                       alt={c.name}
                       width={900}
                       height={506}
