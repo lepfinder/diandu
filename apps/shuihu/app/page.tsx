@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from '@/components/Link';
+import { TopicCard } from '@classic/ui';
 import { getBook, getChapterList } from '@/lib/book';
 import { getTopics } from '@/lib/topics';
 
@@ -71,24 +72,9 @@ export default function HomePage() {
           </div>
         </div>
         <section className="home-grid">
-          <Link className="topic-card has-img" href="/topics/seats/">
-            <Image src="/topics/topic-seats.webp" alt="" fill sizes="(max-width: 720px) 100vw, 33vw" />
-            <div className="icon">座</div>
-            <h3>座次</h3>
-            <p>三十六天罡，七十二地煞。拖到第几回，已经写到的人就亮。</p>
-          </Link>
-          <Link className="topic-card has-img" href="/topics/path/">
-            <Image src="/topics/topic-path.webp" alt="" fill sizes="(max-width: 720px) 100vw, 33vw" />
-            <div className="icon">聚</div>
-            <h3>聚义</h3>
-            <p>从龙虎山到蓼儿洼。二十二站，按书里的次序，不是地图。</p>
-          </Link>
-          <Link className="topic-card has-img" href="/topics/scenes/">
-            <Image src="/topics/topic-scenes.webp" alt="" fill sizes="(max-width: 720px) 100vw, 33vw" />
-            <div className="icon">戏</div>
-            <h3>名场面</h3>
-            <p>从误走妖魔、镇关西、生辰纲，到招安和蓼儿洼。{sceneCount} 场短述。</p>
-          </Link>
+          <TopicCard href="/topics/seats/" icon="座" title="座次" desc="三十六天罡，七十二地煞。拖到第几回，已经写到的人就亮。" image="/topics/topic-seats.webp" />
+          <TopicCard href="/topics/path/" icon="聚" title="聚义" desc="从龙虎山到蓼儿洼。二十二站，按书里的次序，不是地图。" image="/topics/topic-path.webp" />
+          <TopicCard href="/topics/scenes/" icon="戏" title="名场面" desc={`从误走妖魔、镇关西、生辰纲，到招安和蓼儿洼。${sceneCount} 场短述。`} image="/topics/topic-scenes.webp" />
         </section>
 
         <div className="section-head" style={{ marginTop: 48 }}>

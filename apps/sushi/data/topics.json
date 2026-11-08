@@ -1,0 +1,200 @@
+{
+  "tabs": [
+    {
+      "id": "chibi",
+      "name": "赤壁",
+      "href": "/topics/chibi/"
+    },
+    {
+      "id": "huangzhou",
+      "name": "黄州",
+      "href": "/topics/huangzhou/"
+    },
+    {
+      "id": "wutai",
+      "name": "乌台",
+      "href": "/topics/wutai/"
+    },
+    {
+      "id": "ziyou",
+      "name": "子由",
+      "href": "/topics/ziyou/"
+    },
+    {
+      "id": "sanzhou",
+      "name": "三州",
+      "href": "/topics/sanzhou/"
+    },
+    {
+      "id": "hainan",
+      "name": "海南",
+      "href": "/topics/hainan/"
+    },
+    {
+      "id": "rain",
+      "name": "烟雨",
+      "href": "/topics/rain/"
+    }
+  ],
+  "chibi": {
+    "title": "赤壁三咏",
+    "lead": "同一片江月，两赋一词。黄州五年里，苏轼把赤壁写成自己的精神地标。",
+    "image": "/topics/topic-chibi.webp",
+    "items": [
+      {
+        "workId": "niannujiao-chibi",
+        "note": "以周郎起兴，收束在「人生如梦」。豪放词的典型打开方式。"
+      },
+      {
+        "workId": "qian-chibi-fu",
+        "note": "主客问答：水与月、变与不变。把贬谪写成哲学。"
+      },
+      {
+        "workId": "hou-chibi-fu",
+        "note": "冬夜再游。孤鹤横江，梦醒成空——比前赋更冷、更静。"
+      }
+    ]
+  },
+  "huangzhou": {
+    "title": "黄州岁月",
+    "lead": "乌台诗案之后，苏轼在黄州垦东坡、筑雪堂。东坡居士的名号，与这批文字一起留下来。",
+    "image": "/topics/topic-huangzhou.webp",
+    "items": [
+      {
+        "workId": "dingfengbo",
+        "note": "沙湖道中遇雨。「一蓑烟雨任平生」——黄州心态的一句定调。"
+      },
+      {
+        "workId": "ji-chengtiansi",
+        "note": "承天寺夜游。八十四字的闲与空，与赤壁长赋对照。"
+      },
+      {
+        "workId": "linjiangxian-lingao",
+        "note": "夜归临皋。小舟从此逝，江海寄余生——想走，又还在岸上。"
+      },
+      {
+        "workId": "niannujiao-chibi",
+        "note": "赤壁怀古，把个人命运接到历史长河里。"
+      },
+      {
+        "workId": "qian-chibi-fu",
+        "note": "七月既望。清风明月，取之无禁。"
+      }
+    ]
+  },
+  "wutai": {
+    "title": "乌台诗案",
+    "lead": "元丰二年，苏轼因诗入狱。御史台别称乌台。百余日后贬黄州——没有这场狱祸，就没有后来的东坡。",
+    "image": "/topics/topic-wutai.webp",
+    "essay": "湖州任上谢表被弹劾「愚弄朝廷」，牵出此前诗作中的讥刺。审讯、抄家、几乎论死；苏辙乞以官职赎兄，朋友奔走。狱中二诗是惊魂的原文；出狱后责授黄州团练副使，不得签书公事。后来的定风波与赤壁赋，都带着这场狱祸的底色：既怕再言，又不能不写。",
+    "items": [
+      {
+        "workId": "yuzhong-ziyou",
+        "note": "狱中原文。与君世世为兄弟——死生之际写给子由。"
+      },
+      {
+        "workId": "dingfengbo",
+        "note": "狱后第三年。穿林打叶的雨，像朝堂风雨的缩小版——他选择徐行。"
+      },
+      {
+        "workId": "linjiangxian-lingao",
+        "note": "「此身非我有」：乌台之后，身体与命运的所有权成了问题。"
+      },
+      {
+        "workId": "qian-chibi-fu",
+        "note": "把几乎灭顶的经验，蒸馏成水月对话。没有乌台，难有此赋。"
+      }
+    ]
+  },
+  "ziyou": {
+    "title": "兄弟子由",
+    "lead": "苏辙字子由。同榜进士，一生聚少离多。苏轼最好的读者，常常是他。",
+    "image": "/topics/topic-ziyou.webp",
+    "essay": "嘉祐二年兄弟同科。此后一在朝一在野、一贬一量移，书信与诗词不断。中秋《水调歌头》明写「兼怀子由」；密州、黄州许多随手的收束，都像说给懂他的人听。读东坡，子由是隐线里的知己。",
+    "items": [
+      {
+        "workId": "shui-diaoge-tou",
+        "note": "序已点明兼怀子由。「千里共婵娟」是给弟弟的中秋。"
+      },
+      {
+        "workId": "yuzhong-ziyou",
+        "note": "御史台狱中的托付。来生未了因，比共婵娟更决绝。"
+      },
+      {
+        "workId": "jiangchengzi-jimeng",
+        "note": "悼亡之外，密州的孤独也来自兄弟天各一方。"
+      },
+      {
+        "workId": "dingfengbo",
+        "note": "黄州心境。子由此时亦在贬途或外任——烟雨是两人的天气。"
+      }
+    ]
+  },
+  "sanzhou": {
+    "title": "三州行迹",
+    "lead": "黄州、惠州、儋州。晚年三贬，越走越远，文字却越来越松、越来越落地。",
+    "image": "/topics/topic-sanzhou.webp",
+    "essay": "黄州垦东坡，得号；惠州啖荔枝，自称岭南人；儋州渡海，与黎人杂处。一条南迁线，把庙堂文人逼成能在泥土与海风里过日子的人。读三州，是读东坡如何把流放过成生活；读到《自题金山画像》，三州已被他自己认作平生功业。",
+    "items": [
+      {
+        "workId": "dingfengbo",
+        "note": "黄州：一蓑烟雨。态度先立住。"
+      },
+      {
+        "workId": "shilichizhi",
+        "note": "惠州：荔枝三百颗。用玩笑改写流放。"
+      },
+      {
+        "workId": "duhai",
+        "note": "儋州／渡海：九死南荒吾不恨。三州收官。"
+      },
+      {
+        "workId": "ziti-jinshan",
+        "note": "金山自题：平生功业，黄州惠州儋州。"
+      }
+    ]
+  },
+  "rain": {
+    "title": "一蓑烟雨",
+    "lead": "苏轼写雨，很少只写天气。雨是态度：穿林打叶、料峭春风，也是西湖的淡妆浓抹。",
+    "image": "/topics/topic-rain.webp",
+    "items": [
+      {
+        "workId": "dingfengbo",
+        "note": "莫听穿林打叶声——雨中的自我说服。"
+      },
+      {
+        "workId": "yin-hushang",
+        "note": "水光潋滟与山色空蒙。晴雨都好，西湖才完整。"
+      },
+      {
+        "workId": "huanxisha-qingquan",
+        "note": "蕲水清泉寺。谁道人生无再少？门前流水尚能西。"
+      }
+    ]
+  },
+  "hainan": {
+    "title": "海南北归",
+    "lead": "渡海、澄迈、金山自题。岭南以后的收束：把九死写成奇绝，把三州写成功业。",
+    "image": "/topics/topic-hainan.webp",
+    "essay": "绍圣之后越走越远：惠州、儋州，海是最后一道边界。元符三年获赦北归，《六月二十日夜渡海》把南荒说成冠平生的游历；澄迈通潮阁回望「青山一发是中原」；金山自题则把功业写成三个地名。与「三州」专题连读：那边是贬途地图，这边是晚年自况。",
+    "items": [
+      {
+        "workId": "duhai",
+        "note": "夜渡琼州海峡。不恨，是拒绝被流放定义。"
+      },
+      {
+        "workId": "chengmai",
+        "note": "通潮阁上。余生欲老海南村——真把儋州当过家园。"
+      },
+      {
+        "workId": "shilichizhi",
+        "note": "惠州伏笔：岭南人的自我命名，早于渡海。"
+      },
+      {
+        "workId": "ziti-jinshan",
+        "note": "北归收束。问汝平生功业，只答三州。"
+      }
+    ]
+  }
+}

@@ -14,6 +14,9 @@ tsconfig.tsbuildinfo
 .env.*
 !.env.example
 
+# 配图草稿 / 对比预览，勿提交
+apps/*/public/images/_preview/
+
 # 构建中间物 / 研究用大图（勿进主仓）
 apps/honglou/data/紅樓夢.txt
 apps/honglou/data/index.html

@@ -1,0 +1,432 @@
+{
+  "stations": [
+    {
+      "id": "chaoge",
+      "name": "朝歌",
+      "chapter": 1,
+      "blurb": "纣王女娲宫进香，题诗惹祸。灭商之劫从这里起。",
+      "image": "/scenes/jinxiang.webp"
+    },
+    {
+      "id": "chentang",
+      "name": "陈塘关",
+      "chapter": 12,
+      "blurb": "哪吒出世。乾坤圈、混天绫，灵珠子落在李靖府里。",
+      "image": "/scenes/nezha-born.webp"
+    },
+    {
+      "id": "kunlun",
+      "name": "昆仑山",
+      "chapter": 15,
+      "blurb": "子牙奉元始之命下山。封神榜也从这里带出。",
+      "image": "/scenes/lianhua.webp"
+    },
+    {
+      "id": "panxi",
+      "name": "磻溪",
+      "chapter": 23,
+      "blurb": "文王夜梦飞熊。下一回渭水聘贤，子牙归周。",
+      "image": "/scenes/weishui.webp"
+    },
+    {
+      "id": "xiqi",
+      "name": "西岐",
+      "chapter": 24,
+      "blurb": "子牙入西岐。此后十数年，商军一次次打到城下。",
+      "image": "/scenes/jintai.webp"
+    },
+    {
+      "id": "wuguan",
+      "name": "五关",
+      "chapter": 33,
+      "blurb": "黄飞虎反出朝歌，泗水关大战，一路投周。",
+      "image": "/scenes/feihu.webp"
+    },
+    {
+      "id": "shijue",
+      "name": "十绝阵",
+      "chapter": 45,
+      "blurb": "十天君摆阵。燃灯调度，十二金仙轮番破阵。",
+      "image": "/scenes/shijue.webp"
+    },
+    {
+      "id": "huanghe",
+      "name": "黄河阵",
+      "chapter": 50,
+      "blurb": "三霄为兄报仇。混元金斗困住金仙，西岐几乎崩盘。",
+      "image": "/scenes/huanghe.webp"
+    },
+    {
+      "id": "juelong",
+      "name": "绝龙岭",
+      "chapter": 52,
+      "blurb": "闻太师归天。商朝最能打的太师，倒在这里。",
+      "image": "/scenes/juelong.webp"
+    },
+    {
+      "id": "jintai",
+      "name": "金台拜将",
+      "chapter": 67,
+      "blurb": "武王拜子牙为将。西岐由守转攻，东征开始。",
+      "image": "/scenes/jintai.webp"
+    },
+    {
+      "id": "jinjiling",
+      "name": "金鸡岭",
+      "chapter": 69,
+      "blurb": "孔宣五色神光挡路。准提出手，孔雀归西方。",
+      "image": "/scenes/kongxuan.webp"
+    },
+    {
+      "id": "zhuxian",
+      "name": "诛仙阵",
+      "chapter": 77,
+      "blurb": "通天教主祭诛仙四剑。老子一气化三清破阵。",
+      "image": "/scenes/zhuxian.webp"
+    },
+    {
+      "id": "wanxian",
+      "name": "万仙阵",
+      "chapter": 82,
+      "blurb": "三教大会。截教精锐几乎在这一阵折尽。",
+      "image": "/scenes/wanxian.webp"
+    },
+    {
+      "id": "muye",
+      "name": "牧野",
+      "chapter": 97,
+      "blurb": "甲子日决战。纣王摘星楼自焚，妲己被擒。",
+      "image": "/scenes/muye.webp"
+    },
+    {
+      "id": "fengshentai",
+      "name": "封神台",
+      "chapter": 99,
+      "blurb": "子牙按榜封神。忠奸、仙凡，各归神位。",
+      "image": "/scenes/fengshen.webp"
+    },
+    {
+      "id": "fengguo",
+      "name": "封诸侯",
+      "chapter": 100,
+      "blurb": "武王封列国。子牙就国于齐，周室开基。",
+      "image": "/scenes/fengshen.webp"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "jinxiang",
+      "plate": "香",
+      "title": "女娲宫进香",
+      "chapter": 1,
+      "summary": "纣王三月进香，见女娲圣像题诗亵渎。女娲遣千年狐狸、九头雉鸡、玉石琵琶三妖，去朝歌惑纣。商周易主的劫数，从这一首诗写起。",
+      "people": [
+        "纣王",
+        "女娲"
+      ],
+      "image": "/scenes/jinxiang.webp"
+    },
+    {
+      "id": "nezha-born",
+      "plate": "哪",
+      "title": "哪吒出世",
+      "chapter": 12,
+      "summary": "李靖夫人怀胎三年零六个月，生下一个肉球。太乙真人取名哪吒，乾坤圈、混天绫随身。陈塘关从此多了一个闯祸的灵珠子。",
+      "people": [
+        "哪吒",
+        "李靖",
+        "太乙真人"
+      ],
+      "image": "/scenes/nezha-born.webp"
+    },
+    {
+      "id": "lianhua",
+      "plate": "莲",
+      "title": "莲花化身",
+      "chapter": 14,
+      "summary": "哪吒割肉还母、剔骨还父后，太乙真人用莲花、荷叶给他重塑肉身。从此他不再只是李靖的儿子，而是阐教先行官。",
+      "people": [
+        "哪吒",
+        "太乙真人",
+        "李靖"
+      ],
+      "image": "/scenes/lianhua.webp"
+    },
+    {
+      "id": "weishui",
+      "plate": "钓",
+      "title": "渭水聘贤",
+      "chapter": 24,
+      "summary": "文王梦飞熊后，渭水边访到直钩垂钓的子牙。载回西岐，拜为丞相。伐纣的人间主线，从这一聘真正开始。",
+      "people": [
+        "姜子牙",
+        "姬昌"
+      ],
+      "image": "/scenes/weishui.webp"
+    },
+    {
+      "id": "bidan",
+      "plate": "心",
+      "title": "妲己害比干",
+      "chapter": 26,
+      "summary": "妲己说自己有病，要吃比干的心做药。比干挖心而出，朝歌忠臣折去一根梁柱。狐狸精的毒，写到了骨头里。",
+      "people": [
+        "苏妲己",
+        "比干",
+        "纣王"
+      ],
+      "image": "/scenes/bidan.webp"
+    },
+    {
+      "id": "feihu",
+      "plate": "反",
+      "title": "黄飞虎反五关",
+      "chapter": 33,
+      "summary": "武成王因妲己害妻、纣王无道，反出朝歌。泗水关大战后投周。商朝第一猛将，站到了西岐一边。",
+      "people": [
+        "黄飞虎",
+        "黄天化"
+      ],
+      "image": "/scenes/feihu.webp"
+    },
+    {
+      "id": "shijue",
+      "plate": "阵",
+      "title": "十绝阵",
+      "chapter": 45,
+      "summary": "十天君摆下天绝、地烈诸阵。燃灯议破，十二金仙轮流闯阵，各有死伤。这是截教与阐教第一次大规模阵战。",
+      "people": [
+        "燃灯道人",
+        "闻仲",
+        "姜子牙"
+      ],
+      "image": "/scenes/shijue.webp"
+    },
+    {
+      "id": "qijianshu",
+      "plate": "箭",
+      "title": "钉头七箭书",
+      "chapter": 48,
+      "summary": "陆压教子牙以钉头七箭书射赵公明。公明按日衰败，终于归天。野仙的阴招，破了峨眉山这一劫。",
+      "people": [
+        "陆压",
+        "赵公明",
+        "姜子牙"
+      ],
+      "image": "/scenes/qijianshu.webp"
+    },
+    {
+      "id": "huanghe",
+      "plate": "河",
+      "title": "黄河阵",
+      "chapter": 50,
+      "summary": "云霄、琼霄、碧霄为兄报仇，摆黄河阵。混元金斗把十二金仙的顶上三花收走。西岐几乎在这一阵里崩盘。",
+      "people": [
+        "三霄娘娘",
+        "姜子牙",
+        "燃灯道人"
+      ],
+      "image": "/scenes/huanghe.webp"
+    },
+    {
+      "id": "juelong",
+      "plate": "岭",
+      "title": "闻仲归天",
+      "chapter": 52,
+      "summary": "闻太师连败后走绝龙岭，被雷震子等围住。忠于商室的太师倒在这里，朝歌再没有能统筹西征的人。",
+      "people": [
+        "闻仲",
+        "雷震子",
+        "姜子牙"
+      ],
+      "image": "/scenes/juelong.webp"
+    },
+    {
+      "id": "jintai",
+      "plate": "拜",
+      "title": "金台拜将",
+      "chapter": 67,
+      "summary": "武王筑台拜子牙为将。西岐由守转攻，分兵出关。此后的故事，是一路破关取朝歌。",
+      "people": [
+        "姜子牙",
+        "姬发"
+      ],
+      "image": "/scenes/jintai.webp"
+    },
+    {
+      "id": "kongxuan",
+      "plate": "光",
+      "title": "五色神光",
+      "chapter": 69,
+      "summary": "孔宣在金鸡岭挡住东征大军。五色神光能收万物，连法宝也逃不脱。第七十回准提出手，现出孔雀原形。",
+      "people": [
+        "孔宣",
+        "准提道人",
+        "姜子牙"
+      ],
+      "image": "/scenes/kongxuan.webp"
+    },
+    {
+      "id": "zhuxian",
+      "plate": "剑",
+      "title": "破诛仙阵",
+      "chapter": 78,
+      "summary": "通天教主祭诛仙四剑。老子一气化三清，与元始、准提等合力破阵。截教教主第一次在阵上落下风。",
+      "people": [
+        "通天教主",
+        "老子",
+        "元始天尊"
+      ],
+      "image": "/scenes/zhuxian.webp"
+    },
+    {
+      "id": "wanxian",
+      "plate": "万",
+      "title": "万仙阵",
+      "chapter": 82,
+      "summary": "三教大会万仙阵。截教门下几乎一网打尽，多教人马在此入封神榜。神魔之战写到了顶点。",
+      "people": [
+        "通天教主",
+        "元始天尊",
+        "准提道人",
+        "姜子牙"
+      ],
+      "image": "/scenes/wanxian.webp"
+    },
+    {
+      "id": "muye",
+      "plate": "焚",
+      "title": "牧野灭商",
+      "chapter": 97,
+      "summary": "甲子日牧野决战。前徒倒戈，纣王登摘星楼自焚，妲己被擒正法。人间的商周之争，在这一回收束。",
+      "people": [
+        "纣王",
+        "苏妲己",
+        "姜子牙",
+        "姬发"
+      ],
+      "image": "/scenes/muye.webp"
+    },
+    {
+      "id": "fengshen",
+      "plate": "封",
+      "title": "封神",
+      "chapter": 99,
+      "summary": "子牙按元始所赐封神榜，把忠臣、战将、截教门人一一封神。黄飞虎为东岳，哪吒为中坛元帅，各归其位。",
+      "people": [
+        "姜子牙"
+      ],
+      "image": "/scenes/fengshen.webp"
+    }
+  ],
+  "relics": [
+    {
+      "id": "fengshenbang",
+      "kind": "榜文",
+      "name": "封神榜",
+      "owner": "姜子牙",
+      "chapter": 15,
+      "blurb": "元始天尊付子牙带下山。榜上有名者，死后入神位。全书劫数，都围着这一卷名单转。",
+      "image": "/relics/fengshenbang.webp"
+    },
+    {
+      "id": "qiankunquan",
+      "kind": "兵器",
+      "name": "乾坤圈",
+      "owner": "哪吒",
+      "chapter": 12,
+      "blurb": "出世时套在右腕。打敖丙、战石矶，都靠它。哪吒的第一件标志。",
+      "image": "/relics/qiankunquan.webp"
+    },
+    {
+      "id": "huntianling",
+      "kind": "兵器",
+      "name": "混天绫",
+      "owner": "哪吒",
+      "chapter": 12,
+      "blurb": "红绫围在肚腹。入水搅海、绑人捆将，是哪吒近战的软兵器。",
+      "image": "/relics/huntianling.webp"
+    },
+    {
+      "id": "huojianqiang",
+      "kind": "兵器",
+      "name": "火尖枪",
+      "owner": "哪吒",
+      "chapter": 14,
+      "blurb": "莲花化身后太乙所赐。风火轮配枪，先行官的完整形制到齐。",
+      "image": "/relics/huojianqiang.webp"
+    },
+    {
+      "id": "dadao",
+      "kind": "兵器",
+      "name": "打神鞭",
+      "owner": "姜子牙",
+      "chapter": 15,
+      "blurb": "专打封神榜上有名之人。榜上无名，鞭子反而打不着。子牙临阵的本命法宝。",
+      "image": "/relics/dadao.webp"
+    },
+    {
+      "id": "fantianyin",
+      "kind": "法宝",
+      "name": "番天印",
+      "owner": "殷郊",
+      "chapter": 65,
+      "blurb": "广成子原物，落入殷郊之手后几乎改天。岐山受犁锄一场，印的威胁写得很满。",
+      "image": "/relics/fantianyin.webp"
+    },
+    {
+      "id": "dinghai",
+      "kind": "法宝",
+      "name": "定海珠",
+      "owner": "赵公明",
+      "chapter": 47,
+      "blurb": "二十四颗定海珠，打得金仙抬不起头。公明未死前，西岐最怕的就是这一串。",
+      "image": "/relics/dinghai.webp"
+    },
+    {
+      "id": "hunyuan",
+      "kind": "法宝",
+      "name": "混元金斗",
+      "owner": "三霄娘娘",
+      "chapter": 50,
+      "blurb": "黄河阵里的核心。收的是顶上三花、胸中五气，金仙也要落凡。",
+      "image": "/relics/hunyuan.webp"
+    },
+    {
+      "id": "zhuxianjian",
+      "kind": "阵剑",
+      "name": "诛仙四剑",
+      "owner": "通天教主",
+      "chapter": 77,
+      "blurb": "诛仙、戮仙、陷仙、绝仙。挂在诛仙阵门上，三教合力才破得开。",
+      "image": "/relics/zhuxianjian.webp"
+    },
+    {
+      "id": "wuse",
+      "kind": "神通",
+      "name": "五色神光",
+      "owner": "孔宣",
+      "chapter": 69,
+      "blurb": "金、木、水、火、土五光，见物即收。准提未到之前，东征几乎卡死在金鸡岭。",
+      "image": "/relics/wuse.webp"
+    },
+    {
+      "id": "linglongta",
+      "kind": "法宝",
+      "name": "玲珑塔",
+      "owner": "李靖",
+      "chapter": 14,
+      "blurb": "燃灯所赠，用来收服哪吒。后来成了托塔天王的象征。",
+      "image": "/relics/linglongta.webp"
+    },
+    {
+      "id": "qijianshu",
+      "kind": "术法",
+      "name": "钉头七箭书",
+      "owner": "陆压",
+      "chapter": 48,
+      "blurb": "书上画人，箭射其形，七日可取命。赵公明死于这阴招，不死于阵上刀兵。",
+      "image": "/relics/qijianshu.webp"
+    }
+  ]
+}

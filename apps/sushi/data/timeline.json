@@ -1,0 +1,190 @@
+{
+  "events": [
+    {
+      "id": "birth",
+      "year": 1037,
+      "yearLabel": "景祐四年",
+      "age": 0,
+      "title": "生于眉山",
+      "place": "眉州眉山",
+      "phase": "少年",
+      "blurb": "苏洵第三子。与弟苏辙同受家学，后来人称「三苏」。",
+      "image": "/life/meishan.webp",
+      "workIds": []
+    },
+    {
+      "id": "jinshi",
+      "year": 1057,
+      "yearLabel": "嘉祐二年",
+      "age": 20,
+      "title": "进士及第",
+      "place": "汴京",
+      "phase": "出仕",
+      "blurb": "与苏辙同榜。欧阳修主考，奇其文，名动京师。",
+      "image": "/life/jinshi.webp",
+      "workIds": []
+    },
+    {
+      "id": "fengxiang",
+      "year": 1061,
+      "yearLabel": "嘉祐六年",
+      "age": 24,
+      "title": "签书凤翔府判官",
+      "place": "凤翔",
+      "phase": "出仕",
+      "blurb": "初任地方。此后辗转京城与外任，卷入新法争议。",
+      "image": "/life/fengxiang.webp",
+      "workIds": []
+    },
+    {
+      "id": "mizhou",
+      "year": 1074,
+      "yearLabel": "熙宁七年",
+      "age": 37,
+      "title": "知密州",
+      "place": "密州",
+      "phase": "外任",
+      "blurb": "出知密州。悼亡与出猎同调《江城子》，中秋《水调歌头》兼怀子由——密州三年，公私两端都写透了。",
+      "image": "/life/mizhou.webp",
+      "workIds": [
+        "jiangchengzi-chulie",
+        "jiangchengzi-jimeng",
+        "shui-diaoge-tou"
+      ]
+    },
+    {
+      "id": "xuzhou",
+      "year": 1077,
+      "yearLabel": "熙宁十年",
+      "age": 40,
+      "title": "知徐州",
+      "place": "徐州",
+      "phase": "外任",
+      "blurb": "黄河决口，亲率军民筑堤。谢雨道上作《浣溪沙》，民间「苏公堤」故事多自此生。",
+      "image": "/life/xuzhou.webp",
+      "workIds": [
+        "huanxisha-xuzhou"
+      ]
+    },
+    {
+      "id": "huzhou",
+      "year": 1079,
+      "yearLabel": "元丰二年",
+      "age": 42,
+      "title": "乌台诗案",
+      "place": "湖州 → 御史台狱",
+      "phase": "狱祸",
+      "blurb": "因诗获罪，入狱百余日。几乎论死，狱中寄诗子由；后贬黄州团练副使。没有乌台，就没有后来的东坡。",
+      "image": "/life/huzhou.webp",
+      "workIds": [
+        "yuzhong-ziyou"
+      ]
+    },
+    {
+      "id": "huangzhou",
+      "year": 1080,
+      "yearLabel": "元丰三年",
+      "age": 43,
+      "title": "贬谪黄州",
+      "place": "黄州",
+      "phase": "黄州",
+      "blurb": "垦东坡、筑雪堂，东坡之名由此起。赤壁二赋、念奴娇、定风波，多半写在这几年。",
+      "image": "/life/huangzhou.webp",
+      "workIds": [
+        "dingfengbo",
+        "niannujiao-chibi",
+        "qian-chibi-fu",
+        "hou-chibi-fu",
+        "linjiangxian-lingao",
+        "ji-chengtiansi",
+        "huanxisha-qingquan",
+        "dielianhua"
+      ]
+    },
+    {
+      "id": "ruzhou",
+      "year": 1084,
+      "yearLabel": "元丰七年",
+      "age": 47,
+      "title": "量移汝州",
+      "place": "汝州途中",
+      "phase": "量移",
+      "blurb": "离开黄州。过庐山作《题西林壁》，「不识庐山真面目」自此成典。",
+      "image": "/life/ruzhou.webp",
+      "workIds": [
+        "tixilinbi"
+      ]
+    },
+    {
+      "id": "hangzhou",
+      "year": 1089,
+      "yearLabel": "元祐四年",
+      "age": 52,
+      "title": "再知杭州",
+      "place": "杭州",
+      "phase": "元祐",
+      "blurb": "疏浚西湖，筑苏堤。早年通判杭州时已有《饮湖上初晴后雨》；再知杭州，是把旧游写成政绩。",
+      "image": "/life/hangzhou.webp",
+      "workIds": [
+        "yin-hushang"
+      ]
+    },
+    {
+      "id": "huizhou",
+      "year": 1094,
+      "yearLabel": "绍圣元年",
+      "age": 57,
+      "title": "贬惠州",
+      "place": "惠州",
+      "phase": "岭南",
+      "blurb": "党争再起，远谪岭南。仍写「日啖荔枝三百颗，不辞长作岭南人」。",
+      "image": "/life/huizhou.webp",
+      "workIds": [
+        "shilichizhi"
+      ]
+    },
+    {
+      "id": "danzhou",
+      "year": 1097,
+      "yearLabel": "绍圣四年",
+      "age": 60,
+      "title": "再贬儋州",
+      "place": "儋州",
+      "phase": "海南",
+      "blurb": "渡海至儋耳。与黎人杂处，讲学授徒。北归前夜《六月二十日夜渡海》，九死南荒吾不恨。",
+      "image": "/life/danzhou.webp",
+      "workIds": [
+        "duhai"
+      ]
+    },
+    {
+      "id": "return",
+      "year": 1100,
+      "yearLabel": "元符三年",
+      "age": 63,
+      "title": "遇赦北归",
+      "place": "渡海北还",
+      "phase": "北归",
+      "blurb": "徽宗即位，获赦。自海南启程北上，过澄迈作《通潮阁》，回望加报天边。",
+      "image": "/life/return.webp",
+      "workIds": [
+        "chengmai",
+        "duhai"
+      ]
+    },
+    {
+      "id": "death",
+      "year": 1101,
+      "yearLabel": "建中靖国元年",
+      "age": 64,
+      "title": "卒于常州",
+      "place": "常州",
+      "phase": "北归",
+      "blurb": "七月二十八日病逝。金山自题「心似已灰之木」，收束一生功业：黄州惠州儋州。",
+      "image": "/life/changzhou.webp",
+      "workIds": [
+        "ziti-jinshan"
+      ]
+    }
+  ]
+}

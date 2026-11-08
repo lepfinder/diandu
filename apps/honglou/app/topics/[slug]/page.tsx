@@ -15,7 +15,9 @@ import { asset } from '@classic/ui';
 
 const tabs = [
   { id: 'places', name: '大观园' },
+  { id: 'seasons', name: '四季图' },
   { id: 'twelve', name: '十二钗' },
+  { id: 'posters', name: '水墨海报' },
   { id: 'qu', name: '红楼曲' },
   { id: 'music', name: '87版歌曲' },
   { id: 'poems', name: '诗词' },
@@ -24,6 +26,56 @@ const tabs = [
   { id: 'food', name: '饮食' },
   { id: 'glossary', name: '术语' },
 ];
+
+const SEASONS = [
+  {
+    id: 'spring',
+    name: '春 · 大观春晓',
+    image: '/images/season-spring.webp',
+    verse: '绕堤柳借三篙翠，隔岸花分一脉香。',
+    desc: '春水初生，柳堤花岸。大观园在元春省亲后的第一场春光里，盛开如一场尚未醒来的梦。',
+  },
+  {
+    id: 'summer',
+    name: '夏 · 芍药遗梦',
+    image: '/images/season-summer.webp',
+    verse: '柳堤之上，富贵繁华，到头一梦。',
+    desc: '荷香满池，湘云醉卧芍药裀。盛夏是园中最热闹也最易忘忧的时节，繁华正浓。',
+  },
+  {
+    id: 'autumn',
+    name: '秋 · 大观秋水',
+    image: '/images/season-autumn.webp',
+    verse: '寒塘渡鹤影，冷月葬花魂。',
+    desc: '中秋夜，凹晶溪馆联诗。秋水映月，鹤影掠塘——盛极将衰的清声，在此写成。',
+  },
+  {
+    id: 'winter',
+    name: '冬 · 大观冬雪',
+    image: '/images/season-winter.webp',
+    verse: '落了片白茫茫大地真干净。',
+    desc: '琉璃世界白雪红梅。冬雪洗净繁华，也预示全书终局的空茫。',
+  },
+] as const;
+
+const POSTERS = [
+  {
+    id: 'daiyu',
+    name: '林黛玉 · 葬花词',
+    image: '/images/poster-daiyu.webp',
+    verse: '一朝春尽红颜老，花落人亡两不知。',
+    desc: '水墨电影海报。葬花一幕，是黛玉还泪与全书诗心的汇合点。',
+    href: '/read/27/',
+  },
+  {
+    id: 'baoyu',
+    name: '贾宝玉 · 石头记',
+    image: '/images/poster-baoyu.webp',
+    verse: '假作真时真亦假，无为有处有还无。',
+    desc: '水墨电影海报。通灵宝玉入世，真假有无的开篇总纲。',
+    href: '/read/1/',
+  },
+] as const;
 
 export function generateStaticParams() {
   return tabs.map((t) => ({ slug: t.id }));
@@ -73,6 +125,51 @@ export default async function TopicsPage({ params }: { params: Promise<{ slug: s
         </div>
       </>
     );
+  } else if (slug === 'seasons') {
+    body = (
+      <>
+        <p className="sub" style={{ margin: '-10px 0 18px', color: 'var(--ink-3)', fontSize: 14, lineHeight: 1.8 }}>
+          大观园四季全景：春晓、夏梦、秋水、冬雪。同一座园子，在时序里看见繁华与空茫。
+        </p>
+        <div className="season-list">
+          {SEASONS.map((s) => (
+            <article key={s.id} className="season-card">
+              <div className="season-img" data-label={s.name}>
+                <img src={asset(s.image)} alt={s.name} width={2016} height={864} loading="eager" decoding="async" />
+              </div>
+              <div className="season-body">
+                <h3>{s.name}</h3>
+                <p className="season-verse">{s.verse}</p>
+                <p>{s.desc}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </>
+    );
+  } else if (slug === 'posters') {
+    body = (
+      <>
+        <p className="sub" style={{ margin: '-10px 0 18px', color: 'var(--ink-3)', fontSize: 14, lineHeight: 1.8 }}>
+          水墨电影海报两帧：黛玉葬花、宝玉石头记。竖幅构图，点开可跳到对应回目。
+        </p>
+        <div className="poster-grid">
+          {POSTERS.map((p) => (
+            <Link key={p.id} href={p.href} className="poster-card">
+              <div className="poster-img" data-label={p.name}>
+                <img src={asset(p.image)} alt={p.name} width={1152} height={2048} loading="eager" decoding="async" />
+              </div>
+              <div className="poster-body">
+                <h3>{p.name}</h3>
+                <p className="season-verse">{p.verse}</p>
+                <p>{p.desc}</p>
+                <span className="go">打开正文 →</span>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </>
+    );
   } else if (slug === 'twelve') {
     const fu = (T.twelve as any).fuCe as typeof T.twelve.items;
     const fuIntro = (T.twelve as any).fuCeIntro as string;
@@ -111,24 +208,35 @@ export default async function TopicsPage({ params }: { params: Promise<{ slug: s
     body = (
       <>
         <div className="topic-hero" data-label="太虚幻境">
-          <img src={asset("/images/taixu.webp")} alt="太虚幻境" width={1536} height={520} loading="eager" decoding="async" />
+          <img src={asset("/images/taixu.webp")} alt="太虚幻境" width={1280} height={720} loading="eager" decoding="async" />
           <div className="topic-hero-cap">因空见色，由色生情，传情入色，自色悟空</div>
         </div>
         <p className="sub" style={{ margin: '0 0 22px', color: 'var(--ink-3)', fontSize: 14, lineHeight: 1.8 }}>{T.background.intro}</p>
         <div className="essay-list">
-          {T.background.essays.map((e) => (
-            <article key={e.id} className="essay-card has-img">
-              {BG_IMAGES[e.id] ? (
-                <div className="essay-img" data-label={e.title}>
-                  <img src={asset(BG_IMAGES[e.id])} alt={e.title} width={1200} height={420} loading="eager" decoding="async" />
+          {T.background.essays.map((e) => {
+            const textLen = (e.body || []).reduce((n, p) => n + p.length, 0);
+            const isLong = textLen >= 320;
+            return (
+              <article key={e.id} className={`essay-card has-img${isLong ? ' is-long' : ''}`}>
+                {BG_IMAGES[e.id] ? (
+                  <div className="essay-img" data-label={e.title}>
+                    <img
+                      src={asset(BG_IMAGES[e.id])}
+                      alt={e.title}
+                      width={isLong ? 1280 : 960}
+                      height={isLong ? 720 : 720}
+                      loading="eager"
+                      decoding="async"
+                    />
+                  </div>
+                ) : null}
+                <div className="essay-body">
+                  <h3>{e.title}</h3>
+                  <div className="body">{e.body.map((p, i) => <p key={i}>{p}</p>)}</div>
                 </div>
-              ) : null}
-              <div className="essay-body" style={{ padding: 20 }}>
-                <h3>{e.title}</h3>
-                <div className="body">{e.body.map((p, i) => <p key={i}>{p}</p>)}</div>
-              </div>
-            </article>
-          ))}
+              </article>
+            );
+          })}
         </div>
       </>
     );

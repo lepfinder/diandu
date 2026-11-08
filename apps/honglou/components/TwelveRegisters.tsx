@@ -53,6 +53,7 @@ export function TwelveRegisters({
   const [tab, setTab] = useState<'zheng' | 'fu' | 'youfu'>('zheng');
   const [detail, setDetail] = useState<TwelveDetail | null>(null);
   const list = tab === 'zheng' ? zheng : tab === 'fu' ? fu : youFu;
+  const siblingIds = list.map((t) => t.id);
 
   return (
     <>
@@ -77,7 +78,12 @@ export function TwelveRegisters({
         ))}
       </div>
 
-      <TwelveDetailModal detail={detail} onClose={() => setDetail(null)} />
+      <TwelveDetailModal
+        detail={detail}
+        onClose={() => setDetail(null)}
+        siblings={siblingIds}
+        onNavigate={(id) => setDetail(getTwelveDetail(id))}
+      />
     </>
   );
 }

@@ -1,0 +1,101 @@
+{
+  "corpus": [
+    {
+      "id": "benji",
+      "name": "本纪",
+      "blurb": "天子之事。从五帝到汉武，十二篇帝王编年。项羽虽败，仍入本纪。",
+      "stories": ["五帝本纪", "秦始皇本纪", "项羽本纪", "高祖本纪"],
+      "image": "/topics/topic-corpus.webp"
+    },
+    {
+      "id": "biao",
+      "name": "表",
+      "blurb": "以年系事。六国、秦楚之际、汉兴以来将相，适合对照江山时间轴。",
+      "stories": ["六国年表"],
+      "image": "/topics/topic-corpus.webp"
+    },
+    {
+      "id": "shu",
+      "name": "书",
+      "blurb": "典章与制度。礼乐律历、天官封禅、河渠平准——读史也读「怎么治国」。",
+      "stories": ["河渠书"],
+      "image": "/topics/topic-corpus.webp"
+    },
+    {
+      "id": "shijia",
+      "name": "世家",
+      "blurb": "诸侯与特立之家。孔子以布衣入世家，陈涉以首事入世家。",
+      "stories": ["孔子世家", "陈涉世家", "留侯世家"],
+      "image": "/topics/topic-corpus.webp"
+    },
+    {
+      "id": "liezhuan",
+      "name": "列传",
+      "blurb": "士人、将相、游侠、刺客、日者……七十篇人物长廊，是史记的主干。",
+      "stories": ["伯夷列传", "刺客列传", "淮阴侯列传", "李将军列传", "太史公自序"],
+      "image": "/topics/topic-corpus.webp"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "julü",
+      "plate": "鹿",
+      "title": "钜鹿之战",
+      "chapter": 7,
+      "summary": "项羽破釜沉舟，章邯降。秦军主力瓦解，天下格局改写。",
+      "people": ["项羽", "章邯"],
+      "map": { "year": -207, "place": "钜鹿" },
+      "image": "/scenes/julu.webp"
+    },
+    {
+      "id": "hongmen",
+      "plate": "门",
+      "title": "鸿门宴",
+      "chapter": 7,
+      "summary": "项庄舞剑，樊哙闯帐。一席酒，埋下楚汉分野。",
+      "people": ["项羽", "刘邦", "张良", "樊哙"],
+      "map": { "year": -206, "place": "鸿门" },
+      "image": "/scenes/hongmen.webp"
+    },
+    {
+      "id": "gaixia",
+      "plate": "垓",
+      "title": "垓下之围",
+      "chapter": 7,
+      "summary": "四面楚歌，霸王别姬，乌江自刎。本纪以悲剧收束。",
+      "people": ["项羽", "刘邦", "韩信"],
+      "map": { "year": -202, "place": "垓下" },
+      "image": "/scenes/gaixia.webp"
+    },
+    {
+      "id": "daze",
+      "plate": "泽",
+      "title": "大泽乡",
+      "chapter": 48,
+      "summary": "雨失期，法皆斩。陈胜吴广斩木为兵，揭竿而起。",
+      "people": ["陈胜", "吴广"],
+      "map": { "year": -209, "place": "大泽乡" },
+      "image": "/scenes/daze.webp"
+    },
+    {
+      "id": "yishui",
+      "plate": "水",
+      "title": "易水送别",
+      "chapter": 86,
+      "summary": "风萧萧兮易水寒。荆轲入秦，图穷匕见。",
+      "people": ["荆轲", "太子丹"],
+      "map": { "year": -227, "place": "易水" },
+      "image": "/scenes/yishui.webp"
+    },
+    {
+      "id": "jingxing",
+      "plate": "陉",
+      "title": "井陉之战",
+      "chapter": 92,
+      "summary": "背水一战。韩信破赵，名震河北。",
+      "people": ["韩信"],
+      "map": { "year": -204, "place": "井陉" },
+      "image": "/scenes/jingxing.webp"
+    }
+  ]
+}

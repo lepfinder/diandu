@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { absoluteUrl, getSiteUrl } from '@classic/ui';
 import '@classic/reader/styles.css';
 import './globals.css';
+import '@classic/ui/topic-card.css';
 import { Nav } from '@/components/Nav';
 
 const title = '聊斋志异 · 交互精读';

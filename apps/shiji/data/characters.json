@@ -1,0 +1,233 @@
+{
+  "groups": [
+    {
+      "id": "benji",
+      "name": "本纪人物",
+      "color": "#8b2e24"
+    },
+    {
+      "id": "shijia",
+      "name": "世家人物",
+      "color": "#6b5344"
+    },
+    {
+      "id": "liezhuan",
+      "name": "列传人物",
+      "color": "#2f5a48"
+    },
+    {
+      "id": "other",
+      "name": "其他",
+      "color": "#3d5a6c"
+    }
+  ],
+  "list": [
+    {
+      "id": "qinshihuang",
+      "name": "秦始皇",
+      "group": "benji",
+      "role": "秦皇帝",
+      "firstCh": 6,
+      "lastCh": 6,
+      "bio": "嬴政。自亲政到一统六国，再至沙丘崩。本纪与江山「秦始皇」行迹可对读。",
+      "map": {
+        "person": "qinshihuang"
+      },
+      "anchors": [
+        {
+          "year": -238,
+          "place": "咸阳"
+        },
+        {
+          "year": -230,
+          "place": "新郑"
+        },
+        {
+          "year": -221,
+          "place": "临淄"
+        },
+        {
+          "year": -210,
+          "place": "沙丘"
+        }
+      ]
+    },
+    {
+      "id": "xiangyu",
+      "name": "项羽",
+      "group": "benji",
+      "role": "西楚霸王",
+      "firstCh": 7,
+      "lastCh": 7,
+      "bio": "项籍字羽。巨鹿破秦、鸿门宴、垓下之围，太史公以本纪规格写失败者。",
+      "map": {
+        "year": -207,
+        "place": "钜鹿"
+      },
+      "anchors": [
+        {
+          "year": -209,
+          "place": "会稽"
+        },
+        {
+          "year": -207,
+          "place": "钜鹿"
+        },
+        {
+          "year": -206,
+          "place": "鸿门"
+        },
+        {
+          "year": -202,
+          "place": "垓下"
+        }
+      ]
+    },
+    {
+      "id": "liubang",
+      "name": "刘邦",
+      "group": "benji",
+      "role": "汉高祖",
+      "firstCh": 8,
+      "lastCh": 8,
+      "bio": "沛丰人。从亭长到皇帝，与项羽本纪对照，是楚汉的另一半。",
+      "map": {
+        "year": -202,
+        "place": "长安"
+      },
+      "anchors": [
+        {
+          "year": -209,
+          "place": "沛县"
+        },
+        {
+          "year": -206,
+          "place": "霸上"
+        },
+        {
+          "year": -202,
+          "place": "定陶"
+        }
+      ]
+    },
+    {
+      "id": "kongzi",
+      "name": "孔子",
+      "group": "shijia",
+      "role": "至圣",
+      "firstCh": 47,
+      "lastCh": 47,
+      "bio": "唯一以「世家」立传的布衣。周游列国与归鲁删述，是儒家地理线。",
+      "map": {
+        "year": -497,
+        "place": "曲阜"
+      }
+    },
+    {
+      "id": "chensheng",
+      "name": "陈胜",
+      "group": "shijia",
+      "role": "张楚王",
+      "firstCh": 48,
+      "lastCh": 48,
+      "bio": "大泽乡首事。「王侯将相宁有种乎」一声，六国余烬重燃。",
+      "map": {
+        "year": -209,
+        "place": "大泽乡"
+      }
+    },
+    {
+      "id": "zhangliang",
+      "name": "张良",
+      "group": "shijia",
+      "role": "留侯",
+      "firstCh": 55,
+      "lastCh": 55,
+      "bio": "下邳受书，运筹帷幄。世家写谋臣，与韩信列传对照可读。",
+      "map": {
+        "year": -204,
+        "place": "下邳"
+      }
+    },
+    {
+      "id": "jingke",
+      "name": "荆轲",
+      "group": "liezhuan",
+      "role": "刺客",
+      "firstCh": 86,
+      "lastCh": 86,
+      "bio": "刺客列传压卷。易水送别至咸阳殿上，是战国末的绝响。",
+      "map": {
+        "year": -227,
+        "place": "易水"
+      },
+      "anchors": [
+        {
+          "year": -227,
+          "place": "易水"
+        },
+        {
+          "year": -227,
+          "place": "咸阳"
+        }
+      ]
+    },
+    {
+      "id": "hanxin",
+      "name": "韩信",
+      "group": "liezhuan",
+      "role": "淮阴侯",
+      "firstCh": 92,
+      "lastCh": 92,
+      "bio": "胯下之辱到十二连营。井陉、潍水、垓下，军事地理极清晰。",
+      "map": {
+        "year": -204,
+        "place": "井陉"
+      },
+      "anchors": [
+        {
+          "year": -206,
+          "place": "汉中"
+        },
+        {
+          "year": -205,
+          "place": "陈仓"
+        },
+        {
+          "year": -204,
+          "place": "井陉"
+        },
+        {
+          "year": -202,
+          "place": "垓下"
+        }
+      ]
+    },
+    {
+      "id": "liguang",
+      "name": "李广",
+      "group": "liezhuan",
+      "role": "飞将军",
+      "firstCh": 109,
+      "lastCh": 109,
+      "bio": "陇西成纪人。与匈奴周旋数十年，列传写尽数奇。",
+      "map": {
+        "year": -129,
+        "place": "雁门"
+      }
+    },
+    {
+      "id": "simaqian",
+      "name": "司马迁",
+      "group": "other",
+      "role": "太史公",
+      "firstCh": 130,
+      "lastCh": 130,
+      "bio": "自序是全书总纲：继春秋、成一家之言。读史记，最后回到这一篇。",
+      "map": {
+        "year": -104,
+        "place": "长安"
+      }
+    }
+  ]
+}

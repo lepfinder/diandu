@@ -12,6 +12,32 @@
   position: relative;
   min-height: 0;
 }
+.cr-workspace {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
+  position: relative;
+}
+.cr-toc-rail {
+  width: min(272px, 34vw);
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  background: var(--paper-2);
+  border-right: 1px solid var(--line);
+  z-index: 5;
+}
+.cr-toc-rail .cr-drawer-head,
+.cr-toc-rail .cr-drawer-search,
+.cr-toc-rail .cr-toc-lead {
+  flex: none;
+}
+.cr-toc-rail .cr-toc-list {
+  flex: 1;
+  min-height: 0;
+}
 .cr-progress {
   position: absolute;
   top: 0;
@@ -80,7 +106,13 @@
   stroke-linejoin: round;
 }
 
-.cr-body { overflow: auto; height: 100%; -webkit-overflow-scrolling: touch; }
+.cr-body {
+  overflow: auto;
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+}
 .cr-read-frame {
   max-width: var(--read-width);
   margin: 0 auto;
@@ -999,6 +1031,10 @@
 }
 
 /* 手机：抽屉改底部 sheet；不做纸书边栏 */
+.cr-shell.is-compact .cr-workspace {
+  display: block;
+  overflow: hidden;
+}
 .cr-shell.is-compact .cr-read-frame {
   max-width: none;
   padding: 0;
@@ -1011,7 +1047,8 @@
 .cr-shell.is-compact .cr-chapter-head h1 { font-size: 24px; }
 .cr-shell.is-compact .cr-margin { display: none; }
 .cr-shell.is-compact .cr-drawer,
-.cr-shell.is-compact .cr-drawer.right {
+.cr-shell.is-compact .cr-drawer.right,
+.cr-shell.is-compact .cr-toc-drawer {
   top: auto;
   left: 0;
   right: 0;
@@ -1025,7 +1062,8 @@
   box-shadow: var(--shadow-lg);
 }
 .cr-shell.is-compact .cr-drawer.open,
-.cr-shell.is-compact .cr-drawer.right.open { transform: none; }
+.cr-shell.is-compact .cr-drawer.right.open,
+.cr-shell.is-compact .cr-toc-drawer.open { transform: none; }
 .cr-shell.is-compact .cr-composer-wrap { place-items: end center; }
 .cr-shell.is-compact .cr-nav { flex-direction: column; }
 .cr-shell.is-compact .cr-nav a.next { text-align: left; }

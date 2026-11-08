@@ -118,6 +118,10 @@ a {
   animation: rise 0.8s var(--ease) 0.1s both;
 }
 
+.shelf-people {
+  margin-top: 3.2rem;
+}
+
 .shelf-head h2 {
   margin: 1.35rem 0 0;
   font-size: 1.05rem;

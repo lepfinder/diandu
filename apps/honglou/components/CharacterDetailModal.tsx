@@ -1,9 +1,11 @@
 'use client';
 
+import { useEffect, useMemo } from 'react';
 import Link from '@/components/Link';
 import { getTV87Role } from '@/lib/tv87';
 import { getTwelveDetail } from '@/lib/twelve-detail';
 import type { Character } from '@/lib/types';
+import { asset } from '@classic/ui';
 
 export type CharacterDetail = Character & {
   personality?: string;
@@ -18,10 +20,50 @@ export type CharacterDetail = Character & {
 export function CharacterDetailModal({
   detail,
   onClose,
+  siblings,
+  onNavigate,
 }: {
   detail: CharacterDetail | null;
   onClose: () => void;
+  siblings?: CharacterDetail[];
+  onNavigate?: (c: CharacterDetail) => void;
 }) {
+  const nav = useMemo(() => {
+    if (!detail || !siblings?.length || !onNavigate) return null;
+    const i = siblings.findIndex((c) => c.id === detail.id);
+    if (i < 0) return null;
+    const prev = siblings[(i - 1 + siblings.length) % siblings.length];
+    const next = siblings[(i + 1) % siblings.length];
+    return { index: i, total: siblings.length, prev, next };
+  }, [detail, siblings, onNavigate]);
+
+  useEffect(() => {
+    if (!detail) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        onClose();
+        return;
+      }
+      if (!nav || !onNavigate) return;
+      if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        onNavigate(nav.prev);
+      } else if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+        e.preventDefault();
+        onNavigate(nav.next);
+      }
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [detail, onClose, nav, onNavigate]);
+
+  useEffect(() => {
+    if (!detail) return;
+    const body = document.querySelector('.modal.detail-modal .detail-body');
+    if (body) body.scrollTop = 0;
+  }, [detail?.id]);
+
   if (!detail) return null;
   const tl = (detail.timeline || []).map((t: any) => ({ ch: t.ch, text: t.desc || t.event || '' }));
   const tv87 = getTV87Role(detail.id);
@@ -34,7 +76,7 @@ export function CharacterDetailModal({
           {heroImage ? (
             <img
               className="detail-hero-img"
-              src={heroImage}
+              src={asset(heroImage)}
               alt={detail.name}
               width={960}
               height={540}
@@ -45,11 +87,34 @@ export function CharacterDetailModal({
             </div>
           )}
           <div className="detail-hero-shade">
-            <div className="detail-kicker">{detail.role}</div>
+            <div className="detail-kicker">
+              {detail.role}
+              {nav ? ` · ${nav.index + 1}/${nav.total}` : ''}
+            </div>
             <h2>{detail.name}</h2>
             <div className="detail-alias">{(detail.aliases || []).join(' · ')}</div>
           </div>
-          <button className="icon-btn detail-close" onClick={onClose} title="关闭">
+          {nav ? (
+            <>
+              <button
+                type="button"
+                className="icon-btn detail-nav prev"
+                onClick={() => onNavigate?.(nav.prev)}
+                title={`上一位：${nav.prev.name}`}
+              >
+                ‹
+              </button>
+              <button
+                type="button"
+                className="icon-btn detail-nav next"
+                onClick={() => onNavigate?.(nav.next)}
+                title={`下一位：${nav.next.name}`}
+              >
+                ›
+              </button>
+            </>
+          ) : null}
+          <button className="icon-btn detail-close" onClick={onClose} title="关闭（Esc）">
             ×
           </button>
         </div>
@@ -173,6 +238,11 @@ export function CharacterDetailModal({
               人物关系
             </Link>
           </div>
+          {nav ? (
+            <p className="muted detail-nav-hint">↑↓←→ 切换人物 · Esc 关闭</p>
+          ) : (
+            <p className="muted detail-nav-hint">Esc 关闭</p>
+          )}
         </div>
       </div>
     </div>

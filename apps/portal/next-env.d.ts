@@ -1,6 +1,5 @@
 /// <reference types="next" />
 /// <reference types="next/image-types/global" />
-/// <reference path="./.next-dev/types/routes.d.ts" />
 
-// NOTE: This file should not be edited
-// see https://nextjs.org/docs/app/api-reference/config/typescript for more information.
+// 路由类型见 tsconfig include：.next/types 与 .next-dev/types（dev / build 共用）。
+// 勿手写单一 distDir 的 routes 引用；next 可能会改写本文件，请跑 pnpm sync:next-env 还原。

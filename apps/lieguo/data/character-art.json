@@ -1,0 +1,54 @@
+{
+  "youwang": {
+    "portrait": "/images/characters/youwang-portrait.webp",
+    "avatar": "/images/characters/youwang-avatar.webp"
+  },
+  "pingwang": {
+    "portrait": "/images/characters/pingwang-portrait.webp",
+    "avatar": "/images/characters/pingwang-avatar.webp"
+  },
+  "huanhong": {
+    "portrait": "/images/characters/huanhong-portrait.webp",
+    "avatar": "/images/characters/huanhong-avatar.webp"
+  },
+  "guanzhong": {
+    "portrait": "/images/characters/guanzhong-portrait.webp",
+    "avatar": "/images/characters/guanzhong-avatar.webp"
+  },
+  "chonger": {
+    "portrait": "/images/characters/chonger-portrait.webp",
+    "avatar": "/images/characters/chonger-avatar.webp"
+  },
+  "goujian": {
+    "portrait": "/images/characters/goujian-portrait.webp",
+    "avatar": "/images/characters/goujian-avatar.webp"
+  },
+  "fuchai": {
+    "portrait": "/images/characters/fuchai-portrait.webp",
+    "avatar": "/images/characters/fuchai-avatar.webp"
+  },
+  "shangyang": {
+    "portrait": "/images/characters/shangyang-portrait.webp",
+    "avatar": "/images/characters/shangyang-avatar.webp"
+  },
+  "suzqin": {
+    "portrait": "/images/characters/suzqin-portrait.webp",
+    "avatar": "/images/characters/suzqin-avatar.webp"
+  },
+  "zhangyi": {
+    "portrait": "/images/characters/zhangyi-portrait.webp",
+    "avatar": "/images/characters/zhangyi-avatar.webp"
+  },
+  "lianpo": {
+    "portrait": "/images/characters/lianpo-portrait.webp",
+    "avatar": "/images/characters/lianpo-avatar.webp"
+  },
+  "jingke": {
+    "portrait": "/images/characters/jingke-portrait.webp",
+    "avatar": "/images/characters/jingke-avatar.webp"
+  },
+  "qinshihuang": {
+    "portrait": "/images/characters/qinshihuang-portrait.webp",
+    "avatar": "/images/characters/qinshihuang-avatar.webp"
+  }
+}

@@ -1,19 +1,64 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 import Link from '@/components/Link';
-import type { TwelveDetail } from '@/lib/twelve-detail';
+import { getTwelveDetail, type TwelveDetail } from '@/lib/twelve-detail';
 import { asset } from '@classic/ui';
 
-export function TwelveDetailModal({ detail, onClose }: { detail: TwelveDetail | null; onClose: () => void }) {
+export function TwelveDetailModal({
+  detail,
+  onClose,
+  siblings,
+  onNavigate,
+}: {
+  detail: TwelveDetail | null;
+  onClose: () => void;
+  /** 当前册内按展示顺序的 id 列表，用于左右键切换 */
+  siblings?: string[];
+  onNavigate?: (id: string) => void;
+}) {
+  const nav = useMemo(() => {
+    if (!detail || !siblings?.length || !onNavigate) return null;
+    const i = siblings.indexOf(detail.id);
+    if (i < 0) return null;
+    const prevId = siblings[(i - 1 + siblings.length) % siblings.length];
+    const nextId = siblings[(i + 1) % siblings.length];
+    return {
+      index: i,
+      total: siblings.length,
+      prevId,
+      nextId,
+      prev: getTwelveDetail(prevId),
+      next: getTwelveDetail(nextId),
+    };
+  }, [detail, siblings, onNavigate]);
+
   useEffect(() => {
     if (!detail) return;
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose();
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        onClose();
+        return;
+      }
+      if (!nav || !onNavigate) return;
+      if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        onNavigate(nav.prevId);
+      } else if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+        e.preventDefault();
+        onNavigate(nav.nextId);
+      }
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
-  }, [detail, onClose]);
+  }, [detail, onClose, nav, onNavigate]);
+
+  useEffect(() => {
+    if (!detail) return;
+    const body = document.querySelector('.modal.detail-modal .detail-body');
+    if (body) body.scrollTop = 0;
+  }, [detail?.id]);
 
   if (!detail) return null;
 
@@ -21,15 +66,42 @@ export function TwelveDetailModal({ detail, onClose }: { detail: TwelveDetail | 
     <div className="modal-wrap open" onClick={onClose}>
       <div className="modal detail-modal" onClick={(e) => e.stopPropagation()}>
         <div className="detail-hero">
-          <img src={asset(detail.image)} alt={detail.name} width={960} height={540} />
+          <img
+            className="detail-hero-img"
+            src={asset(detail.image)}
+            alt={detail.name}
+            width={960}
+            height={540}
+          />
           <div className="detail-hero-shade">
             <div className="detail-kicker">
               {detail.register === 'zheng' ? '正册' : detail.register === 'fu' ? '副册' : '又副册'} · {detail.role}
+              {nav ? ` · ${nav.index + 1}/${nav.total}` : ''}
             </div>
             <h2>{detail.name}</h2>
             <div className="detail-alias">{detail.aliases.join(' · ')}</div>
           </div>
-          <button className="icon-btn detail-close" onClick={onClose} title="关闭">
+          {nav ? (
+            <>
+              <button
+                type="button"
+                className="icon-btn detail-nav prev"
+                onClick={() => onNavigate?.(nav.prevId)}
+                title={`上一位：${nav.prev?.name || ''}`}
+              >
+                ‹
+              </button>
+              <button
+                type="button"
+                className="icon-btn detail-nav next"
+                onClick={() => onNavigate?.(nav.nextId)}
+                title={`下一位：${nav.next?.name || ''}`}
+              >
+                ›
+              </button>
+            </>
+          ) : null}
+          <button className="icon-btn detail-close" onClick={onClose} title="关闭（Esc）">
             ×
           </button>
         </div>
@@ -159,6 +231,11 @@ export function TwelveDetailModal({ detail, onClose }: { detail: TwelveDetail | 
               人物百科
             </Link>
           </div>
+          {nav ? (
+            <p className="muted detail-nav-hint">↑↓←→ 切换同册人物 · Esc 关闭</p>
+          ) : (
+            <p className="muted detail-nav-hint">Esc 关闭</p>
+          )}
         </div>
       </div>
     </div>

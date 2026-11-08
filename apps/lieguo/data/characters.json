@@ -1,0 +1,252 @@
+{
+  "groups": [
+    {
+      "id": "zhou",
+      "name": "周室",
+      "color": "#6b5344"
+    },
+    {
+      "id": "qi",
+      "name": "齐",
+      "color": "#2f5a48"
+    },
+    {
+      "id": "jin",
+      "name": "晋",
+      "color": "#3d5a6c"
+    },
+    {
+      "id": "chu",
+      "name": "楚",
+      "color": "#7a3b1e"
+    },
+    {
+      "id": "qin",
+      "name": "秦",
+      "color": "#8b2e24"
+    },
+    {
+      "id": "other",
+      "name": "列国诸杰",
+      "color": "#5a4a73"
+    }
+  ],
+  "list": [
+    {
+      "id": "youwang",
+      "name": "周幽王",
+      "group": "zhou",
+      "role": "西周末主",
+      "firstCh": 2,
+      "lastCh": 2,
+      "bio": "烽火戏诸侯。褒姒一笑，镐京火起，西周终结。",
+      "map": {
+        "year": -771,
+        "place": "镐京"
+      }
+    },
+    {
+      "id": "pingwang",
+      "name": "周平王",
+      "group": "zhou",
+      "role": "东周始君",
+      "firstCh": 3,
+      "lastCh": 3,
+      "bio": "东迁洛邑，开春秋序幕。王室式微，诸侯争霸自此起。",
+      "map": {
+        "year": -770,
+        "place": "洛阳"
+      }
+    },
+    {
+      "id": "huanhong",
+      "name": "齐桓公",
+      "group": "qi",
+      "role": "春秋首霸",
+      "firstCh": 13,
+      "lastCh": 13,
+      "bio": "用管仲，九合诸侯，一匡天下。春秋五霸之首。",
+      "map": {
+        "year": -651,
+        "place": "葵丘"
+      },
+      "anchors": [
+        {
+          "year": -685,
+          "place": "临淄"
+        },
+        {
+          "year": -656,
+          "place": "召陵"
+        },
+        {
+          "year": -651,
+          "place": "葵丘"
+        }
+      ]
+    },
+    {
+      "id": "guanzhong",
+      "name": "管仲",
+      "group": "qi",
+      "role": "齐相",
+      "firstCh": 16,
+      "lastCh": 16,
+      "bio": "鲍叔牙力荐。通货积财，富国强兵，辅桓公成霸。",
+      "map": {
+        "year": -685,
+        "place": "临淄"
+      }
+    },
+    {
+      "id": "chonger",
+      "name": "晋文公",
+      "group": "jin",
+      "role": "春秋霸主",
+      "firstCh": 40,
+      "lastCh": 40,
+      "bio": "重耳流亡十九年，返国后城濮败楚，践土会盟。",
+      "map": {
+        "year": -632,
+        "place": "城濮"
+      },
+      "anchors": [
+        {
+          "year": -655,
+          "place": "蒲"
+        },
+        {
+          "year": -637,
+          "place": "楚"
+        },
+        {
+          "year": -632,
+          "place": "城濮"
+        }
+      ]
+    },
+    {
+      "id": "goujian",
+      "name": "越王勾践",
+      "group": "other",
+      "role": "雪耻之主",
+      "firstCh": 80,
+      "lastCh": 80,
+      "bio": "卧薪尝胆，十年生聚。灭吴后会盟徐州，号称霸王。",
+      "map": {
+        "year": -473,
+        "place": "会稽"
+      }
+    },
+    {
+      "id": "fuchai",
+      "name": "吴王夫差",
+      "group": "other",
+      "role": "吴国末主",
+      "firstCh": 80,
+      "lastCh": 80,
+      "bio": "破越后骄侈忘忧，终为勾践所灭。",
+      "map": {
+        "year": -494,
+        "place": "姑苏"
+      }
+    },
+    {
+      "id": "shangyang",
+      "name": "商鞅",
+      "group": "qin",
+      "role": "变法之臣",
+      "firstCh": 89,
+      "lastCh": 89,
+      "bio": "卫鞅入秦，变法图强。秦由是雄于诸侯。",
+      "map": {
+        "year": -356,
+        "place": "咸阳"
+      }
+    },
+    {
+      "id": "suzqin",
+      "name": "苏秦",
+      "group": "other",
+      "role": "纵横家",
+      "firstCh": 90,
+      "lastCh": 90,
+      "bio": "合纵抗秦。挂六国相印，是战国策士的高峰。",
+      "map": {
+        "year": -333,
+        "place": "洛阳"
+      }
+    },
+    {
+      "id": "zhangyi",
+      "name": "张仪",
+      "group": "qin",
+      "role": "连横之相",
+      "firstCh": 90,
+      "lastCh": 90,
+      "bio": "连横破纵，为秦开疆。与苏秦并称纵横。",
+      "map": {
+        "year": -322,
+        "place": "咸阳"
+      }
+    },
+    {
+      "id": "lianpo",
+      "name": "廉颇",
+      "group": "other",
+      "role": "赵将",
+      "firstCh": 101,
+      "lastCh": 101,
+      "bio": "长平前坚壁清野。与蔺相如将相和，是赵国脊梁。",
+      "map": {
+        "year": -260,
+        "place": "长平"
+      }
+    },
+    {
+      "id": "jingke",
+      "name": "荆轲",
+      "group": "other",
+      "role": "刺客",
+      "firstCh": 106,
+      "lastCh": 106,
+      "bio": "易水送别，图穷匕见。列国志压轴的悲歌。",
+      "map": {
+        "year": -227,
+        "place": "易水"
+      },
+      "anchors": [
+        {
+          "year": -227,
+          "place": "易水"
+        },
+        {
+          "year": -227,
+          "place": "咸阳"
+        }
+      ]
+    },
+    {
+      "id": "qinshihuang",
+      "name": "秦始皇",
+      "group": "qin",
+      "role": "一统之君",
+      "firstCh": 108,
+      "lastCh": 108,
+      "bio": "灭六国，建郡县。列国志收束在混一舆图。",
+      "map": {
+        "person": "qinshihuang"
+      },
+      "anchors": [
+        {
+          "year": -230,
+          "place": "新郑"
+        },
+        {
+          "year": -221,
+          "place": "咸阳"
+        }
+      ]
+    }
+  ]
+}

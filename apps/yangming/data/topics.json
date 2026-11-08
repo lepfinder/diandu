@@ -1,0 +1,113 @@
+{
+  "tabs": [
+    { "id": "longchang", "name": "龙场", "href": "/topics/longchang/" },
+    { "id": "zhixing", "name": "知行", "href": "/topics/zhixing/" },
+    { "id": "liangzhi", "name": "良知", "href": "/topics/liangzhi/" },
+    { "id": "bingshi", "name": "事功", "href": "/topics/bingshi/" },
+    { "id": "tianquan", "name": "天泉", "href": "/topics/tianquan/" }
+  ],
+  "longchang": {
+    "title": "龙场悟道",
+    "lead": "正德三年，居夷处困。中夜大悟：圣人之道，吾性自足。心学从此站起来。",
+    "image": "/topics/topic-longchang.webp",
+    "essay": "贬龙场前，阳明走过辞章、骑射、佛老，也走过格竹的失败。诏狱与驿丞把人逼到墙角：生死一关看透，道理反而澄明。悟道不是玄谈，是绝境里认回自家心。瘗旅、教条、知行合一，都从这口井里打水。",
+    "items": [
+      {
+        "workId": "yilu-wen",
+        "note": "同是天涯。悟道之外，龙场还有土、还有泪。"
+      },
+      {
+        "workId": "jiaotiao-longchang",
+        "note": "立志勤学改过责善——悟道后先教日用。"
+      },
+      {
+        "workId": "zhixing-heyi",
+        "note": "龙场立基后最响的一句：知行合一。"
+      }
+    ]
+  },
+  "zhixing": {
+    "title": "知行合一",
+    "lead": "真知必行。把「知道却做不到」从哲学借口里拆掉。",
+    "image": "/topics/topic-zhixing.webp",
+    "essay": "阳明反对把知、行截成两段。见好色时已自好，不是见了再立个心去好。知是主意，行是工夫；会得时，说知已有行，说行已有知。私欲隔断处，正是工夫下手处。",
+    "items": [
+      {
+        "workId": "zhixing-heyi",
+        "note": "徐爱问难，阳明以好好色恶恶臭喻真知行。"
+      },
+      {
+        "workId": "xinxuai-wuli",
+        "note": "心即理。知行合一的本体论前提。"
+      },
+      {
+        "workId": "xunmeng",
+        "note": "教育上也要「趋向鼓舞」——知行在童蒙。"
+      }
+    ]
+  },
+  "liangzhi": {
+    "title": "致良知",
+    "lead": "百死千难中得来的三字宗旨。是非之心，推极于事事物物。",
+    "image": "/topics/topic-liangzhi.webp",
+    "essay": "良知人人本有，致是工夫。不是悬空守一个灵明，而是在意念发处知善知恶、为善去恶。咏良知诗把宗旨唱出来，《大学问》把经典收进来，遗言「此心光明」则是致到尽头的气象。",
+    "items": [
+      {
+        "workId": "liangzhi-shi",
+        "note": "是非之心，不虑而知。"
+      },
+      {
+        "workId": "yong-liangzhi",
+        "note": "个个人心有仲尼——可记的两首。"
+      },
+      {
+        "workId": "daxuewen",
+        "note": "以良知重释《大学》。"
+      },
+      {
+        "workId": "cixin-guangming",
+        "note": "一生收束：此心光明，亦复何言。"
+      }
+    ]
+  },
+  "bingshi": {
+    "title": "事功一路",
+    "lead": "破山中贼易，破心中贼难。南赣、宸濠、思田——心学有兵戈。",
+    "image": "/topics/topic-bingshi.webp",
+    "essay": "世人易把心学看成书院清谈。阳明巡抚南赣、四十三日平宁王、晚年抚思田，证明致良知不离事上磨炼。告谕浰头的语气，与传习录并不两截。",
+    "items": [
+      {
+        "workId": "bingfa-shi",
+        "note": "先谕后兵，一体之仁落到治乱。"
+      },
+      {
+        "workId": "xunmeng",
+        "note": "破贼之后的教化：歌诗习礼。"
+      },
+      {
+        "workId": "liangzhi-shi",
+        "note": "事功再大，宗旨仍归致良知。"
+      }
+    ]
+  },
+  "tianquan": {
+    "title": "天泉证道",
+    "lead": "四句教。上根与中根，本体与工夫，一夜说清，也一夜埋下分歧。",
+    "image": "/topics/topic-tianquan.webp",
+    "essay": "出征前夜，钱德洪、王畿各执一端。阳明说两义原都有：利根直悟本体，其次在意念上为善去恶。四句教是晚年定本，也是王门后来分化的起点——读它，既要见圆融，也要见紧张。",
+    "items": [
+      {
+        "workId": "siju-jiao",
+        "note": "四句本身。"
+      },
+      {
+        "workId": "chuanxilu-tianquan",
+        "note": "对话语境：为何说给两种人听。"
+      },
+      {
+        "workId": "daxuewen",
+        "note": "同时期的《大学》总义。"
+      }
+    ]
+  }
+}

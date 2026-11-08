@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from '@/components/Link';
+import { TopicCard } from '@classic/ui';
 import { getBook, getChapterList } from '@/lib/book';
 
 const spotTitles = ['画壁', '画皮', '婴宁', '聂小倩', '促织', '席方平', '香玉', '黄英'];
@@ -70,24 +71,9 @@ export default function HomePage() {
           </div>
         </div>
         <section className="home-grid">
-          <Link className="topic-card has-img" href="/topics/kinds/">
-            <Image src="/topics/topic-kinds.webp" alt="" fill sizes="(max-width: 720px) 100vw, 33vw" />
-            <div className="icon">品</div>
-            <h3>品类</h3>
-            <p>狐、鬼、花妖、仙道、人间。志异的世界先按类摸一遍。</p>
-          </Link>
-          <Link className="topic-card has-img" href="/topics/scenes/">
-            <Image src="/topics/topic-scenes.webp" alt="" fill sizes="(max-width: 720px) 100vw, 33vw" />
-            <div className="icon">篇</div>
-            <h3>名篇</h3>
-            <p>画皮、婴宁、聂小倩、促织、席方平……先读这些。</p>
-          </Link>
-          <Link className="topic-card has-img" href="/characters/">
-            <Image src="/topics/topic-characters.webp" alt="" fill sizes="(max-width: 720px) 100vw, 33vw" />
-            <div className="icon">人</div>
-            <h3>人物</h3>
-            <p>四十二人。狐鬼花妖、异类仙道，和人间的孝女剑侠。</p>
-          </Link>
+          <TopicCard href="/topics/kinds/" icon="品" title="品类" desc="狐、鬼、花妖、仙道、人间。志异的世界先按类摸一遍。" image="/topics/topic-kinds.webp" />
+          <TopicCard href="/topics/scenes/" icon="篇" title="名篇" desc="画皮、婴宁、聂小倩、促织、席方平……先读这些。" image="/topics/topic-scenes.webp" />
+          <TopicCard href="/characters/" icon="人" title="人物" desc="四十二人。狐鬼花妖、异类仙道，和人间的孝女剑侠。" image="/topics/topic-characters.webp" />
         </section>
 
         {spots.length > 0 ? (

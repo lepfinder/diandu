@@ -1,11 +1,11 @@
 'use client';
 
-import { useCallback, useState, type MouseEvent as ReactMouseEvent } from 'react';
+import { useCallback, useEffect, useMemo, useState, type MouseEvent as ReactMouseEvent } from 'react';
 import Link from '@/components/Link';
 import { TwelveDetailModal } from '@/components/TwelveDetailModal';
 import { getCharacter, getRelationsFor } from '@/lib/content';
 import { toCN } from '@/lib/cn';
-import { getTwelveDetail, type TwelveDetail } from '@/lib/twelve-detail';
+import { getTwelveDetail, TWELVE_DETAIL, type TwelveDetail } from '@/lib/twelve-detail';
 import type { Character } from '@/lib/types';
 import { asset } from '@classic/ui';
 
@@ -27,6 +27,23 @@ export function useHonglouBodyClick() {
     openChar(c);
     return true;
   }, [openChar]);
+
+  useEffect(() => {
+    if (!modalChar || twelveDetail) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        setModalChar(null);
+      }
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [modalChar, twelveDetail]);
+
+  const twelveSiblings = useMemo(() => {
+    if (!twelveDetail) return undefined;
+    return TWELVE_DETAIL.filter((x) => x.register === twelveDetail.register).map((x) => x.id);
+  }, [twelveDetail]);
 
   const overlays = (
     <>
@@ -82,7 +99,12 @@ export function useHonglouBodyClick() {
           </div>
         );
       })() : null}
-      <TwelveDetailModal detail={twelveDetail} onClose={() => setTwelveDetail(null)} />
+      <TwelveDetailModal
+        detail={twelveDetail}
+        onClose={() => setTwelveDetail(null)}
+        siblings={twelveSiblings}
+        onNavigate={(id) => setTwelveDetail(getTwelveDetail(id))}
+      />
     </>
   );
 

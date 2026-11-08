@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from '@/components/Link';
 import { getGroup, getGroups, getPeople, portraitUrl, type Person } from '@/lib/characters';
+import { useModalListNav } from '@classic/ui';
 
 const filters = [{ id: 'all', name: '全部' }, ...getGroups()];
 
@@ -10,6 +11,7 @@ export default function CharactersPage() {
   const [group, setGroup] = useState('all');
   const [open, setOpen] = useState<Person | null>(null);
   const people = getPeople(group);
+  const openIndex = useModalListNav(open, people, setOpen);
 
   return (
     <div className="page-scroll">
@@ -26,7 +28,10 @@ export default function CharactersPage() {
               key={item.id}
               type="button"
               className={`chip ${group === item.id ? 'active' : ''}`}
-              onClick={() => setGroup(item.id)}
+              onClick={() => {
+                setGroup(item.id);
+                setOpen(null);
+              }}
             >
               {item.name}
             </button>
@@ -35,8 +40,15 @@ export default function CharactersPage() {
         <div className="char-grid">
           {people.map((person) => {
             const camp = getGroup(person.group);
+            const active = open?.id === person.id;
             return (
-              <button key={person.id} type="button" className="char-card" onClick={() => setOpen(person)}>
+              <button
+                key={person.id}
+                type="button"
+                className={`char-card${active ? ' on' : ''}`}
+                aria-current={active ? 'true' : undefined}
+                onClick={() => setOpen(person)}
+              >
                 <img className="avatar" src={portraitUrl(person.id)} alt="" />
                 <span>
                   <span className="name">{person.name}</span>
@@ -64,6 +76,12 @@ export default function CharactersPage() {
               <Link href={`/read/${open.firstCh}/`}>登场 · 第 {open.firstCh} 回</Link>
               <Link href={`/read/${open.lastCh}/`}>写到 · 第 {open.lastCh} 回</Link>
             </div>
+            {people.length > 1 ? (
+              <p className="modal-hint">
+                ↑↓←→ 切换
+                {openIndex >= 0 ? ` · ${openIndex + 1}/${people.length}` : ''}
+              </p>
+            ) : null}
           </article>
         </div>
       ) : null}

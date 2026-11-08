@@ -1,12 +1,71 @@
 import Image from 'next/image';
 import Link from '@/components/Link';
+import { TopicCard } from '@classic/ui';
 import { getBook, getChapterList } from '@/lib/book';
-import { toCN } from '@/lib/cn';
+
+const TOPICS = [
+  {
+    href: '/star/',
+    icon: '缘',
+    title: '人物关系',
+    desc: '三维星座中的贾府群芳。血缘、姻亲、情缘一图看清，拖回目轴看兴衰明灭。',
+    image: '/images/graph-banner.webp',
+  },
+  {
+    href: '/characters/',
+    icon: '人',
+    title: '人物百科',
+    desc: '六十余位核心人物的身世、性格与命运，按府邸与身份分类速查。',
+    image: '/images/characters.webp',
+  },
+  {
+    href: '/topics/places/',
+    icon: '鉴',
+    title: '大观园图鉴',
+    desc: '怡红院、潇湘馆、蘅芜苑……青春乌托邦的空间叙事。',
+    image: '/images/garden-scroll.webp',
+  },
+  {
+    href: '/topics/seasons/',
+    icon: '时',
+    title: '大观园四季',
+    desc: '春晓、夏梦、秋水、冬雪——同一座园子里的时序与盛衰。',
+    image: '/images/season-spring.webp',
+  },
+  {
+    href: '/topics/twelve/',
+    icon: '册',
+    title: '金陵十二钗',
+    desc: '太虚判词与红楼梦曲，十二种命册的解读。',
+    image: '/images/chai-daiyu.webp',
+  },
+  {
+    href: '/topics/posters/',
+    icon: '影',
+    title: '水墨海报',
+    desc: '葬花词与石头记——黛玉、宝玉的竖幅水墨电影海报。',
+    image: '/images/poster-daiyu.webp',
+    objectPosition: '50% 18%',
+  },
+  {
+    href: '/topics/poems/',
+    icon: '诗',
+    title: '诗词曲赋',
+    desc: '葬花吟、芙蓉女儿诔、好了歌——命运的韵文体预告。',
+    image: '/images/poem-hongdou.webp',
+  },
+  {
+    href: '/topics/background/',
+    icon: '史',
+    title: '背景与红学',
+    desc: '作者、版本、红学源流与核心意象，把书放回历史里读。',
+    image: '/images/bg-author.webp',
+  },
+] as const;
 
 export default function HomePage() {
   const book = getBook();
   const chapters = getChapterList();
-  const pct = 1;
 
   return (
     <div className="page-scroll">
@@ -61,42 +120,17 @@ export default function HomePage() {
           </div>
         </div>
         <section className="home-grid">
-          <Link className="topic-card has-img" href="/star/">
-            <Image src="/images/graph-banner.webp" alt="" fill sizes="(max-width: 720px) 100vw, 33vw" />
-            <div className="icon">缘</div>
-            <h3>人物关系</h3>
-            <p>三维星座中的贾府群芳。血缘、姻亲、情缘一图看清，拖回目轴看兴衰明灭。</p>
-          </Link>
-          <Link className="topic-card has-img" href="/characters/">
-            <Image src="/images/place-xiaoxiang.webp" alt="" fill sizes="(max-width: 720px) 100vw, 33vw" />
-            <div className="icon">人</div>
-            <h3>人物百科</h3>
-            <p>六十余位核心人物的身世、性格与命运，按府邸与身份分类速查。</p>
-          </Link>
-          <Link className="topic-card has-img" href="/topics/places/">
-            <Image src="/images/place-hengwu.webp" alt="" fill sizes="(max-width: 720px) 100vw, 33vw" />
-            <div className="icon">鉴</div>
-            <h3>大观园图鉴</h3>
-            <p>怡红院、潇湘馆、蘅芜苑……青春乌托邦的空间叙事。</p>
-          </Link>
-          <Link className="topic-card has-img" href="/topics/twelve/">
-            <Image src="/images/chai-daiyu.webp" alt="" fill sizes="(max-width: 720px) 100vw, 33vw" />
-            <div className="icon">册</div>
-            <h3>金陵十二钗</h3>
-            <p>太虚判词与红楼梦曲，十二种命册的解读。</p>
-          </Link>
-          <Link className="topic-card has-img" href="/topics/poems/">
-            <Image src="/images/poem-hongdou.webp" alt="" fill sizes="(max-width: 720px) 100vw, 33vw" />
-            <div className="icon">诗</div>
-            <h3>诗词曲赋</h3>
-            <p>葬花吟、芙蓉女儿诔、好了歌——命运的韵文体预告。</p>
-          </Link>
-          <Link className="topic-card has-img" href="/topics/background/">
-            <Image src="/images/bg-author.webp" alt="" fill sizes="(max-width: 720px) 100vw, 33vw" />
-            <div className="icon">史</div>
-            <h3>背景与红学</h3>
-            <p>作者、版本、红学源流与核心意象，把书放回历史里读。</p>
-          </Link>
+          {TOPICS.map((t) => (
+            <TopicCard
+              key={t.href}
+              href={t.href}
+              icon={t.icon}
+              title={t.title}
+              desc={t.desc}
+              image={t.image}
+              objectPosition={'objectPosition' in t ? t.objectPosition : undefined}
+            />
+          ))}
         </section>
 
         <div className="section-head" style={{ marginTop: 48 }}>

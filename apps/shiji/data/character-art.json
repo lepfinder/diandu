@@ -1,0 +1,42 @@
+{
+  "qinshihuang": {
+    "portrait": "/images/characters/qinshihuang-portrait.webp",
+    "avatar": "/images/characters/qinshihuang-avatar.webp"
+  },
+  "xiangyu": {
+    "portrait": "/images/characters/xiangyu-portrait.webp",
+    "avatar": "/images/characters/xiangyu-avatar.webp"
+  },
+  "liubang": {
+    "portrait": "/images/characters/liubang-portrait.webp",
+    "avatar": "/images/characters/liubang-avatar.webp"
+  },
+  "kongzi": {
+    "portrait": "/images/characters/kongzi-portrait.webp",
+    "avatar": "/images/characters/kongzi-avatar.webp"
+  },
+  "chensheng": {
+    "portrait": "/images/characters/chensheng-portrait.webp",
+    "avatar": "/images/characters/chensheng-avatar.webp"
+  },
+  "zhangliang": {
+    "portrait": "/images/characters/zhangliang-portrait.webp",
+    "avatar": "/images/characters/zhangliang-avatar.webp"
+  },
+  "jingke": {
+    "portrait": "/images/characters/jingke-portrait.webp",
+    "avatar": "/images/characters/jingke-avatar.webp"
+  },
+  "hanxin": {
+    "portrait": "/images/characters/hanxin-portrait.webp",
+    "avatar": "/images/characters/hanxin-avatar.webp"
+  },
+  "liguang": {
+    "portrait": "/images/characters/liguang-portrait.webp",
+    "avatar": "/images/characters/liguang-avatar.webp"
+  },
+  "simaqian": {
+    "portrait": "/images/characters/simaqian-portrait.webp",
+    "avatar": "/images/characters/simaqian-avatar.webp"
+  }
+}

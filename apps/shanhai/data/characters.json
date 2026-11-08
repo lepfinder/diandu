@@ -1,0 +1,409 @@
+{
+  "groups": [
+    {
+      "id": "beast",
+      "name": "异兽",
+      "color": "#8c4a1f"
+    },
+    {
+      "id": "bird",
+      "name": "奇鸟",
+      "color": "#2f4d73"
+    },
+    {
+      "id": "god",
+      "name": "神祇",
+      "color": "#6b5344"
+    },
+    {
+      "id": "nation",
+      "name": "海外国",
+      "color": "#3f6b58"
+    },
+    {
+      "id": "hero",
+      "name": "帝裔",
+      "color": "#8f2d2d"
+    }
+  ],
+  "list": [
+    {
+      "id": "xingxing",
+      "name": "狌狌",
+      "group": "beast",
+      "role": "招摇之山",
+      "firstCh": 1,
+      "lastCh": 1,
+      "bio": "南山经之首。状如禺而白耳，伏行人走。食之善走。开篇第一只异兽。"
+    },
+    {
+      "id": "lushu",
+      "name": "鹿蜀",
+      "group": "beast",
+      "role": "杻阳之山",
+      "firstCh": 1,
+      "lastCh": 1,
+      "bio": "状如马而白首，文如虎而赤尾，音如谣。佩之宜子孙。"
+    },
+    {
+      "id": "jingwei",
+      "name": "精卫",
+      "group": "bird",
+      "role": "发鸠之山",
+      "firstCh": 3,
+      "lastCh": 3,
+      "bio": "炎帝少女女娃溺于东海所化。文首白喙赤足，常衔西山之木石以堙东海。"
+    },
+    {
+      "id": "bifang",
+      "name": "毕方",
+      "group": "bird",
+      "role": "海外南经",
+      "firstCh": 6,
+      "lastCh": 6,
+      "bio": "青水之西。人面一脚。异鸟里形貌最省、最难忘的一只。"
+    },
+    {
+      "id": "luan",
+      "name": "鸾鸟",
+      "group": "bird",
+      "role": "西山 / 大荒",
+      "firstCh": 2,
+      "lastCh": 16,
+      "bio": "西山经与大荒西经多次出现。自歌自舞，常与凤鸟并写，是祥瑞一侧的飞禽。"
+    },
+    {
+      "id": "xiwangmu",
+      "name": "西王母",
+      "group": "god",
+      "role": "玉山 / 昆仑",
+      "firstCh": 2,
+      "lastCh": 16,
+      "bio": "状如人，豹尾虎齿而善啸，蓬发戴胜。司天之厉及五残。昆仑一侧又写她梯几而戴胜。"
+    },
+    {
+      "id": "xingtian",
+      "name": "刑天",
+      "group": "god",
+      "role": "海外西经",
+      "firstCh": 7,
+      "lastCh": 7,
+      "bio": "与帝争神，断首之后以乳为目、以脐为口，操干戚以舞。山海经里最烈的一位。"
+    },
+    {
+      "id": "zhulong",
+      "name": "烛龙",
+      "group": "god",
+      "role": "章尾山",
+      "firstCh": 17,
+      "lastCh": 17,
+      "bio": "人面蛇身而赤。瞑乃晦，视乃明。不食不寝不息，是烛九阴。"
+    },
+    {
+      "id": "nvwa",
+      "name": "女娲",
+      "group": "god",
+      "role": "大荒西经",
+      "firstCh": 16,
+      "lastCh": 16,
+      "bio": "书中不写补天，只写女娲之肠化为十神，处栗广之野。是创世神在山海经里的另一种现身。"
+    },
+    {
+      "id": "kaiming",
+      "name": "开明兽",
+      "group": "beast",
+      "role": "昆仑九门",
+      "firstCh": 11,
+      "lastCh": 11,
+      "bio": "身大类虎而九首，皆人面，东向立昆仑上。守帝之下都的九门。"
+    },
+    {
+      "id": "bashe",
+      "name": "巴蛇",
+      "group": "beast",
+      "role": "海内南经",
+      "firstCh": 10,
+      "lastCh": 10,
+      "bio": "食象，三岁而出其骨。青黄赤黑。君子服之，无心腹之疾。"
+    },
+    {
+      "id": "kuafu",
+      "name": "夸父",
+      "group": "hero",
+      "role": "逐日",
+      "firstCh": 8,
+      "lastCh": 17,
+      "bio": "与日逐走，渴死于道。弃杖化为邓林。海外北经与大荒北经都写到他。"
+    },
+    {
+      "id": "huangdi",
+      "name": "黄帝",
+      "group": "hero",
+      "role": "海内经",
+      "firstCh": 18,
+      "lastCh": 18,
+      "bio": "令应龙攻蚩尤于冀州之野，又下天女魃止雨。海内经里人间帝系的枢纽。"
+    },
+    {
+      "id": "chiyou",
+      "name": "蚩尤",
+      "group": "hero",
+      "role": "作兵伐帝",
+      "firstCh": 18,
+      "lastCh": 18,
+      "bio": "作兵伐黄帝，请风伯雨师纵大风雨。终被杀于冀州之野。"
+    },
+    {
+      "id": "yu",
+      "name": "禹",
+      "group": "hero",
+      "role": "布土定九州",
+      "firstCh": 18,
+      "lastCh": 18,
+      "bio": "鲧窃息壤被杀后所生。帝命他卒布土以定九州。山海经收束在治水成功。"
+    },
+    {
+      "id": "gun",
+      "name": "鲧",
+      "group": "hero",
+      "role": "窃息壤",
+      "firstCh": 18,
+      "lastCh": 18,
+      "bio": "洪水滔天时窃帝之息壤以堙洪水，不待帝命。祝融杀之于羽郊，腹生禹。"
+    },
+    {
+      "id": "yumin",
+      "name": "羽民国",
+      "group": "nation",
+      "role": "海外南经",
+      "firstCh": 6,
+      "lastCh": 6,
+      "bio": "为人长头，身生羽。一曰长颊。海外南境诸国里形貌最鲜明的一支。"
+    },
+    {
+      "id": "guanxiong",
+      "name": "贯匈国",
+      "group": "nation",
+      "role": "海外南经",
+      "firstCh": 6,
+      "lastCh": 6,
+      "bio": "为人匈有窍。一曰在臷国东。海外异形国的代表。"
+    },
+    {
+      "id": "jiaojing",
+      "name": "交胫国",
+      "group": "nation",
+      "role": "海外南经",
+      "firstCh": 6,
+      "lastCh": 6,
+      "bio": "为人交胫。海外自西南陬至东南陬一路数过来的奇国之一。"
+    },
+    {
+      "id": "qigong",
+      "name": "奇肱国",
+      "group": "nation",
+      "role": "海外西经",
+      "firstCh": 7,
+      "lastCh": 7,
+      "bio": "其人一臂三目，有阴有阳，乘文马。海外西境的巧国。"
+    },
+    {
+      "id": "daren",
+      "name": "大人国",
+      "group": "nation",
+      "role": "海外东经",
+      "firstCh": 9,
+      "lastCh": 9,
+      "bio": "为人大，坐而削船。东方海外以形体巨大著称。"
+    },
+    {
+      "id": "junzi",
+      "name": "君子国",
+      "group": "nation",
+      "role": "海外东经",
+      "firstCh": 9,
+      "lastCh": 9,
+      "bio": "衣冠带剑，食兽，使二大虎在旁。好让不争。"
+    },
+    {
+      "id": "xihe",
+      "name": "羲和",
+      "group": "god",
+      "role": "浴日甘渊",
+      "firstCh": 14,
+      "lastCh": 14,
+      "bio": "大荒东经：有女子名曰羲和，方日浴于甘渊。帝俊之妻，生十日。"
+    },
+    {
+      "id": "yinglong",
+      "name": "应龙",
+      "group": "god",
+      "role": "冀州之野",
+      "firstCh": 18,
+      "lastCh": 18,
+      "bio": "黄帝所令，畜水攻蚩尤。杀蚩尤与夸父之后，去南方处之，故南方多雨。"
+    },
+    {
+      "id": "zhu",
+      "name": "祝融",
+      "group": "god",
+      "role": "南方 / 杀鲧",
+      "firstCh": 6,
+      "lastCh": 18,
+      "bio": "海外南经末：南方祝融，兽身人面，乘两龙。海内经里又奉命杀鲧于羽郊。"
+    },
+    {
+      "id": "wenyao",
+      "name": "文鳐鱼",
+      "group": "beast",
+      "role": "西山经水物",
+      "firstCh": 2,
+      "lastCh": 2,
+      "bio": "状如鲤鱼，鱼身而鸟翼，苍文而白首赤喙。常行西海，游于东海，以夜飞。"
+    },
+    {
+      "id": "jiuweihu",
+      "name": "九尾狐",
+      "group": "beast",
+      "role": "青丘之山",
+      "firstCh": 1,
+      "lastCh": 1,
+      "bio": "南山经青丘之山。状如狐而九尾，音如婴儿，能食人；食者不蛊。后世狐仙想象，多从这里起。"
+    },
+    {
+      "id": "zheng",
+      "name": "狰",
+      "group": "beast",
+      "role": "章莪之山",
+      "firstCh": 2,
+      "lastCh": 2,
+      "bio": "西山经。状如赤豹，五尾一角，音如击石。章莪之山所为甚怪，狰是其中一兽。"
+    },
+    {
+      "id": "qiongqi",
+      "name": "穷奇",
+      "group": "beast",
+      "role": "邽山",
+      "firstCh": 2,
+      "lastCh": 12,
+      "bio": "西山经邽山：状如牛，猬毛，音如獆狗，是食人。海内北经又见穷奇，形象略有出入。"
+    },
+    {
+      "id": "paoxiao",
+      "name": "狍鸮",
+      "group": "beast",
+      "role": "钩吾之山",
+      "firstCh": 3,
+      "lastCh": 3,
+      "bio": "北山经钩吾之山。羊身人面，目在腋下，虎齿人爪，音如婴儿，是食人。后世常把它和饕餮并提。"
+    },
+    {
+      "id": "kui",
+      "name": "夔",
+      "group": "beast",
+      "role": "流波山",
+      "firstCh": 14,
+      "lastCh": 14,
+      "bio": "大荒东经东海流波山。状如牛，苍身无角，一足；出入水则必风雨，光如日月，声如雷。黄帝以其皮为鼓。"
+    },
+    {
+      "id": "chenghuang",
+      "name": "乘黄",
+      "group": "beast",
+      "role": "白民之国",
+      "firstCh": 7,
+      "lastCh": 7,
+      "bio": "海外西经白民之国。状如狐，背上有角，乘之寿二千岁。是坐骑，也是长生的异兽。"
+    },
+    {
+      "id": "yong",
+      "name": "颙",
+      "group": "bird",
+      "role": "令丘之山",
+      "firstCh": 1,
+      "lastCh": 1,
+      "bio": "南山经令丘之山。状如枭，人面四目而有耳，其鸣自号。见则天下大旱。"
+    },
+    {
+      "id": "fenghuang",
+      "name": "凤皇",
+      "group": "bird",
+      "role": "丹穴之山",
+      "firstCh": 1,
+      "lastCh": 11,
+      "bio": "南山经丹穴之山。状如鸡，五采而文，首翼背膺腹分德义礼仁信。饮食自然，自歌自舞，见则天下安宁。"
+    },
+    {
+      "id": "guanguan",
+      "name": "灌灌",
+      "group": "bird",
+      "role": "青丘之山",
+      "firstCh": 1,
+      "lastCh": 1,
+      "bio": "与九尾狐同出青丘。状如鸠，音若呵，佩之不惑。山经里少见的「佩之有益」之鸟。"
+    },
+    {
+      "id": "xiangliu",
+      "name": "相柳",
+      "group": "god",
+      "role": "共工之臣",
+      "firstCh": 8,
+      "lastCh": 8,
+      "bio": "海外北经。九首人面，蛇身而青，以食于九山。禹杀相柳，其血腥，不可以树五谷种。"
+    },
+    {
+      "id": "jumang",
+      "name": "句芒",
+      "group": "god",
+      "role": "东方木神",
+      "firstCh": 9,
+      "lastCh": 9,
+      "bio": "海外东经末：东方句芒，鸟身人面，乘两龙。与南方祝融对举，是方位神之一。"
+    },
+    {
+      "id": "yuqiang",
+      "name": "禺强",
+      "group": "god",
+      "role": "北方海神",
+      "firstCh": 8,
+      "lastCh": 17,
+      "bio": "海外北经作禺彊：人面鸟身，珥两青蛇，践两青蛇。大荒北经北海之渚中再见。"
+    },
+    {
+      "id": "busimin",
+      "name": "不死民",
+      "group": "nation",
+      "role": "海外南经",
+      "firstCh": 6,
+      "lastCh": 6,
+      "bio": "为人黑色，寿，不死。海外自西南陬数过来的奇国里，这一支最像仙乡传言。"
+    },
+    {
+      "id": "changbi",
+      "name": "长臂国",
+      "group": "nation",
+      "role": "海外南经",
+      "firstCh": 6,
+      "lastCh": 6,
+      "bio": "捕鱼水中，两手各操一鱼。一曰在焦侥东。海外异形国里最好记的一种。"
+    },
+    {
+      "id": "sanshou",
+      "name": "三首国",
+      "group": "nation",
+      "role": "海外南经",
+      "firstCh": 6,
+      "lastCh": 6,
+      "bio": "为人一身三首。一曰在凿齿东。和贯匈、交胫一样，是海外南境的异形谱。"
+    },
+    {
+      "id": "yimu",
+      "name": "一目国",
+      "group": "nation",
+      "role": "海外北经",
+      "firstCh": 8,
+      "lastCh": 8,
+      "bio": "一目中其面而居。海外北境诸国里，形象最简、也最刺目的一支。"
+    }
+  ]
+}

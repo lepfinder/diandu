@@ -93,7 +93,12 @@ export default function CharactersPage() {
       </div>
 
       {modal && (
-        <CharacterDetailModal detail={modal as any} onClose={() => setModal(null)} />
+        <CharacterDetailModal
+          detail={modal as any}
+          onClose={() => setModal(null)}
+          siblings={list as any}
+          onNavigate={(c) => setModal(c)}
+        />
       )}
 
     </div>

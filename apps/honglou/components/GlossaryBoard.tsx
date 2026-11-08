@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react';
 import Link from '@/components/Link';
+import { useModalListNav } from '@classic/ui';
 
 export type GlossaryItem = {
   id: string;
@@ -41,6 +42,8 @@ export function GlossaryBoard({
       return hay.includes(kw);
     });
   }, [items, cat, q]);
+
+  const openIndex = useModalListNav(open, list, setOpen);
 
   const counts = useMemo(() => {
     const c = { all: items.length, address: 0, dress: 0, office: 0, object: 0 } as Record<string, number>;
@@ -111,6 +114,11 @@ export function GlossaryBoard({
                 <Link className="pill accent" href={`/read/${open.chRef}/`}>见第{open.chRef}回</Link>
                 <Link className="pill" href={`/search/?q=${encodeURIComponent(open.term)}`}>全文检索</Link>
               </div>
+              {list.length > 1 ? (
+                <p className="muted detail-nav-hint" style={{ marginTop: 14 }}>
+                  ↑↓←→ 切换{openIndex >= 0 ? ` · ${openIndex + 1}/${list.length}` : ''} · Esc 关闭
+                </p>
+              ) : null}
             </div>
           </div>
         </div>

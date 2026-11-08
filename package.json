@@ -12,11 +12,18 @@
     "dev:xiyouji": "pnpm --filter @diandu/xiyouji dev",
     "dev:jinpingmei": "pnpm --filter @diandu/jinpingmei dev",
     "dev:liaozhai": "pnpm --filter @diandu/liaozhai dev",
+    "dev:shiji": "pnpm --filter @diandu/shiji dev",
+    "dev:lieguo": "pnpm --filter @diandu/lieguo dev",
+    "dev:sushi": "pnpm --filter @diandu/sushi dev",
+    "dev:yangming": "pnpm --filter @diandu/yangming dev",
+    "dev:fengshen": "pnpm --filter @diandu/fengshen dev",
+    "dev:shanhai": "pnpm --filter @diandu/shanhai dev",
     "build": "pnpm -r --filter=./apps/* build",
     "build:portal": "pnpm --filter @diandu/portal build",
     "assemble": "node scripts/assemble.mjs",
     "compress:images": "node scripts/compress-images.mjs",
-    "deploy:build": "pnpm -r --filter=./apps/* run build:cf && node scripts/assemble.mjs",
-    "sync:books": "node scripts/sync-book-public.mjs"
+    "deploy:build": "pnpm -r --filter=./apps/* run build:cf && node scripts/assemble.mjs && node scripts/sync-next-env.mjs",
+    "sync:books": "node scripts/sync-book-public.mjs",
+    "sync:next-env": "node scripts/sync-next-env.mjs"
   }
 }

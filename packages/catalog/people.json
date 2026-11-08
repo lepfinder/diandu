@@ -1,0 +1,28 @@
+[
+  {
+    "id": "sushi",
+    "name": "苏轼",
+    "courtesy": "子瞻",
+    "hao": "东坡居士",
+    "basePath": "/sushi",
+    "port": 3530,
+    "kicker": "北宋文人 · 交互精读",
+    "lead": ["竹杖芒鞋轻胜马，谁怕？", "一蓑烟雨任平生。"],
+    "highlight": "时间线 · 名篇笺注 · 乌台赤壁三州",
+    "cover": "/covers/sushi.webp",
+    "packageName": "@diandu/sushi"
+  },
+  {
+    "id": "yangming",
+    "name": "王阳明",
+    "courtesy": "伯安",
+    "hao": "阳明先生",
+    "basePath": "/yangming",
+    "port": 3540,
+    "kicker": "心学宗师 · 交互精读",
+    "lead": ["此心光明，亦复何言？", "知行合一，致良知。"],
+    "highlight": "龙场悟道 · 传习录 · 致良知",
+    "cover": "/covers/yangming.webp",
+    "packageName": "@diandu/yangming"
+  }
+]

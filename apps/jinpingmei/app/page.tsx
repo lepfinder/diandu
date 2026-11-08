@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from '@/components/Link';
+import { TopicCard } from '@classic/ui';
 import { HomeProgress } from '@/components/HomeProgress';
 import { getBook, getChapterList } from '@/lib/book';
 
@@ -61,54 +62,14 @@ export default function HomePage() {
           </div>
         </div>
         <section className="home-grid">
-          <Link className="topic-card has-img" href="/topics/timeline/">
-            <Image src="/topics/topic-timeline.webp" alt="" fill sizes="(max-width: 720px) 100vw, 33vw" />
-            <div className="icon">年</div>
-            <h3>年表</h3>
-            <p>四幕推进。从清河开场到普静幻度。</p>
-          </Link>
-          <Link className="topic-card has-img" href="/topics/house/">
-            <Image src="/topics/topic-house.webp" alt="" fill sizes="(max-width: 720px) 100vw, 33vw" />
-            <div className="icon">府</div>
-            <h3>府内</h3>
-            <p>六房、女婿、结义兄弟和几条外宅。</p>
-          </Link>
-          <Link className="topic-card has-img" href="/topics/scenes/">
-            <Image src="/topics/topic-scenes.webp" alt="" fill sizes="(max-width: 720px) 100vw, 33vw" />
-            <div className="icon">戏</div>
-            <h3>名场面</h3>
-            <p>从热结十兄弟到幻度孝哥，一眼能认出来的那几场。</p>
-          </Link>
-          <Link className="topic-card has-img" href="/topics/pieces/">
-            <Image src="/topics/topic-pieces.webp" alt="" fill sizes="(max-width: 720px) 100vw, 33vw" />
-            <div className="icon">篇</div>
-            <h3>名篇</h3>
-            <p>开卷诗到收束联，配宋风图。</p>
-          </Link>
-          <Link className="topic-card has-img" href="/topics/goods/">
-            <Image src="/topics/topic-goods.webp" alt="" fill sizes="(max-width: 720px) 100vw, 33vw" />
-            <div className="icon">物</div>
-            <h3>物产</h3>
-            <p>四十九件器物静物图，衣料吃食玩物都有。</p>
-          </Link>
-          <Link className="topic-card has-img" href="/topics/editions/">
-            <Image src="/topics/topic-editions.webp" alt="" fill sizes="(max-width: 720px) 100vw, 33vw" />
-            <div className="icon">本</div>
-            <h3>版本</h3>
-            <p>词话、崇祯、张评三大系统。本站用崇祯本。</p>
-          </Link>
-          <Link className="topic-card has-img" href="/topics/market/">
-            <Image src="/topics/topic-market.webp" alt="" fill sizes="(max-width: 720px) 100vw, 33vw" />
-            <div className="icon">市</div>
-            <h3>市井官场</h3>
-            <p>铺面、提刑、蔡京门路、丽春院。</p>
-          </Link>
-          <Link className="topic-card has-img" href="/characters/">
-            <Image src="/topics/topic-characters.webp" alt="" fill sizes="(max-width: 720px) 100vw, 33vw" />
-            <div className="icon">人</div>
-            <h3>人物</h3>
-            <p>西门府内外主线。点开看登场与写到。</p>
-          </Link>
+          <TopicCard href="/topics/timeline/" icon="年" title="年表" desc="四幕推进。从清河开场到普静幻度。" image="/topics/topic-timeline.webp" />
+          <TopicCard href="/topics/house/" icon="府" title="府内" desc="六房、女婿、结义兄弟和几条外宅。" image="/topics/topic-house.webp" />
+          <TopicCard href="/topics/scenes/" icon="戏" title="名场面" desc="从热结十兄弟到幻度孝哥，一眼能认出来的那几场。" image="/topics/topic-scenes.webp" />
+          <TopicCard href="/topics/pieces/" icon="篇" title="名篇" desc="开卷诗到收束联，配宋风图。" image="/topics/topic-pieces.webp" />
+          <TopicCard href="/topics/goods/" icon="物" title="物产" desc="四十九件器物静物图，衣料吃食玩物都有。" image="/topics/topic-goods.webp" />
+          <TopicCard href="/topics/editions/" icon="本" title="版本" desc="词话、崇祯、张评三大系统。本站用崇祯本。" image="/topics/topic-editions.webp" />
+          <TopicCard href="/topics/market/" icon="市" title="市井官场" desc="铺面、提刑、蔡京门路、丽春院。" image="/topics/topic-market.webp" />
+          <TopicCard href="/characters/" icon="人" title="人物" desc="西门府内外主线。点开看登场与写到。" image="/topics/topic-characters.webp" />
         </section>
 
         <div className="section-head" style={{ marginTop: 48 }}>

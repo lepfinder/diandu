@@ -1,0 +1,370 @@
+{
+  "eras": [
+    {
+      "id": "spring",
+      "name": "春秋",
+      "blurb": "平王东迁到三家分晋前。齐桓晋文、吴越争霸，五霸迭兴。",
+      "stories": ["烽火戏诸侯", "管仲相齐", "城濮之战", "勾践灭吴"],
+      "image": "/topics/topic-eras.webp"
+    },
+    {
+      "id": "warring",
+      "name": "战国",
+      "blurb": "七雄并立到秦统一。变法、纵横、长平、荆轲，最终混一舆图。",
+      "stories": ["商鞅变法", "合纵连横", "长平之战", "荆轲刺秦", "秦灭六国"],
+      "image": "/topics/topic-eras.webp"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "fenghuo",
+      "plate": "火",
+      "title": "烽火戏诸侯",
+      "chapter": 2,
+      "summary": "幽王为褒姒一笑，点燃烽火。犬戎破镐京，西周亡。",
+      "people": ["周幽王", "褒姒"],
+      "map": { "year": -771, "place": "镐京" },
+      "image": "/scenes/fenghuo.webp"
+    },
+    {
+      "id": "dongqian",
+      "plate": "迁",
+      "title": "平王东迁",
+      "chapter": 3,
+      "summary": "平王迁都洛邑。王室东移，春秋开篇。",
+      "people": ["周平王"],
+      "map": { "year": -770, "place": "洛阳" },
+      "image": "/scenes/dongqian.webp"
+    },
+    {
+      "id": "guanzhong",
+      "plate": "仲",
+      "title": "管仲相齐",
+      "chapter": 16,
+      "summary": "鲍叔牙力荐管仲。通货积财，齐桓公首霸中原。",
+      "people": ["管仲", "齐桓公", "鲍叔牙"],
+      "map": { "year": -685, "place": "临淄" },
+      "image": "/scenes/guanzhong.webp"
+    },
+    {
+      "id": "chengpu",
+      "plate": "濮",
+      "title": "城濮之战",
+      "chapter": 40,
+      "summary": "晋文公败楚于城濮，践土会盟，霸业告成。",
+      "people": ["晋文公", "楚成王"],
+      "map": { "year": -632, "place": "城濮" },
+      "image": "/scenes/chengpu.webp"
+    },
+    {
+      "id": "goujian",
+      "plate": "胆",
+      "title": "勾践灭吴",
+      "chapter": 80,
+      "summary": "卧薪尝胆廿载。越兵入吴，夫差自尽。",
+      "people": ["勾践", "夫差"],
+      "map": { "year": -473, "place": "姑苏" },
+      "image": "/scenes/goujian.webp"
+    },
+    {
+      "id": "changping",
+      "plate": "坑",
+      "title": "长平之战",
+      "chapter": 98,
+      "summary": "白起坑杀赵卒。战国格局自此一边倒向秦。",
+      "people": ["白起", "赵括", "廉颇"],
+      "map": { "year": -260, "place": "长平" },
+      "image": "/scenes/changping.webp"
+    },
+    {
+      "id": "yishui",
+      "plate": "水",
+      "title": "荆轲刺秦",
+      "chapter": 106,
+      "summary": "风萧萧兮易水寒。图穷匕见，壮士不还。",
+      "people": ["荆轲", "秦始皇"],
+      "map": { "year": -227, "place": "易水" },
+      "image": "/scenes/yishui.webp"
+    },
+    {
+      "id": "unify",
+      "plate": "一",
+      "title": "秦灭六国",
+      "chapter": 108,
+      "summary": "兼六国混一舆图，号始皇建立郡县。列国时代落幕。",
+      "people": ["秦始皇"],
+      "map": { "year": -221, "place": "咸阳" },
+      "image": "/scenes/unify.webp"
+    }
+  ],
+  "idioms": [
+    {
+      "id": "fenghuo",
+      "idiom": "烽火戏诸侯",
+      "gloss": "为博一笑而失信于人，终酿大祸。",
+      "story": "周幽王为褒姒屡举烽火，诸侯空跑。犬戎真至时无人来救，西周灭亡。",
+      "chapter": 2,
+      "people": ["周幽王", "褒姒"],
+      "map": { "year": -771, "place": "镐京" },
+      "era": "spring"
+    },
+    {
+      "id": "yigu",
+      "idiom": "一鼓作气",
+      "gloss": "趁士气正盛一举成事；也指做事要一气呵成。",
+      "story": "曹刿论战：一鼓作气，再而衰，三而竭。长勺之战鲁师败齐。",
+      "chapter": 16,
+      "people": ["曹刿", "鲁庄公"],
+      "map": { "year": -684, "place": "长勺" },
+      "era": "spring"
+    },
+    {
+      "id": "guanbao",
+      "idiom": "管鲍之交",
+      "gloss": "知己相交，不计私利。",
+      "story": "鲍叔牙力荐管仲相齐桓公。管仲曰：生我者父母，知我者鲍子也。",
+      "chapter": 16,
+      "people": ["管仲", "鲍叔牙"],
+      "map": { "year": -685, "place": "临淄" },
+      "era": "spring"
+    },
+    {
+      "id": "laoma",
+      "idiom": "老马识途",
+      "gloss": "经验丰富的人可作向导。",
+      "story": "齐桓公伐孤竹迷道，管仲放老马引路，遂得归途。",
+      "chapter": 21,
+      "people": ["管仲", "齐桓公"],
+      "map": { "year": -663, "place": "孤竹" },
+      "era": "spring"
+    },
+    {
+      "id": "jiadao",
+      "idiom": "假道灭虢",
+      "gloss": "借路灭邻，顺手吞并；亦喻阴谋兼并。",
+      "story": "晋献公向虞借道伐虢，还师顺灭虞。荀息之计。",
+      "chapter": 25,
+      "people": ["晋献公", "荀息"],
+      "map": { "year": -655, "place": "虞" },
+      "era": "spring"
+    },
+    {
+      "id": "chunwang",
+      "idiom": "唇亡齿寒",
+      "gloss": "利害相关，一方亡则另一方危。",
+      "story": "宫之奇谏虞公：虢亡则虞从之。虞不听，终被晋灭。",
+      "chapter": 25,
+      "people": ["宫之奇", "虞公"],
+      "map": { "year": -655, "place": "虞" },
+      "era": "spring"
+    },
+    {
+      "id": "tuibi",
+      "idiom": "退避三舍",
+      "gloss": "主动退让以避免冲突；后亦指谦逊避让。",
+      "story": "重耳流亡过楚，许楚成王：他日晋楚交兵，当退避三舍。城濮之战践约。",
+      "chapter": 35,
+      "people": ["晋文公", "楚成王"],
+      "map": { "year": -632, "place": "城濮" },
+      "era": "spring"
+    },
+    {
+      "id": "woxin",
+      "idiom": "卧薪尝胆",
+      "gloss": "刻苦自励，志在雪耻。",
+      "story": "勾践败于夫差后，卧薪尝胆，十年生聚，终灭吴。",
+      "chapter": 81,
+      "people": ["勾践", "夫差"],
+      "map": { "year": -494, "place": "会稽" },
+      "era": "spring"
+    },
+    {
+      "id": "wanbi",
+      "idiom": "完璧归赵",
+      "gloss": "原物完好归还。",
+      "story": "蔺相如奉和氏璧入秦，设计完璧归赵，不辱使命。",
+      "chapter": 96,
+      "people": ["蔺相如", "秦昭王"],
+      "map": { "year": -283, "place": "咸阳" },
+      "era": "warring"
+    },
+    {
+      "id": "fujing",
+      "idiom": "负荆请罪",
+      "gloss": "主动认错、请求责罚。",
+      "story": "廉颇与蔺相如争列，后负荆至门请罪，将相和。",
+      "chapter": 96,
+      "people": ["廉颇", "蔺相如"],
+      "map": { "year": -279, "place": "邯郸" },
+      "era": "warring"
+    },
+    {
+      "id": "zhishang",
+      "idiom": "纸上谈兵",
+      "gloss": "空谈理论，不切实际。",
+      "story": "赵括徒读父书，代廉颇将，长平大败。成语概括其事。",
+      "chapter": 98,
+      "people": ["赵括", "廉颇", "白起"],
+      "map": { "year": -260, "place": "长平" },
+      "era": "warring"
+    },
+    {
+      "id": "tuqiong",
+      "idiom": "图穷匕见",
+      "gloss": "真相或杀机终于显露。",
+      "story": "荆轲献督亢地图，图穷而匕首见，刺秦不中。",
+      "chapter": 107,
+      "people": ["荆轲", "秦始皇"],
+      "map": { "year": -227, "place": "咸阳" },
+      "era": "warring"
+    },
+    {
+      "id": "hezong",
+      "idiom": "合纵连横",
+      "gloss": "战国外交策略：六国南北联合抗秦，或事秦以攻他国。",
+      "story": "苏秦合纵，张仪连横，游说列国，开纵横家时代。",
+      "chapter": 90,
+      "people": ["苏秦", "张仪"],
+      "map": { "year": -333, "place": "洛阳" },
+      "era": "warring"
+    },
+    {
+      "id": "chaoqin",
+      "idiom": "朝秦暮楚",
+      "gloss": "反复无常，立场摇摆。",
+      "story": "战国小国与游士或事秦或事楚，朝秦暮楚成为时代写照。",
+      "chapter": 92,
+      "people": ["楚怀王"],
+      "map": { "year": -299, "place": "咸阳" },
+      "era": "warring"
+    }
+  ],
+  "places": [
+    {
+      "id": "hao",
+      "ancient": "镐京",
+      "modern": "陕西西安西南",
+      "note": "西周国都。烽火戏诸侯、犬戎破周皆在此落幕。",
+      "chapter": 2,
+      "map": { "year": -771, "place": "镐京" },
+      "era": "spring"
+    },
+    {
+      "id": "luoyi",
+      "ancient": "洛邑 / 洛阳",
+      "modern": "河南洛阳",
+      "note": "平王东迁后的东周王城，春秋战国名义共主所在。",
+      "chapter": 3,
+      "map": { "year": -770, "place": "洛阳" },
+      "era": "spring"
+    },
+    {
+      "id": "linzi",
+      "ancient": "临淄",
+      "modern": "山东淄博临淄",
+      "note": "齐国国都。管仲相齐、桓公称霸的大本营。",
+      "chapter": 16,
+      "map": { "year": -685, "place": "临淄" },
+      "era": "spring"
+    },
+    {
+      "id": "changshao",
+      "ancient": "长勺",
+      "modern": "山东莱芜一带（约）",
+      "note": "曹刿败齐处。「一鼓作气」的战场。",
+      "chapter": 16,
+      "map": { "year": -684, "place": "长勺" },
+      "era": "spring"
+    },
+    {
+      "id": "chengpu",
+      "ancient": "城濮",
+      "modern": "山东鄄城西南一带（约）",
+      "note": "晋楚城濮之战。文公退避三舍后大败楚军。",
+      "chapter": 40,
+      "map": { "year": -632, "place": "城濮" },
+      "era": "spring"
+    },
+    {
+      "id": "kuaiji",
+      "ancient": "会稽",
+      "modern": "浙江绍兴一带",
+      "note": "越国腹地。勾践栖会稽、卧薪尝胆由此起。",
+      "chapter": 81,
+      "map": { "year": -494, "place": "会稽" },
+      "era": "spring"
+    },
+    {
+      "id": "gusu",
+      "ancient": "姑苏",
+      "modern": "江苏苏州",
+      "note": "吴国都城。夫差筑姑苏台，终为勾践所破。",
+      "chapter": 80,
+      "map": { "year": -473, "place": "姑苏" },
+      "era": "spring"
+    },
+    {
+      "id": "ying",
+      "ancient": "郢",
+      "modern": "湖北荆州江陵一带",
+      "note": "楚国国都。春秋战国南方重心。",
+      "chapter": 10,
+      "map": { "year": -690, "place": "郢" },
+      "era": "spring"
+    },
+    {
+      "id": "handan",
+      "ancient": "邯郸",
+      "modern": "河北邯郸",
+      "note": "赵国国都。完璧归赵、将相和的舞台。",
+      "chapter": 96,
+      "map": { "year": -279, "place": "邯郸" },
+      "era": "warring"
+    },
+    {
+      "id": "changping",
+      "ancient": "长平",
+      "modern": "山西高平",
+      "note": "白起坑赵卒处。战国决定性战役战场。",
+      "chapter": 98,
+      "map": { "year": -260, "place": "长平" },
+      "era": "warring"
+    },
+    {
+      "id": "xianyang",
+      "ancient": "咸阳",
+      "modern": "陕西咸阳 / 西安北",
+      "note": "秦国都城。商鞅变法、荆轲刺秦、一统六国皆系于此。",
+      "chapter": 108,
+      "map": { "year": -221, "place": "咸阳" },
+      "era": "warring"
+    },
+    {
+      "id": "yishui",
+      "ancient": "易水",
+      "modern": "河北易县",
+      "note": "荆轲辞燕太子丹处。「风萧萧兮易水寒」。",
+      "chapter": 107,
+      "map": { "year": -227, "place": "易水" },
+      "era": "warring"
+    },
+    {
+      "id": "xinzheng",
+      "ancient": "新郑",
+      "modern": "河南新郑",
+      "note": "郑国、后韩都。秦灭韩重要节点。",
+      "chapter": 108,
+      "map": { "year": -230, "place": "新郑" },
+      "era": "warring"
+    },
+    {
+      "id": "qufu",
+      "ancient": "曲阜 / 鲁",
+      "modern": "山东曲阜",
+      "note": "鲁国都城。礼乐之邦，曹刿论战等鲁史多发于此境。",
+      "chapter": 16,
+      "map": { "year": -684, "place": "曲阜" },
+      "era": "spring"
+    }
+  ]
+}

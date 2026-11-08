@@ -20,7 +20,7 @@ const serif = Noto_Serif_SC({
 const siteUrl = getSiteUrl();
 const title = '典读';
 const description =
-  '典读 · 中国古典交互精读。红楼梦、三国演义、水浒传、西游记、金瓶梅、聊斋志异：全文阅读、人物图谱、专题与检索。';
+  '典读 · 中国古典交互精读。古典书目与人物精读：全文阅读、生平时间线、图谱、专题与检索。';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -39,6 +39,9 @@ export const metadata: Metadata = {
     '西游记',
     '金瓶梅',
     '聊斋志异',
+    '史记',
+    '苏轼',
+    '王阳明',
     '交互精读',
   ],
   authors: [{ name: '典读' }],

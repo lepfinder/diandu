@@ -5,3 +5,6 @@ export { Link } from './Link';
 export { SiteNav, getPortalHref } from './SiteNav';
 export type { SiteNavItem, SiteNavProps } from './SiteNav';
 export { DEFAULT_SITE_URL, absoluteUrl, getSiteUrl } from './site';
+export { TopicCard } from './TopicCard';
+export type { TopicCardProps } from './TopicCard';
+export { useModalListNav } from './useModalListNav';

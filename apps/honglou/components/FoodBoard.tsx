@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from 'react';
 import Link from '@/components/Link';
-import { asset } from '@classic/ui';
+import { asset, useModalListNav } from '@classic/ui';
 
 export type FoodItem = {
   id: string;
@@ -37,6 +37,8 @@ export function FoodBoard({ items, intro }: { items: FoodItem[]; intro: string }
       return hay.includes(kw);
     });
   }, [items, cat, q]);
+
+  const openIndex = useModalListNav(open, list, setOpen);
 
   const counts = useMemo(() => {
     const c: Record<string, number> = { all: items.length };
@@ -121,6 +123,11 @@ export function FoodBoard({ items, intro }: { items: FoodItem[]; intro: string }
                 <Link className="pill accent" href={`/read/${open.chRef}/`}>见第{open.chRef}回</Link>
                 <Link className="pill" href={`/search/?q=${encodeURIComponent(open.term)}`}>全文检索</Link>
               </div>
+              {list.length > 1 ? (
+                <p className="muted detail-nav-hint" style={{ marginTop: 14 }}>
+                  ↑↓←→ 切换{openIndex >= 0 ? ` · ${openIndex + 1}/${list.length}` : ''} · Esc 关闭
+                </p>
+              ) : null}
             </div>
           </div>
         </div>

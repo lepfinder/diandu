@@ -130,6 +130,15 @@ export function ReaderChrome({
     });
   }, [chapter.n, notesEnabled, storagePrefix]);
 
+  // 桌面恢复目录分栏偏好；切到窄屏时只收起抽屉，不改写偏好
+  useEffect(() => {
+    if (compact) {
+      setTocOpen(false);
+      return;
+    }
+    setTocOpen(readString(storagePrefix, 'tocRail', '0') === '1');
+  }, [compact, storagePrefix]);
+
   useEffect(() => {
     const root = document.documentElement;
     root.style.setProperty('--read-size', `${fontSize}px`);
@@ -181,8 +190,9 @@ export function ReaderChrome({
         // 桌面：切换侧栏批注；手机：打开笔记总览
         if (compact || !notesEnabled) {
           setNotesOpen((v) => !v);
-          setTocOpen(false);
+          if (compact) setTocOpen(false);
           setSetOpen(false);
+          setReviewsOpen(false);
         } else {
           setMarginVisible((v) => {
             const next = !v;
@@ -194,15 +204,20 @@ export function ReaderChrome({
       if (notesPanelEnabled && (e.key === 'b' || e.key === 'B')) {
         setNotesOpen((v) => !v);
         setReviewsOpen(false);
-        setTocOpen(false);
+        if (compact) setTocOpen(false);
         setSetOpen(false);
       }
       if (socialReviews.length > 0 && (e.key === 'r' || e.key === 'R')) {
         e.preventDefault();
         setReviewsOpen((v) => !v);
         setNotesOpen(false);
-        setTocOpen(false);
+        if (compact) setTocOpen(false);
         setSetOpen(false);
+      }
+      if (e.key === 'o' || e.key === 'O') {
+        e.preventDefault();
+        toggleTocRail();
+        return;
       }
       if (e.key === 't' || e.key === 'T') {
         const order = ['paper', 'sepia', 'night'];
@@ -263,18 +278,38 @@ export function ReaderChrome({
   }
 
   function closePanels() {
-    setTocOpen(false);
-    setSetOpen(false);
-    setNotesOpen(false);
-    setReviewsOpen(false);
+    const hasModal = setOpen || notesOpen || reviewsOpen || (compact && tocOpen);
+    if (hasModal) {
+      setSetOpen(false);
+      setNotesOpen(false);
+      setReviewsOpen(false);
+      if (compact) setTocOpen(false);
+    } else if (!compact && tocOpen) {
+      setTocOpen(false);
+      write(storagePrefix, 'tocRail', '0');
+    }
     setSelBar(null);
     setFocusedNoteId(null);
     setComposer(null);
   }
 
+  function toggleTocRail() {
+    setSetOpen(false);
+    setNotesOpen(false);
+    setReviewsOpen(false);
+    setTocOpen((open) => {
+      const next = !open;
+      if (!compact) {
+        write(storagePrefix, 'tocRail', next ? '1' : '0');
+        showToast(next ? '已显示目录栏' : '已隐藏目录栏');
+      }
+      return next;
+    });
+  }
+
   function openReviewsPanel() {
     setReviewsOpen(true);
-    setTocOpen(false);
+    if (compact) setTocOpen(false);
     setSetOpen(false);
     setNotesOpen(false);
     if (!expandedReviewId && socialReviews[0]) {
@@ -316,7 +351,7 @@ export function ReaderChrome({
         setNoteFilter('all');
       }
       setNotesOpen(true);
-      setTocOpen(false);
+      if (compact) setTocOpen(false);
       setSetOpen(false);
     }
   }
@@ -548,8 +583,9 @@ export function ReaderChrome({
   function openNotesDrawer(filter?: 'all' | 'note' | 'mark' | 'social') {
     if (filter) setNoteFilter(filter);
     setNotesOpen(true);
-    setTocOpen(false);
+    if (compact) setTocOpen(false);
     setSetOpen(false);
+    setReviewsOpen(false);
   }
 
   type MarginItem = {
@@ -589,7 +625,9 @@ export function ReaderChrome({
     }
   }
   const marginNoteKey = marginItems.map((item) => item.id).join('|');
-  const panelOpen = tocOpen || setOpen || notesOpen || reviewsOpen;
+  /** 遮罩只服务模态抽屉；桌面目录分栏不挡正文 */
+  const modalOpen = setOpen || notesOpen || reviewsOpen || (compact && tocOpen);
+  const showTocRail = !compact && tocOpen;
 
   useEffect(() => {
     if (!showMargin) {
@@ -645,11 +683,52 @@ export function ReaderChrome({
     };
   }, [showMargin, marginNoteKey, fontSize, lineHeight, readWidth, chapter.n]);
 
+  const tocPanel = (
+    <>
+      <div className="cr-drawer-head">
+        <h3>目录</h3>
+        <button type="button" className="cr-icon" onClick={toggleTocRail} aria-label="关闭目录">×</button>
+      </div>
+      <div className="cr-drawer-search">
+        <input
+          placeholder="搜回目，或输入回数"
+          value={tocFilter}
+          onChange={(e) => setTocFilter(e.target.value)}
+        />
+      </div>
+      {tocLead ? <div className="cr-toc-lead">{tocLead}</div> : null}
+      <div className="cr-toc-list" ref={tocListRef}>
+        {filtered.map((item) => (
+          <Link
+            key={item.n}
+            href={`/read/${item.n}/`}
+            className={`cr-toc-item${item.n === chapter.n ? ' active' : ''}`}
+            onClick={() => {
+              if (compact) setTocOpen(false);
+            }}
+          >
+            <span className="n">{item.label}</span>
+            <span className="t">{item.t1}</span>
+          </Link>
+        ))}
+      </div>
+    </>
+  );
+
   return (
-    <div className={`cr-shell${compact ? ' is-compact' : ''}${showMargin ? ' has-margin' : ''}`}>
+    <div
+      className={`cr-shell${compact ? ' is-compact' : ''}${showMargin ? ' has-margin' : ''}${showTocRail ? ' has-toc-rail' : ''}`}
+    >
       <div className="cr-progress" ref={progressRef} />
       <header className="cr-top">
-        <button type="button" className="cr-icon" onClick={() => { setTocOpen(true); setSetOpen(false); setNotesOpen(false); setReviewsOpen(false); }} title="目录" aria-label="目录">
+        <button
+          type="button"
+          className={`cr-icon${tocOpen ? ' on' : ''}`}
+          onClick={toggleTocRail}
+          title={compact ? '目录' : (tocOpen ? '隐藏目录栏' : '显示目录栏')}
+          aria-label={compact ? '目录' : (tocOpen ? '隐藏目录栏' : '显示目录栏')}
+          aria-pressed={tocOpen}
+        >
           <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10" /></svg>
         </button>
         <div className="cr-title">
@@ -686,11 +765,28 @@ export function ReaderChrome({
             <span className="cr-reviews-label">书评</span>
           </button>
         ) : null}
-        <button type="button" className="cr-icon" onClick={() => { setSetOpen(true); setTocOpen(false); setNotesOpen(false); setReviewsOpen(false); }} title="版式" aria-label="版式">
+        <button
+          type="button"
+          className="cr-icon"
+          onClick={() => {
+            setSetOpen(true);
+            setNotesOpen(false);
+            setReviewsOpen(false);
+            if (compact) setTocOpen(false);
+          }}
+          title="版式"
+          aria-label="版式"
+        >
           <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" /><path d="M12 3v2M12 19v2M3 12H5M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M18.4 5.6 17 7M7 17l-1.4 1.4" /></svg>
         </button>
       </header>
 
+      <div className="cr-workspace">
+      {showTocRail ? (
+        <aside className="cr-toc-rail" aria-label="目录">
+          {tocPanel}
+        </aside>
+      ) : null}
       <div
         className="cr-body"
         ref={bodyRef}
@@ -790,6 +886,7 @@ export function ReaderChrome({
           ) : null}
         </div>
       </div>
+      </div>
 
       {composer ? (
         <div className="cr-composer-wrap" onClick={() => setComposer(null)}>
@@ -887,31 +984,13 @@ export function ReaderChrome({
         </div>
       ) : null}
 
-      <div className={`cr-overlay${panelOpen ? ' open' : ''}`} onClick={closePanels} />
+      <div className={`cr-overlay${modalOpen ? ' open' : ''}`} onClick={closePanels} />
 
-      <aside className={`cr-drawer${tocOpen ? ' open' : ''}`}>
-        <div className="cr-drawer-head">
-          <h3>目录</h3>
-          <button type="button" className="cr-icon" onClick={() => setTocOpen(false)} aria-label="关闭">×</button>
-        </div>
-        <div className="cr-drawer-search">
-          <input placeholder="搜回目，或输入回数" value={tocFilter} onChange={(e) => setTocFilter(e.target.value)} />
-        </div>
-        {tocLead ? <div className="cr-toc-lead">{tocLead}</div> : null}
-        <div className="cr-toc-list" ref={tocListRef}>
-          {filtered.map((item) => (
-            <Link
-              key={item.n}
-              href={`/read/${item.n}/`}
-              className={`cr-toc-item${item.n === chapter.n ? ' active' : ''}`}
-              onClick={() => setTocOpen(false)}
-            >
-              <span className="n">{item.label}</span>
-              <span className="t">{item.t1}</span>
-            </Link>
-          ))}
-        </div>
-      </aside>
+      {compact ? (
+        <aside className={`cr-drawer cr-toc-drawer${tocOpen ? ' open' : ''}`} aria-label="目录">
+          {tocPanel}
+        </aside>
+      ) : null}
 
       <aside className={`cr-drawer right${setOpen ? ' open' : ''}`}>
         <div className="cr-drawer-head">
@@ -953,7 +1032,7 @@ export function ReaderChrome({
             </div>
           </div>
           <p className="cr-tip">
-            快捷键：← → / j k 翻回，t 换纸色
+            快捷键：← → / j k 翻回，o 目录栏，t 换纸色
             {notesPanelEnabled ? (compact || !notesEnabled ? '，n 笔记' : '，n 侧栏批注，b 笔记总览') : ''}
             {socialReviews.length > 0 ? '，r 书评' : ''}
             ，Esc 关闭，/ 检索

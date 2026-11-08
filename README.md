@@ -1,6 +1,6 @@
 # 典读 · diandu
 
-中国古典交互精读 monorepo：聚合站 + 六部书 + 共享组件。
+中国古典交互精读 monorepo：聚合站 + 古典书目 + 人物精读 + 共享组件。
 
 正式域名：https://diandu.xiaonuan.me（Cloudflare Pages 自定义域）  
 备用：https://diandu-6ro.pages.dev · 源码许可见 `LICENSE`，正文底本见 `NOTICE.md`。
@@ -16,10 +16,16 @@ apps/
   xiyouji/      西游记
   jinpingmei/   金瓶梅
   liaozhai/     聊斋志异
+  shiji/        史记
+  lieguo/       东周列国志
+  fengshen/     封神演义
+  shanhai/      山海经
+  sushi/        苏轼（人物精读）
+  yangming/     王阳明（人物精读）
 packages/
   reader/       @classic/reader 阅读壳
   ui/           @classic/ui（Link / SiteNav / asset）
-  catalog/      书目元数据
+  catalog/      书目 / 人物元数据
 ```
 
 ## 开发
@@ -35,9 +41,17 @@ pnpm dev:shuihu      # :3470
 pnpm dev:xiyouji     # :3480
 pnpm dev:jinpingmei  # :3490
 pnpm dev:liaozhai    # :3510
+pnpm dev:shiji       # :3520
+pnpm dev:sushi       # :3530
+pnpm dev:yangming    # :3540
+pnpm dev:lieguo      # :3550
+pnpm dev:fengshen    # :3560
+pnpm dev:shanhai     # :3570
 ```
 
-本地聚合站会链到各书独立端口；组装部署后改为同域路径（`/honglou/` 等）。
+本地聚合站会链到各站独立端口；组装部署后改为同域路径（`/honglou/`、`/sushi/` 等）。
+
+开发用 `.next-dev`、生产构建用 `.next`。路由类型靠各站 `tsconfig` 同时 include 两套目录；`next-env.d.ts` 不写死单一路径。若 `next build/dev` 改写了该文件，执行 `pnpm sync:next-env`（`deploy:build` 结束也会自动同步）。
 
 ## Cloudflare 单站部署
 
@@ -47,7 +61,7 @@ pnpm deploy:build
 npx wrangler pages deploy deploy --project-name=diandu --branch=main
 ```
 
-各书构建时带 `NEXT_PUBLIC_BASE_PATH=/书名`，portal 带 `NEXT_PUBLIC_SITE_MODE=assemble`。  
+各站构建时带 `NEXT_PUBLIC_BASE_PATH=/站名`，portal 带 `NEXT_PUBLIC_SITE_MODE=assemble`。  
 SEO 默认站点为 `https://diandu.xiaonuan.me`（可用 `NEXT_PUBLIC_SITE_URL` 覆盖）；`assemble` 会生成 `robots.txt` / `sitemap.xml`。
 
 ### 绑定 diandu.xiaonuan.me

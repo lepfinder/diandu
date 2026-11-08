@@ -14,6 +14,8 @@ import { fileURLToPath } from 'node:url';
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const deploy = join(root, 'deploy');
 const BOOKS = JSON.parse(readFileSync(join(root, 'packages/catalog/books.json'), 'utf8'));
+const PEOPLE = JSON.parse(readFileSync(join(root, 'packages/catalog/people.json'), 'utf8'));
+const SITES = [...BOOKS, ...PEOPLE];
 const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'https://diandu.xiaonuan.me').replace(
   /\/$/,
   '',
@@ -32,18 +34,18 @@ if (!existsSync(portalOut)) {
 
 cpSync(portalOut, deploy, { recursive: true });
 
-for (const book of BOOKS) {
-  const outDir = join(root, `apps/${book.id}/out`);
+for (const site of SITES) {
+  const outDir = join(root, `apps/${site.id}/out`);
   if (!existsSync(outDir)) {
     console.error(`缺少 ${outDir}，请先 build:cf`);
     process.exit(1);
   }
-  const target = join(deploy, book.id);
+  const target = join(deploy, site.id);
   mkdirSync(target, { recursive: true });
   cpSync(outDir, target, { recursive: true });
   stripDeployJunk(target);
-  const rewritten = rewriteBookAssetPaths(target, book.id);
-  console.log(`assembled ${book.basePath}/ (rewrote ${rewritten} asset refs)`);
+  const rewritten = rewriteBookAssetPaths(target, site.id);
+  console.log(`assembled ${site.basePath}/ (rewrote ${rewritten} asset refs)`);
 }
 
 writeFileSync(
@@ -94,7 +96,7 @@ console.log(`\nDone → ${deploy}`);
 console.log('Cloudflare Pages: 上传 deploy/ 目录即可。');
 
 function writeSeoFiles(deployDir) {
-  const paths = ['/', ...BOOKS.map((b) => `${b.basePath}/`)];
+  const paths = ['/', ...SITES.map((b) => `${b.basePath}/`)];
   writeFileSync(
     join(deployDir, 'robots.txt'),
     `User-agent: *

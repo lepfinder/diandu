@@ -1,0 +1,100 @@
+{
+  "title": "交游人物",
+  "lead": "家人、座师、门人与方外友。按关系速查，再跳回相关作品。",
+  "banner": "/topics/topic-circle.webp",
+  "people": [
+    {
+      "id": "su-xun",
+      "name": "苏洵",
+      "seal": "父",
+      "relation": "父 · 老泉",
+      "blurb": "家学根基，三苏之源。读子瞻名篇，先记得文字底子从眉山家里长出来。",
+      "image": "/circle/su-xun.webp",
+      "workIds": [
+        "shui-diaoge-tou",
+        "jiangchengzi-chulie"
+      ]
+    },
+    {
+      "id": "su-zhe",
+      "name": "苏辙",
+      "seal": "弟",
+      "relation": "弟 · 子由",
+      "blurb": "同榜进士，一生知己。乌台时乞以官职赎兄；中秋共婵娟，说的就是他。",
+      "image": "/circle/su-zhe.webp",
+      "workIds": [
+        "shui-diaoge-tou",
+        "yuzhong-ziyou"
+      ]
+    },
+    {
+      "id": "wang-fu",
+      "name": "王弗",
+      "seal": "妻",
+      "relation": "妻",
+      "blurb": "早逝。十年后密州夜梦，小轩窗正梳妆——《江城子》由此写成。",
+      "image": "/circle/wang-fu.webp",
+      "workIds": [
+        "jiangchengzi-jimeng"
+      ]
+    },
+    {
+      "id": "wang-runzhi",
+      "name": "王闰之",
+      "seal": "继",
+      "relation": "继室",
+      "blurb": "王弗堂妹。随苏轼辗转贬谪，黄州夜游前后赤壁时，家里藏着那斗酒。",
+      "image": "/circle/wang-runzhi.webp",
+      "workIds": [
+        "hou-chibi-fu"
+      ]
+    },
+    {
+      "id": "chaoyun",
+      "name": "朝云",
+      "seal": "云",
+      "relation": "妾",
+      "blurb": "伴至惠州。传说唱《蝶恋花》至柳绵句泪下，岭南岁月里的知音。",
+      "image": "/circle/chaoyun.webp",
+      "workIds": [
+        "dielianhua",
+        "shilichizhi"
+      ]
+    },
+    {
+      "id": "huang-tingjian",
+      "name": "黄庭坚",
+      "seal": "门",
+      "relation": "门人 · 苏门",
+      "blurb": "苏门四学士之首。诗书画皆能，推尊东坡——黄州豪放与夜游的闲笔，都是门人后来回望的典范。",
+      "image": "/circle/huang-tingjian.webp",
+      "workIds": [
+        "niannujiao-chibi",
+        "ji-chengtiansi"
+      ]
+    },
+    {
+      "id": "foyin",
+      "name": "佛印",
+      "seal": "禅",
+      "relation": "方外友",
+      "blurb": "金山寺僧，机锋往来。东坡北归过金山自题画像，方外趣味与后赤壁的孤鹤，是同一路的放下。",
+      "image": "/circle/foyin.webp",
+      "workIds": [
+        "ziti-jinshan",
+        "hou-chibi-fu"
+      ]
+    },
+    {
+      "id": "ouyang-xiu",
+      "name": "欧阳修",
+      "seal": "师",
+      "relation": "座师",
+      "blurb": "嘉祐二年主考，奇其文，名动京师。此后苏轼一路写到密州中秋，座师赏识的那个少年，已能把私人思念抬到问月的高度。",
+      "image": "/circle/ouyang-xiu.webp",
+      "workIds": [
+        "shui-diaoge-tou"
+      ]
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from '@/components/Link';
+import { TopicCard } from '@classic/ui';
 import { getBook, getChapterList } from '@/lib/book';
 import { getTopics } from '@/lib/topics';
 
@@ -71,30 +72,10 @@ export default function HomePage() {
           </div>
         </div>
         <section className="home-grid">
-          <Link className="topic-card has-img" href="/topics/route/">
-            <Image src="/topics/topic-route.webp" alt="" fill sizes="(max-width: 720px) 100vw, 33vw" />
-            <div className="icon">途</div>
-            <h3>西行</h3>
-            <p>十八站。拖到第几回，就看到取经人走到哪一站。</p>
-          </Link>
-          <Link className="topic-card has-img" href="/topics/scenes/">
-            <Image src="/topics/topic-scenes.webp" alt="" fill sizes="(max-width: 720px) 100vw, 33vw" />
-            <div className="icon">戏</div>
-            <h3>名场面</h3>
-            <p>从龙宫借宝、白骨精、车迟国到狮驼岭。{sceneCount} 场短述，各链回那一回。</p>
-          </Link>
-          <Link className="topic-card has-img" href="/topics/relics/">
-            <Image src="/topics/topic-relics.webp" alt="" fill sizes="(max-width: 720px) 100vw, 33vw" />
-            <div className="icon">器</div>
-            <h3>器物</h3>
-            <p>金箍棒、紧箍、芭蕉扇、人参果。十二件叫得响的兵器法宝，各链回出处。</p>
-          </Link>
-          <Link className="topic-card has-img" href="/characters/">
-            <Image src="/topics/topic-characters.webp" alt="" fill sizes="(max-width: 720px) 100vw, 33vw" />
-            <div className="icon">人</div>
-            <h3>人物</h3>
-            <p>取经五口之外，天庭、佛门、妖魔和人间按书里有名有事的人补过。五十五人。</p>
-          </Link>
+          <TopicCard href="/topics/route/" icon="途" title="西行" desc="十八站。拖到第几回，就看到取经人走到哪一站。" image="/topics/topic-route.webp" />
+          <TopicCard href="/topics/scenes/" icon="戏" title="名场面" desc={`从龙宫借宝、白骨精、车迟国到狮驼岭。${sceneCount} 场短述，各链回那一回。`} image="/topics/topic-scenes.webp" />
+          <TopicCard href="/topics/relics/" icon="器" title="器物" desc="金箍棒、紧箍、芭蕉扇、人参果。十二件叫得响的兵器法宝，各链回出处。" image="/topics/topic-relics.webp" />
+          <TopicCard href="/characters/" icon="人" title="人物" desc="取经五口之外，天庭、佛门、妖魔和人间按书里有名有事的人补过。五十五人。" image="/topics/topic-characters.webp" />
         </section>
 
         <div className="section-head" style={{ marginTop: 48 }}>

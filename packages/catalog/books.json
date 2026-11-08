@@ -70,5 +70,53 @@
     "highlight": "狐鬼花妖品类 · 名篇",
     "cover": "/covers/liaozhai.webp",
     "packageName": "@diandu/liaozhai"
+  },
+  {
+    "id": "shiji",
+    "title": "史记",
+    "author": "司马迁",
+    "basePath": "/shiji",
+    "port": 3520,
+    "kicker": "纪传体史书 · 交互精读",
+    "lead": ["究天人之际，通古今之变。", "成一家之言。"],
+    "highlight": "五体篇目 · 人物行迹 · 江山舆图",
+    "cover": "/covers/shiji.webp",
+    "packageName": "@diandu/shiji"
+  },
+  {
+    "id": "lieguo",
+    "title": "东周列国志",
+    "author": "冯梦龙 / 蔡元放",
+    "basePath": "/lieguo",
+    "port": 3550,
+    "kicker": "历史演义 · 交互精读",
+    "lead": ["平王东迁到秦并天下。", "春秋争霸，战国兼并。"],
+    "highlight": "一百零八回 · 列国人物 · 江山舆图",
+    "cover": "/covers/lieguo.webp",
+    "packageName": "@diandu/lieguo"
+  },
+  {
+    "id": "fengshen",
+    "title": "封神演义",
+    "author": "许仲琳",
+    "basePath": "/fengshen",
+    "port": 3560,
+    "kicker": "中国古典长篇小说 · 交互精读",
+    "lead": ["商周易位，斩将封神。", "子牙下山，一榜定千秋。"],
+    "highlight": "伐纣征途 · 封神榜 · 法宝图鉴",
+    "cover": "/covers/fengshen.webp",
+    "packageName": "@diandu/fengshen"
+  },
+  {
+    "id": "shanhai",
+    "title": "山海经",
+    "author": "郭璞 注",
+    "basePath": "/shanhai",
+    "port": 3570,
+    "kicker": "先秦神话地理 · 交互图鉴",
+    "lead": ["山经记陆，海经记荒。", "按方位读，按异兽记。"],
+    "highlight": "十八篇方位 · 异兽图鉴 · 名物",
+    "cover": "/covers/shanhai.webp",
+    "packageName": "@diandu/shanhai"
   }
 ]

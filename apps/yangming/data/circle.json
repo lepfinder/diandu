@@ -1,0 +1,79 @@
+{
+  "title": "交游人物",
+  "lead": "家人、弟子与讲友。心学是一群人一起走出来的路。",
+  "banner": "/topics/topic-circle.webp",
+  "people": [
+    {
+      "id": "wang-hua",
+      "name": "王华",
+      "seal": "父",
+      "relation": "父 · 状元",
+      "blurb": "成化十七年状元。家学与仕途底色，守仁少年由此长成。",
+      "image": "/circle/wang-hua.webp",
+      "workIds": []
+    },
+    {
+      "id": "xu-ai",
+      "name": "徐爱",
+      "seal": "爱",
+      "relation": "弟子 · 曰仁",
+      "blurb": "第一高弟。《传习录》徐爱所录，知行合一问答多出其手。",
+      "image": "/circle/xu-ai.webp",
+      "workIds": ["zhixing-heyi", "xinxuai-wuli"]
+    },
+    {
+      "id": "qian-dehong",
+      "name": "钱德洪",
+      "seal": "洪",
+      "relation": "弟子 · 绪山",
+      "blurb": "天泉证道一方。重工夫渐进，后来主持讲会甚力。",
+      "image": "/circle/qian-dehong.webp",
+      "workIds": ["chuanxilu-tianquan", "siju-jiao"]
+    },
+    {
+      "id": "wang-ji",
+      "name": "王畿",
+      "seal": "畿",
+      "relation": "弟子 · 龙溪",
+      "blurb": "天泉证道另一方。主悟本体，影响浙中王门极深。",
+      "image": "/circle/wang-ji.webp",
+      "workIds": ["chuanxilu-tianquan", "siju-jiao"]
+    },
+    {
+      "id": "zhan-ruoshui",
+      "name": "湛若水",
+      "seal": "甘",
+      "relation": "讲友 · 甘泉",
+      "blurb": "陈白沙门人。与阳明共倡心学，宗旨同中有异，一生论学不辍。",
+      "image": "/circle/zhan-ruoshui.webp",
+      "workIds": []
+    },
+    {
+      "id": "lou-liang",
+      "name": "娄谅",
+      "seal": "娄",
+      "relation": "前辈",
+      "blurb": "早年示以宋儒格物之学，影响阳明「格竹」一途——也是后来翻案的起点。",
+      "image": "/circle/lou-liang.webp",
+      "workIds": ["zhixing-heyi"]
+    },
+    {
+      "id": "zhou-ji",
+      "name": "周积",
+      "seal": "积",
+      "relation": "弟子",
+      "blurb": "南安侍疾。问遗言，得「此心光明，亦复何言」。",
+      "image": "/circle/zhou-ji.webp",
+      "workIds": ["cixin-guangming"]
+    },
+    {
+      "id": "liu-jin",
+      "name": "刘瑾",
+      "seal": "瑾",
+      "relation": "权阉 · 对手",
+      "blurb": "正德权阉。阳明抗疏触怒，诏狱廷杖，贬往龙场——对手成就了悟道。",
+      "image": "/circle/liu-jin.webp",
+      "workIds": ["yilu-wen"]
+    }
+  ]
+}

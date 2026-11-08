@@ -1,0 +1,148 @@
+{
+  "events": [
+    {
+      "id": "birth",
+      "year": 1472,
+      "yearLabel": "成化八年",
+      "age": 0,
+      "title": "生于余姚",
+      "place": "浙江余姚",
+      "phase": "少年",
+      "blurb": "名守仁，字伯安。父王华状元及第。少年即有「读书学圣贤」之志。",
+      "image": "/life/yuyao.webp",
+      "workIds": []
+    },
+    {
+      "id": "gezhu",
+      "year": 1492,
+      "yearLabel": "约弘治间",
+      "age": 20,
+      "title": "格竹七日",
+      "place": "北京",
+      "phase": "求道",
+      "blurb": "依朱子「格物」之法，对竹穷理七日，劳思成疾。后来龙场之悟，正从这里翻过来。",
+      "image": "/life/gezhu.webp",
+      "workIds": ["zhixing-heyi"]
+    },
+    {
+      "id": "jinshi",
+      "year": 1499,
+      "yearLabel": "弘治十二年",
+      "age": 27,
+      "title": "进士及第",
+      "place": "北京",
+      "phase": "出仕",
+      "blurb": "二甲进士。观政工部，后任刑部、兵部诸职，习兵事与刑名。",
+      "image": "/life/jinshi.webp",
+      "workIds": []
+    },
+    {
+      "id": "zhaoyu",
+      "year": 1506,
+      "yearLabel": "正德元年",
+      "age": 34,
+      "title": "抗疏下诏狱",
+      "place": "北京 → 龙场",
+      "phase": "狱祸",
+      "blurb": "疏救戴铣，触怒刘瑾，廷杖、诏狱，贬贵州龙场驿丞。性命悬于一线。",
+      "image": "/life/zhaoyu.webp",
+      "workIds": ["yilu-wen"]
+    },
+    {
+      "id": "longchang",
+      "year": 1508,
+      "yearLabel": "正德三年",
+      "age": 36,
+      "title": "龙场悟道",
+      "place": "贵州龙场",
+      "phase": "悟道",
+      "blurb": "居夷处困，中夜大悟：圣人之道，吾性自足。心学于此立基，知行合一自此提出。",
+      "image": "/life/longchang.webp",
+      "workIds": ["zhixing-heyi", "xinxuai-wuli", "jiaotiao-longchang", "yilu-wen"]
+    },
+    {
+      "id": "luling",
+      "year": 1510,
+      "yearLabel": "正德五年",
+      "age": 38,
+      "title": "知庐陵",
+      "place": "江西庐陵",
+      "phase": "事功",
+      "blurb": "刘瑾败，量移庐陵知县。减讼清狱，把龙场心得用到一县治理上。",
+      "image": "/life/luling.webp",
+      "workIds": []
+    },
+    {
+      "id": "nangan",
+      "year": 1517,
+      "yearLabel": "正德十二年",
+      "age": 45,
+      "title": "巡抚南赣",
+      "place": "南赣汀漳",
+      "phase": "事功",
+      "blurb": "提督军务，破山中诸寨。兵事与讲学并行——心学不是空谈。",
+      "image": "/life/nangan.webp",
+      "workIds": ["bingfa-shi", "xunmeng"]
+    },
+    {
+      "id": "chenhao",
+      "year": 1519,
+      "yearLabel": "正德十四年",
+      "age": 47,
+      "title": "平宁王之乱",
+      "place": "南昌",
+      "phase": "事功",
+      "blurb": "朱宸濠反，守仁起兵四十三日擒之。立功而未获全赏，谤议随之。",
+      "image": "/life/chenhao.webp",
+      "workIds": ["bingfa-shi", "liangzhi-shi"]
+    },
+    {
+      "id": "liangzhi",
+      "year": 1521,
+      "yearLabel": "正德十六年",
+      "age": 49,
+      "title": "揭「致良知」",
+      "place": "越中",
+      "phase": "讲学",
+      "blurb": "晚年宗旨归到三字：致良知。把龙场以来的工夫，收成一句可下手处。",
+      "image": "/life/liangzhi.webp",
+      "workIds": ["liangzhi-shi", "yong-liangzhi", "daxuewen"]
+    },
+    {
+      "id": "tianquan",
+      "year": 1527,
+      "yearLabel": "嘉靖六年",
+      "age": 55,
+      "title": "天泉证道",
+      "place": "绍兴",
+      "phase": "讲学",
+      "blurb": "出征思田前夜，与钱德洪、王畿证「四句教」。心学内部的分野，由此埋下。",
+      "image": "/life/tianquan.webp",
+      "workIds": ["siju-jiao", "chuanxilu-tianquan"]
+    },
+    {
+      "id": "sitian",
+      "year": 1528,
+      "yearLabel": "嘉靖七年",
+      "age": 56,
+      "title": "思田之役",
+      "place": "广西",
+      "phase": "事功",
+      "blurb": "奉命征思恩、田州。以抚为主，乱定而归。途中病重。",
+      "image": "/life/sitian.webp",
+      "workIds": []
+    },
+    {
+      "id": "death",
+      "year": 1529,
+      "yearLabel": "嘉靖七年",
+      "age": 57,
+      "title": "卒于南安",
+      "place": "江西南安",
+      "phase": "归途",
+      "blurb": "归途卒于南安。弟子问遗言，答：「此心光明，亦复何言？」",
+      "image": "/life/nanan.webp",
+      "workIds": ["cixin-guangming"]
+    }
+  ]
+}

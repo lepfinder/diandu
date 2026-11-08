@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from '@/components/Link';
+import { TopicCard } from '@classic/ui';
 import { getBook, getChapterList } from '@/lib/book';
 
 const spots = [
@@ -66,48 +67,13 @@ export default function HomePage() {
           </div>
         </div>
         <section className="home-grid">
-          <Link className="topic-card has-img" href="/topics/map/">
-            <Image src="/topics/topic-map.webp" alt="" fill sizes="(max-width: 720px) 100vw, 33vw" />
-            <div className="icon">势</div>
-            <h3>形势</h3>
-            <p>拖到第几回，底图上的势力跟着城池换色。右边是这一回谁据有哪座城。</p>
-          </Link>
-          <Link className="topic-card has-img" href="/topics/events/">
-            <Image src="/topics/topic-events.webp" alt="" fill sizes="(max-width: 720px) 100vw, 33vw" />
-            <div className="icon">事</div>
-            <h3>大事</h3>
-            <p>全书四幕：群雄、三分、蜀汉兴衰、归一。点节点跳回正文。</p>
-          </Link>
-          <Link className="topic-card has-img" href="/topics/scenes/">
-            <Image src="/topics/topic-scenes.webp" alt="" fill sizes="(max-width: 720px) 100vw, 33vw" />
-            <div className="icon">戏</div>
-            <h3>名场面</h3>
-            <p>从凤仪亭到五丈原。二十七场短述，各自链回正文。</p>
-          </Link>
-          <Link className="topic-card has-img" href="/topics/pieces/">
-            <Image src="/topics/topic-pieces.webp" alt="" fill sizes="(max-width: 720px) 100vw, 33vw" />
-            <div className="icon">篇</div>
-            <h3>名篇</h3>
-            <p>开篇词、短歌行、铜雀台赋、七步诗、前后《出师表》。原文照录，链回那一回。</p>
-          </Link>
-          <Link className="topic-card has-img" href="/topics/history/">
-            <Image src="/topics/topic-history.webp" alt="" fill sizes="(max-width: 720px) 100vw, 33vw" />
-            <div className="icon">史</div>
-            <h3>史实对照</h3>
-            <p>桃园、温酒、草船、赤壁、单刀、七擒、空城。演义一截，陈寿和裴注一截。</p>
-          </Link>
-          <Link className="topic-card has-img" href="/topics/relics/">
-            <Image src="/topics/topic-relics.webp" alt="" fill sizes="(max-width: 720px) 100vw, 33vw" />
-            <div className="icon">器</div>
-            <h3>兵器坐骑</h3>
-            <p>青龙偃月、方天画戟、赤兔、的卢。各一段出处，链回相关回。</p>
-          </Link>
-          <Link className="topic-card has-img" href="/characters/">
-            <Image src="/topics/topic-characters.webp" alt="" fill sizes="(max-width: 720px) 100vw, 33vw" />
-            <div className="icon">人</div>
-            <h3>人物</h3>
-            <p>一百三十四人。蜀、魏、吴、群雄、汉室，点开再读行迹。</p>
-          </Link>
+          <TopicCard href="/topics/map/" icon="势" title="形势" desc="拖到第几回，底图上的势力跟着城池换色。右边是这一回谁据有哪座城。" image="/topics/topic-map.webp" />
+          <TopicCard href="/topics/events/" icon="事" title="大事" desc="全书四幕：群雄、三分、蜀汉兴衰、归一。点节点跳回正文。" image="/topics/topic-events.webp" />
+          <TopicCard href="/topics/scenes/" icon="戏" title="名场面" desc="从凤仪亭到五丈原。二十七场短述，各自链回正文。" image="/topics/topic-scenes.webp" />
+          <TopicCard href="/topics/pieces/" icon="篇" title="名篇" desc="开篇词、短歌行、铜雀台赋、七步诗、前后《出师表》。原文照录，链回那一回。" image="/topics/topic-pieces.webp" />
+          <TopicCard href="/topics/history/" icon="史" title="史实对照" desc="桃园、温酒、草船、赤壁、单刀、七擒、空城。演义一截，陈寿和裴注一截。" image="/topics/topic-history.webp" />
+          <TopicCard href="/topics/relics/" icon="器" title="兵器坐骑" desc="青龙偃月、方天画戟、赤兔、的卢。各一段出处，链回相关回。" image="/topics/topic-relics.webp" />
+          <TopicCard href="/characters/" icon="人" title="人物" desc="一百三十四人。蜀、魏、吴、群雄、汉室，点开再读行迹。" image="/topics/topic-characters.webp" />
         </section>
 
         <div className="section-head" style={{ marginTop: 48 }}>

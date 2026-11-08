@@ -1,0 +1,290 @@
+{
+  "regions": [
+    {
+      "id": "nanshan",
+      "name": "南山经",
+      "quadrant": "南",
+      "corpus": "山经",
+      "chapter": 1,
+      "blurb": "招摇之山起笔。狌狌、鹿蜀、旋龟，南境草木金玉与异兽先在这里铺开。"
+    },
+    {
+      "id": "xishan",
+      "name": "西山经",
+      "quadrant": "西",
+      "corpus": "山经",
+      "chapter": 2,
+      "blurb": "华山、昆仑一线。西王母、鸾鸟、文鳐鱼，西方神山最密。"
+    },
+    {
+      "id": "beishan",
+      "name": "北山经",
+      "quadrant": "北",
+      "corpus": "山经",
+      "chapter": 3,
+      "blurb": "单狐、求如到太行一带。精卫填海的发鸠之山，正在北境。"
+    },
+    {
+      "id": "dongshan",
+      "name": "东山经",
+      "quadrant": "东",
+      "corpus": "山经",
+      "chapter": 4,
+      "blurb": "东海沿岸诸山。蠃鱼、茈鱼、獙獙，水兽多于飞鸟。"
+    },
+    {
+      "id": "zhongshan",
+      "name": "中山经",
+      "quadrant": "中",
+      "corpus": "山经",
+      "chapter": 5,
+      "blurb": "山经最长一篇。薄山、缟羝到洞庭、荆山，中土山川写到尾。"
+    },
+    {
+      "id": "haiwainan",
+      "name": "海外南经",
+      "quadrant": "南",
+      "corpus": "海经",
+      "chapter": 6,
+      "blurb": "结匈、羽民、贯匈、交胫。海外诸国从西南陬数到东南陬。"
+    },
+    {
+      "id": "haiwaixi",
+      "name": "海外西经",
+      "quadrant": "西",
+      "corpus": "海经",
+      "chapter": 7,
+      "blurb": "女祭、形天、奇肱、一夫一妇。刑天舞干戚，写在西海外。"
+    },
+    {
+      "id": "haiwaibei",
+      "name": "海外北经",
+      "quadrant": "北",
+      "corpus": "海经",
+      "chapter": 8,
+      "blurb": "无启之国、夸父追日、寻木长千里。北方海外以夸父一节最响。"
+    },
+    {
+      "id": "haiwaidong",
+      "name": "海外东经",
+      "quadrant": "东",
+      "corpus": "海经",
+      "chapter": 9,
+      "blurb": "嗟丘、大人国、君子国。东方海外多大人与君子。"
+    },
+    {
+      "id": "haineinan",
+      "name": "海内南经",
+      "quadrant": "南",
+      "corpus": "海经",
+      "chapter": 10,
+      "blurb": "瓯居海中、三天子鄣山。海内南境，巴蛇吞象也在这一带。"
+    },
+    {
+      "id": "haineixi",
+      "name": "海内西经",
+      "quadrant": "西",
+      "corpus": "海经",
+      "chapter": 11,
+      "blurb": "海内昆仑之虚。帝之下都，开明兽守九门，西王母梯几而戴胜。"
+    },
+    {
+      "id": "haineibei",
+      "name": "海内北经",
+      "quadrant": "北",
+      "corpus": "海经",
+      "chapter": 12,
+      "blurb": "蛇巫之山、西王母、犬封国。海内北境人神杂处。"
+    },
+    {
+      "id": "haineidong",
+      "name": "海内东经",
+      "quadrant": "东",
+      "corpus": "海经",
+      "chapter": 13,
+      "blurb": "钜燕、都州、琅邪台。海内东境多记水与台。"
+    },
+    {
+      "id": "dahuangdong",
+      "name": "大荒东经",
+      "quadrant": "东",
+      "corpus": "海经",
+      "chapter": 14,
+      "blurb": "少昊之国、甘山、猗天苏门。日月所出，多在大荒之东。"
+    },
+    {
+      "id": "dahuangnan",
+      "name": "大荒南经",
+      "quadrant": "南",
+      "corpus": "海经",
+      "chapter": 15,
+      "blurb": "融天山、苍梧之野。舜葬苍梧，南方大荒的帝陵在这里。"
+    },
+    {
+      "id": "dahuangxi",
+      "name": "大荒西经",
+      "quadrant": "西",
+      "corpus": "海经",
+      "chapter": 16,
+      "blurb": "不周山、女娲之肠、日月山。烛龙、西王母、十巫，西荒最密。"
+    },
+    {
+      "id": "dahuangbei",
+      "name": "大荒北经",
+      "quadrant": "北",
+      "corpus": "海经",
+      "chapter": 17,
+      "blurb": "附禺之山、夸父、烛龙。章尾山神人，是北方大荒的压轴。"
+    },
+    {
+      "id": "haineijing",
+      "name": "海内经",
+      "quadrant": "中",
+      "corpus": "海经",
+      "chapter": 18,
+      "blurb": "全书收束。南海之内，有都广之野；黄帝、禹、鲧的世系也写在这里。"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "jingwei",
+      "plate": "精",
+      "title": "精卫填海",
+      "chapter": 3,
+      "summary": "发鸠之山，有鸟焉，其状如乌，文首、白喙、赤足，名曰精卫。是炎帝之少女，名曰女娃。女娃游于东海，溺而不返，故为精卫。常衔西山之木石，以堙于东海。",
+      "people": [
+        "精卫",
+        "女娃",
+        "炎帝"
+      ],
+      "image": "/scenes/jingwei.webp"
+    },
+    {
+      "id": "kuafu",
+      "plate": "夸",
+      "title": "夸父逐日",
+      "chapter": 8,
+      "summary": "夸父与日逐走，入日。渴欲得饮，饮于河渭；河渭不足，北饮大泽。未至，道渴而死。弃其杖，化为邓林。海外北经与大荒北经两次写到他。",
+      "people": [
+        "夸父"
+      ],
+      "image": "/scenes/kuafu.webp"
+    },
+    {
+      "id": "xingtian",
+      "plate": "刑",
+      "title": "刑天舞干戚",
+      "chapter": 7,
+      "summary": "形天与帝争神，帝断其首，葬之常羊之山。乃以乳为目，以脐为口，操干戚以舞。海外西经这一节，是山海经里最烈的反抗。",
+      "people": [
+        "刑天"
+      ],
+      "image": "/scenes/xingtian.webp"
+    },
+    {
+      "id": "xiwangmu",
+      "plate": "母",
+      "title": "西王母",
+      "chapter": 2,
+      "summary": "西山经：西王母其状如人，豹尾虎齿而善啸，蓬发戴胜，是司天之厉及五残。海内西经、大荒西经又写她梯几而戴胜，居昆仑一侧。",
+      "people": [
+        "西王母"
+      ],
+      "image": "/scenes/xiwangmu.webp"
+    },
+    {
+      "id": "zhulong",
+      "plate": "烛",
+      "title": "烛龙",
+      "chapter": 17,
+      "summary": "大荒北经：章尾山有神，人面蛇身而赤，直目正乘。其瞑乃晦，其视乃明，不食不寝不息，风雨是谒。是烛九阴，是谓烛龙。",
+      "people": [
+        "烛龙"
+      ],
+      "image": "/scenes/zhulong.webp"
+    },
+    {
+      "id": "nvwa",
+      "plate": "娲",
+      "title": "女娲之肠",
+      "chapter": 16,
+      "summary": "大荒西经：有神十人，名曰女娲之肠，化为神，处栗广之野，横道而处。女娲不在补天的叙事里，却以肠化十神现身。",
+      "people": [
+        "女娲"
+      ],
+      "image": "/scenes/nvwa.webp"
+    },
+    {
+      "id": "kunlun",
+      "plate": "昆",
+      "title": "海内昆仑",
+      "chapter": 11,
+      "summary": "海内昆仑之虚，在西北，帝之下都。方八百里，高万仞。开明兽身大类虎而九首，皆人面，东向立昆仑上。西王母梯几而戴胜，在昆仑一侧。",
+      "people": [
+        "开明兽",
+        "西王母"
+      ],
+      "image": "/scenes/kunlun.webp"
+    },
+    {
+      "id": "huangdi",
+      "plate": "黄",
+      "title": "黄帝战蚩尤",
+      "chapter": 18,
+      "summary": "海内经：蚩尤作兵伐黄帝。黄帝乃令应龙攻之冀州之野。应龙畜水，蚩尤请风伯雨师，纵大风雨。黄帝乃下天女曰魃，雨止，遂杀蚩尤。",
+      "people": [
+        "黄帝",
+        "蚩尤",
+        "应龙",
+        "魃"
+      ],
+      "image": "/scenes/huangdi.webp"
+    },
+    {
+      "id": "yu",
+      "plate": "禹",
+      "title": "禹鲧治水",
+      "chapter": 18,
+      "summary": "海内经：洪水滔天，鲧窃帝之息壤以堙洪水，不待帝命。帝令祝融杀鲧于羽郊。鲧复生禹。帝乃命禹卒布土以定九州。",
+      "people": [
+        "鲧",
+        "禹",
+        "祝融"
+      ],
+      "image": "/scenes/yu.webp"
+    },
+    {
+      "id": "bixi",
+      "plate": "毕",
+      "title": "毕方鸟",
+      "chapter": 6,
+      "summary": "海外南经：毕方鸟在其东，青水西，其为鸟人面一脚。一曰在二八神东。异鸟只写一句，形貌却够记一辈子。",
+      "people": [
+        "毕方"
+      ],
+      "image": "/scenes/bixi.webp"
+    },
+    {
+      "id": "bashe",
+      "plate": "巴",
+      "title": "巴蛇吞象",
+      "chapter": 10,
+      "summary": "海内南经：巴蛇食象，三岁而出其骨。君子服之，无心腹之疾。其为蛇青黄赤黑。一曰黑蛇青首，在犀牛西。",
+      "people": [
+        "巴蛇"
+      ],
+      "image": "/scenes/bashe.webp"
+    },
+    {
+      "id": "shirih",
+      "plate": "日",
+      "title": "十日所出",
+      "chapter": 14,
+      "summary": "大荒东经：汤谷上有扶木，一日方至，一日方出，皆载于乌。东南海之外、甘水之间，有羲和之国，有女子名曰羲和，方日浴于甘渊。",
+      "people": [
+        "羲和"
+      ],
+      "image": "/scenes/shirih.webp"
+    }
+  ]
+}
